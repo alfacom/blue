@@ -2663,6 +2663,70 @@ area/space/atmosalert()
 	icon_state = "away"
 	requires_power = 0
 
+/area/shuttle/thunderdomenew
+	icon_state = "shuttle"
+	name = "\improper thunderdome"
+	requires_power = 0
+	lighting_use_dynamic = 1
+	luminosity = 0
+	sound_env = PLAIN
+
+	New()
+		..()
+		var/sound/S = new/sound()
+		S.file = 'sound/effects/rain01.wav'
+		S.repeat = 1
+		S.wait = 0
+		S.channel = 123
+		S.volume = 300
+		S.priority = 255
+		S.status = SOUND_UPDATE
+
+		Entered(atom/movable/Obj,atom/OldLoc)
+		if(ismob(Obj))
+			if(Obj:client)
+				mysound.status = SOUND_UPDATE
+				Obj << mysound
+		return
+
+	Exited(atom/movable/Obj)
+		if(ismob(Obj))
+			if(Obj:client)
+				mysound.status = SOUND_PAUSED | SOUND_UPDATE
+				Obj << mysound
+
+/area/shuttle/thunderdomeinside
+	icon_state = "away"
+	name = "\improper thunderdome"
+	requires_power = 0
+	lighting_use_dynamic = 1
+	luminosity = 0
+	sound_env = MEDIUM_SOFTFLOOR
+
+	New()
+		..()
+		var/sound/S = new/sound()
+		S.file = 'sound/effects/rainunderroof.wav'
+		S.repeat = 1
+		S.wait = 0
+		S.channel = 123
+		S.volume = 100
+		S.priority = 255
+		S.status = SOUND_UPDATE
+
+	Entered(atom/movable/Obj,atom/OldLoc)
+		if(ismob(Obj))
+			if(Obj:client)
+				mysound.status = SOUND_UPDATE
+				Obj << mysound
+		return
+
+	Exited(atom/movable/Obj)
+		if(ismob(Obj))
+			if(Obj:client)
+				mysound.status = SOUND_PAUSED | SOUND_UPDATE
+				Obj << mysound
+
 /area/awaymission/beach
 	name = "Beach"
 	icon_state = "null"

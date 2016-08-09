@@ -84,7 +84,7 @@
 	accuracy = 2
 	scoped_accuracy = 5
 
-/obj/item/weapon/gun/projectile/heavysniper/update_icon()
+/obj/item/weapon/gun/projectile/heavysniper/svl/update_icon()
 	if(bolt_open)
 		icon_state = "svl-empty"
 	else
@@ -108,7 +108,7 @@
 	accuracy = 2
 	scoped_accuracy = 5
 
-/obj/item/weapon/gun/projectile/heavysniper/update_icon()
+/obj/item/weapon/gun/projectile/heavysniper/barrett/update_icon()
 	if(bolt_open)
 		icon_state = "barretsniper-empty"
 	else

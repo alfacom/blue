@@ -397,6 +397,7 @@
 	armor = list(melee = 40, bullet = 60, laser = 40, energy = 25, bomb = 25, bio = 0, rad = 0)
 	slowdown = 1
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+	canremove = 0
 
 /obj/item/clothing/suit/storage/vest/heavy/assault/nsf
 	name = "NSF armor vest"
@@ -415,8 +416,9 @@
 	icon_state = "webvest"
 	item_state = "webvest"
 	armor = list(melee = 10, bullet = 5, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
-	slowdown = -1
+	slowdown = 0
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS|HEAD
+	canremove = 0
 
 /obj/item/clothing/suit/storage/vest/heavy/scout/ucf
 	name = "UCF cloak"
@@ -436,6 +438,7 @@
 	armor = list(melee = 70, bullet = 80, laser = 70, energy = 60, bomb = 85, bio = 70, rad = 70)
 	slowdown = 2
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS|HANDS
+	canremove = 0
 
 /obj/item/clothing/suit/storage/vest/heavy/support/ucf
 	name = "UCF heavy armor"
@@ -455,6 +458,7 @@
 	armor = list(melee = 40, bullet = 40, laser = 30, energy = 30, bomb = 35, bio = 20, rad = 20)
 	slowdown = 0
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	canremove = 0
 
 /obj/item/clothing/suit/storage/vest/heavy/specialist/ucf
 	name = "UCF light armor vest"

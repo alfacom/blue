@@ -177,6 +177,7 @@
 	name = "helmet"
 	icon_state = "helmet"
 	armor = list(melee = 50, bullet = 40, laser = 30, energy = 10, bomb = 10, bio = 0, rad = 0)
+	canremove = 0
 
 /obj/item/clothing/head/helmet/assault/nsf
 	name = "NSF helmet"
@@ -192,6 +193,7 @@
 	name = "headwear"
 	icon_state = "helmet"
 	armor = list(melee = 10, bullet = 5, laser = 0, energy = 0, bomb = 10, bio = 0, rad = 0)
+	canremove = 0
 
 /obj/item/clothing/head/helmet/specialist/ucf
 	name = "UCF cap"
@@ -207,6 +209,7 @@
 	name = "helmet"
 	icon_state = "helmet"
 	armor = list(melee = 60, bullet = 70, laser = 50, energy = 40, bomb = 40, bio = 0, rad = 0)
+	canremove = 0
 
 /obj/item/clothing/head/helmet/support/nsf
 	name = "NSF heavy helmet"

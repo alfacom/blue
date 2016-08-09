@@ -539,10 +539,15 @@
 /obj/item/weapon/gun/projectile/automatic/al68grenadier/Fire(atom/target, mob/living/user, params, pointblank=0, reflex=0)
 	if(use_launcher)
 		launcher.Fire(target, user, params, pointblank, reflex)
-		if(!launcher.chambered)
-			switch_firemodes(user) //switch back automatically
 	else
 		..()
+
+/obj/item/weapon/gun/projectile/automatic/al68grenadier/examine(mob/user)
+	..()
+	if(launcher.chambered)
+		user << "\The [launcher] has \a [launcher.chambered] loaded."
+	else
+		user << "\The [launcher] is empty."
 
 /obj/item/weapon/gun/projectile/automatic/m8
 	name = "M8 carbine"
@@ -653,10 +658,15 @@
 /obj/item/weapon/gun/projectile/automatic/m27grenadier/Fire(atom/target, mob/living/user, params, pointblank=0, reflex=0)
 	if(use_launcher)
 		launcher.Fire(target, user, params, pointblank, reflex)
-		if(!launcher.chambered)
-			switch_firemodes(user) //switch back automatically
 	else
 		..()
+
+/obj/item/weapon/gun/projectile/automatic/m27grenadier/examine(mob/user)
+	..()
+	if(launcher.chambered)
+		user << "\The [launcher] has \a [launcher.chambered] loaded."
+	else
+		user << "\The [launcher] is empty."
 
 /obj/item/weapon/gun/projectile/automatic/m219
 	name = "light machine gun"
