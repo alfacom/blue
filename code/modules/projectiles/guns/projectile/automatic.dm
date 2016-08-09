@@ -491,64 +491,6 @@
 
 	toggle_scope(1.3)
 
-/obj/item/weapon/gun/projectile/automatic/al68grenadier
-	name = "AL68-GP"
-	desc = "no desc."
-	icon_state = "al68-grenadier"
-	item_state = "carbine"
-	w_class = 5
-	caliber = "a762"
-	slot_flags = SLOT_BACK
-	load_method = MAGAZINE
-	magazine_type = /obj/item/ammo_magazine/ar762
-	allowed_magazines = list(/obj/item/ammo_magazine/ar762)
-	fire_delay = 1
-	accuracy = 3
-	var/use_launcher = 0
-	var/obj/item/weapon/gun/launcher/grenade/underslung/launcher
-
-	firemodes = list(
-		list(mode_name="semiauto", burst=1, fire_delay=0),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=2,    burst_accuracy=list(2,1,1), dispersion=list(0.0, 0.3, 0.3)),
-		list(mode_name="fire grenades",  burst=null, fire_delay=null, move_delay=null, use_launcher=1,    burst_accuracy=null, dispersion=null)
-		)
-
-/obj/item/weapon/gun/projectile/automatic/al68grenadier/update_icon()
-	..()
-	if(ammo_magazine)
-		icon_state = "al68-grenadier"
-	else
-		icon_state = "al68-grenadier-empty"
-
-/obj/item/weapon/gun/projectile/automatic/al68grenadier/New()
-	..()
-	launcher = new(src)
-
-/obj/item/weapon/gun/projectile/automatic/al68grenadier/attackby(obj/item/I, mob/user)
-	if((istype(I, /obj/item/weapon/grenade)))
-		launcher.load(I, user)
-	else
-		..()
-
-/obj/item/weapon/gun/projectile/automatic/al68grenadier/attack_hand(mob/user)
-	if(user.get_inactive_hand() == src && use_launcher)
-		launcher.unload(user)
-	else
-		..()
-
-/obj/item/weapon/gun/projectile/automatic/al68grenadier/Fire(atom/target, mob/living/user, params, pointblank=0, reflex=0)
-	if(use_launcher)
-		launcher.Fire(target, user, params, pointblank, reflex)
-	else
-		..()
-
-/obj/item/weapon/gun/projectile/automatic/al68grenadier/examine(mob/user)
-	..()
-	if(launcher.chambered)
-		user << "\The [launcher] has \a [launcher.chambered] loaded."
-	else
-		user << "\The [launcher] is empty."
-
 /obj/item/weapon/gun/projectile/automatic/m8
 	name = "M8 carbine"
 	desc = "no desc."
@@ -609,64 +551,6 @@
 	set popup_menu = 1
 
 	toggle_scope(1.3)
-
-/obj/item/weapon/gun/projectile/automatic/m27grenadier
-	name = "M27-GL"
-	desc = "no desc."
-	icon_state = "m27grenadier"
-	item_state = "carbine"
-	w_class = 7
-	caliber = "a556"
-	slot_flags = SLOT_BACK
-	load_method = MAGAZINE
-	magazine_type = /obj/item/ammo_magazine/ar556
-	allowed_magazines = list(/obj/item/ammo_magazine/ar556)
-	fire_delay = 1
-	accuracy = 3
-	var/use_launcher = 0
-	var/obj/item/weapon/gun/launcher/grenade/underslung/launcher
-
-	firemodes = list(
-		list(mode_name="semiauto", burst=1, fire_delay=0),
-		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=2,    burst_accuracy=list(2,1,1), dispersion=list(0.0, 0.3, 0.3)),
-		list(mode_name="fire grenades",  burst=null, fire_delay=null, move_delay=null, use_launcher=1,    burst_accuracy=null, dispersion=null)
-		)
-
-/obj/item/weapon/gun/projectile/automatic/m27grenadier/update_icon()
-	..()
-	if(ammo_magazine)
-		icon_state = "m27grenadier"
-	else
-		icon_state = "m27grenadier-empty"
-
-/obj/item/weapon/gun/projectile/automatic/m27grenadier/New()
-	..()
-	launcher = new(src)
-
-/obj/item/weapon/gun/projectile/automatic/m27grenadier/attackby(obj/item/I, mob/user)
-	if((istype(I, /obj/item/weapon/grenade)))
-		launcher.load(I, user)
-	else
-		..()
-
-/obj/item/weapon/gun/projectile/automatic/m27grenadier/attack_hand(mob/user)
-	if(user.get_inactive_hand() == src && use_launcher)
-		launcher.unload(user)
-	else
-		..()
-
-/obj/item/weapon/gun/projectile/automatic/m27grenadier/Fire(atom/target, mob/living/user, params, pointblank=0, reflex=0)
-	if(use_launcher)
-		launcher.Fire(target, user, params, pointblank, reflex)
-	else
-		..()
-
-/obj/item/weapon/gun/projectile/automatic/m27grenadier/examine(mob/user)
-	..()
-	if(launcher.chambered)
-		user << "\The [launcher] has \a [launcher.chambered] loaded."
-	else
-		user << "\The [launcher] is empty."
 
 /obj/item/weapon/gun/projectile/automatic/m219
 	name = "light machine gun"
@@ -808,3 +692,135 @@
 		icon_state = "rpl"
 	else
 		icon_state = "rpl-empty"
+
+/obj/item/weapon/gun/projectile/automatic/m27grenadier
+	name = "M27-GL"
+	desc = "no desc."
+	icon_state = "m27grenadier"
+	item_state = "z8carbine"
+	w_class = 4
+	force = 15
+	caliber = "a556"
+	ammo_type = "/obj/item/ammo_casing/a556"
+	fire_sound = 'sound/weapons/Gunshot.ogg'
+	slot_flags = SLOT_BACK
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/ar556
+	allowed_magazines = list(/obj/item/ammo_magazine/ar556)
+	accuracy = 1
+
+	one_handed_penalty = 5
+
+	burst_delay = 4
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1,    fire_delay=0,    move_delay=null, use_launcher=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3,    fire_delay=null, move_delay=3,    use_launcher=null, burst_accuracy=list(1,1,0), dispersion=list(0.0, 0.3, 0.6)),
+		list(mode_name="fire grenades",  burst=null, fire_delay=null, move_delay=null, use_launcher=1,    burst_accuracy=null, dispersion=null)
+		)
+
+	var/use_launcher = 0
+	var/obj/item/weapon/gun/launcher/grenade/underslung/launcher
+
+/obj/item/weapon/gun/projectile/automatic/m27grenadier/New()
+	..()
+	launcher = new(src)
+
+/obj/item/weapon/gun/projectile/automatic/m27grenadier/attackby(obj/item/I, mob/user)
+	if((istype(I, /obj/item/weapon/grenade)))
+		launcher.load(I, user)
+	else
+		..()
+
+/obj/item/weapon/gun/projectile/automatic/m27grenadier/attack_hand(mob/user)
+	if(user.get_inactive_hand() == src && use_launcher)
+		launcher.unload(user)
+	else
+		..()
+
+/obj/item/weapon/gun/projectile/automatic/m27grenadier/Fire(atom/target, mob/living/user, params, pointblank=0, reflex=0)
+	if(use_launcher)
+		launcher.Fire(target, user, params, pointblank, reflex)
+		if(!launcher.chambered)
+			switch_firemodes(user) //switch back automatically
+	else
+		..()
+
+/obj/item/weapon/gun/projectile/automatic/m27grenadier/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "m27grenadier"
+	else
+		icon_state = "m27grenadier-empty"
+
+/obj/item/weapon/gun/projectile/automatic/m27grenadier/examine(mob/user)
+	..()
+	if(launcher.chambered)
+		user << "\The [launcher] has \a [launcher.chambered] loaded."
+	else
+		user << "\The [launcher] is empty."
+
+/obj/item/weapon/gun/projectile/automatic/al68grenadier
+	name = "AL68-GP"
+	desc = "no desc."
+	icon_state = "al68-grenadier"
+	item_state = "z8carbine"
+	w_class = 4
+	force = 15
+	caliber = "a762"
+	ammo_type = "/obj/item/ammo_casing/a762"
+	fire_sound = 'sound/weapons/Gunshot.ogg'
+	slot_flags = SLOT_BACK
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/ar762
+	allowed_magazines = list(/obj/item/ammo_magazine/ar762)
+	accuracy = 1
+
+	one_handed_penalty = 5
+
+	burst_delay = 4
+	firemodes = list(
+		list(mode_name="semiauto",       burst=1,    fire_delay=0,    move_delay=null, use_launcher=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3,    fire_delay=null, move_delay=3,    use_launcher=null, burst_accuracy=list(1,1,0), dispersion=list(0.0, 0.3, 0.6)),
+		list(mode_name="fire grenades",  burst=null, fire_delay=null, move_delay=null, use_launcher=1,    burst_accuracy=null, dispersion=null)
+		)
+
+	var/use_launcher = 0
+	var/obj/item/weapon/gun/launcher/grenade/underslung/launcher
+
+/obj/item/weapon/gun/projectile/automatic/al68grenadier/New()
+	..()
+	launcher = new(src)
+
+/obj/item/weapon/gun/projectile/automatic/al68grenadier/attackby(obj/item/I, mob/user)
+	if((istype(I, /obj/item/weapon/grenade)))
+		launcher.load(I, user)
+	else
+		..()
+
+/obj/item/weapon/gun/projectile/automatic/al68grenadier/attack_hand(mob/user)
+	if(user.get_inactive_hand() == src && use_launcher)
+		launcher.unload(user)
+	else
+		..()
+
+/obj/item/weapon/gun/projectile/automatic/al68grenadier/Fire(atom/target, mob/living/user, params, pointblank=0, reflex=0)
+	if(use_launcher)
+		launcher.Fire(target, user, params, pointblank, reflex)
+		if(!launcher.chambered)
+			switch_firemodes(user) //switch back automatically
+	else
+		..()
+
+/obj/item/weapon/gun/projectile/automatic/al68grenadier/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "al68-grenadier"
+	else
+		icon_state = "al68-grenadier-empty"
+
+/obj/item/weapon/gun/projectile/automatic/al68grenadier/examine(mob/user)
+	..()
+	if(launcher.chambered)
+		user << "\The [launcher] has \a [launcher.chambered] loaded."
+	else
+		user << "\The [launcher] is empty."
