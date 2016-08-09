@@ -52,11 +52,13 @@
 	icon = 'icons/misc/thunderdomedecostuff/weatherdecals.dmi'
 	name = "rain"
 	icon_state = "rain"
+	anchored = 1
 
 /obj/effect/overlay/rainwater
 	icon = 'icons/misc/thunderdomedecostuff/weatherdecals.dmi'
 	name = "water splashes"
 	icon_state = "splash"
+	anchored = 1
 
 /obj/structure/closet/crate/woodencrate
 	name = "wooden crate"
@@ -78,45 +80,49 @@
 	bound_height = 32
 
 /obj/machinery/door/unpowered/wooden
-	icon = 'icons/misc/thunderdomedecostuff/structures.dmi'
+	icon = 'icons/misc/thunderdomedecostuff/woodendoor.dmi'
 	name = "wooden door"
-	icon_state = "wooddoor1"
+	icon_state = "door1"
 	opacity = 1
 	density = 1
 
 /obj/machinery/door/unpowered/glass
-	icon = 'icons/misc/thunderdomedecostuff/structures.dmi'
+	icon = 'icons/misc/thunderdomedecostuff/glassdoor.dmi'
 	name = "glass door"
-	icon_state = "glassdoor1"
+	icon_state = "door1"
 	opacity = 1
 	density = 1
 
 /obj/machinery/door/unpowered/metal
-	icon = 'icons/misc/thunderdomedecostuff/structures.dmi'
+	icon = 'icons/misc/thunderdomedecostuff/metaldoor.dmi'
 	name = "metal door"
-	icon_state = "metaldoor1"
+	icon_state = "door1"
 	opacity = 1
 	density = 1
 
 /obj/machinery/door/unpowered/woodglass
-	icon = 'icons/misc/thunderdomedecostuff/structures.dmi'
+	icon = 'icons/misc/thunderdomedecostuff/woodenglassdoor.dmi'
 	name = "wooden door"
-	icon_state = "woodglassdoor1"
+	icon_state = "door1"
 	opacity = 1
 	density = 1
 
-/obj/machinery/light/small/streetlight
+/obj/machinery/light/streetlight
 	brightness_range = 14
 	brightness_power = 8
 	brightness_color = "#ADD8E6"
 	name = "street light"
 	icon = 'icons/misc/thunderdomedecostuff/street.dmi'
 	icon_state = "streetlamp1"
+	bound_width = 32
+	bound_height = 96
 
-/obj/machinery/light/small/neonlight
+/obj/machinery/light/neonlight
 	brightness_range = 8
 	brightness_power = 2
 	brightness_color = "#98fb98"
 	name = "neon light"
 	icon = 'icons/misc/thunderdomedecostuff/structures.dmi'
 	icon_state = "exit"
+	bound_width = 32
+	bound_height = 96

@@ -7,8 +7,8 @@
 	category = "Prosthetics"
 
 // Make new external organs and make 'em robotish
-/datum/design/item/prosfab/pros/Fabricate(var/newloc, var/fabricator)
-	if(istype(fabricator, /obj/machinery/pros_fabricator))
+/datum/design/item/prosfab/pros/Fabricate(var/newloc, var/obj/machinery/pros_fabricator/fabricator)
+	if(istype(fabricator))
 		var/obj/machinery/pros_fabricator/prosfab = fabricator
 		var/obj/item/organ/O = new build_path(newloc)
 		O.species = all_species["Human"]
@@ -46,6 +46,19 @@
 		H.dir = 2
 		return H
 
+/datum/design/item/prosfab/pros/external
+	var/datum/organ_description/OD = new
+
+	Fabricate(var/newloc, var/obj/machinery/pros_fabricator/fabricator)
+		if(istype(fabricator))
+			var/obj/item/organ/external/EO = new build_path(newloc, OD)
+			EO.robotize(fabricator.manufacturer)
+			EO.get_icon()
+			spawn(10) //Limbs love to flop around. Who am I to deny them?
+				EO.dir = 2
+			return EO
+
+
 //////////////////// Prosthetics ////////////////////
 /datum/design/item/prosfab/pros/torso
 	time = 35
@@ -67,7 +80,7 @@
 	build_path = /obj/item/organ/external/chest/f
 	gender = FEMALE
 
-/datum/design/item/prosfab/pros/head
+/datum/design/item/prosfab/pros/external/head
 	name = "Prosthetic head"
 	id = "pros_head"
 	build_path = /obj/item/organ/external/head
@@ -75,59 +88,67 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 18750, "glass" = 3750, "plasteel" = 750)
 //	req_tech = list(TECH_ENGINEERING = 2, TECH_MATERIAL = 3, TECH_DATA = 3)	//Saving the values just in case
 
-/datum/design/item/prosfab/pros/l_arm
-	name = "Prosthetic left arm"
-	id = "pros_l_arm"
-	build_path = /obj/item/organ/external/arm
-	time = 20
-	materials = list(DEFAULT_WALL_MATERIAL = 13500)
-
-/datum/design/item/prosfab/pros/l_hand
-	name = "Prosthetic left hand"
-	id = "pros_l_hand"
-	build_path = /obj/item/organ/external/hand
-	time = 15
-	materials = list(DEFAULT_WALL_MATERIAL = 7500)
-
-/datum/design/item/prosfab/pros/l_leg
-	name = "Prosthetic left leg"
-	id = "pros_l_leg"
-	build_path = /obj/item/organ/external/leg
-	time = 20
-	materials = list(DEFAULT_WALL_MATERIAL = 11250)
-
-/datum/design/item/prosfab/pros/l_foot
-	name = "Prosthetic left foot"
-	id = "pros_l_foot"
-	build_path = /obj/item/organ/external/foot
-	time = 15
-	materials = list(DEFAULT_WALL_MATERIAL = 7500)
-
-/datum/design/item/prosfab/pros/r_arm
+/datum/design/item/prosfab/pros/external/r_arm
 	name = "Prosthetic right arm"
 	id = "pros_r_arm"
-	build_path = /obj/item/organ/external/arm/right
+	OD = new/datum/organ_description/arm/right
+	build_path = /obj/item/organ/external/robotic/limb
 	time = 20
 	materials = list(DEFAULT_WALL_MATERIAL = 13500)
 
-/datum/design/item/prosfab/pros/r_hand
-	name = "Prosthetic right hand"
-	id = "pros_r_hand"
-	build_path = /obj/item/organ/external/hand/right
-	time = 15
-	materials = list(DEFAULT_WALL_MATERIAL = 7500)
+/datum/design/item/prosfab/pros/external/l_arm
+	name = "Prosthetic left arm"
+	id = "pros_l_arm"
+	OD = new/datum/organ_description/arm/left
+	build_path = /obj/item/organ/external/robotic/limb
+	time = 20
+	materials = list(DEFAULT_WALL_MATERIAL = 13500)
 
-/datum/design/item/prosfab/pros/r_leg
+/datum/design/item/prosfab/pros/external/r_leg
 	name = "Prosthetic right leg"
 	id = "pros_r_leg"
-	build_path = /obj/item/organ/external/leg/right
+	OD = new/datum/organ_description/leg/right
+	build_path = /obj/item/organ/external/robotic/limb
 	time = 20
 	materials = list(DEFAULT_WALL_MATERIAL = 11250)
 
-/datum/design/item/prosfab/pros/r_foot
+/datum/design/item/prosfab/pros/external/l_leg
+	name = "Prosthetic left leg"
+	id = "pros_l_leg"
+	OD = new/datum/organ_description/leg/left
+	build_path = /obj/item/organ/external/robotic/limb
+	time = 20
+	materials = list(DEFAULT_WALL_MATERIAL = 11250)
+
+/datum/design/item/prosfab/pros/external/r_hand
+	name = "Prosthetic right hand"
+	id = "pros_r_hand"
+	OD = new/datum/organ_description/hand/right
+	build_path = /obj/item/organ/external/robotic/tiny
+	time = 15
+	materials = list(DEFAULT_WALL_MATERIAL = 7500)
+
+/datum/design/item/prosfab/pros/external/l_hand
+	name = "Prosthetic left hand"
+	id = "pros_l_hand"
+	OD = new /datum/organ_description/hand/left
+	build_path = /obj/item/organ/external/robotic/tiny
+	time = 15
+	materials = list(DEFAULT_WALL_MATERIAL = 7500)
+
+/datum/design/item/prosfab/pros/external/r_foot
 	name = "Prosthetic right foot"
 	id = "pros_r_foot"
-	build_path = /obj/item/organ/external/foot/right
+	OD = new/datum/organ_description/foot/right
+	build_path = /obj/item/organ/external/robotic/tiny
+	time = 15
+	materials = list(DEFAULT_WALL_MATERIAL = 7500)
+
+/datum/design/item/prosfab/pros/external/l_foot
+	name = "Prosthetic left foot"
+	id = "pros_l_foot"
+	OD = new/datum/organ_description/foot/left
+	build_path = /obj/item/organ/external/robotic/tiny
 	time = 15
 	materials = list(DEFAULT_WALL_MATERIAL = 7500)
 
