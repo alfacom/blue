@@ -65,20 +65,36 @@
 		O_EYES =     /obj/item/organ/internal/eyes
 	)
 
+	has_limbs = list(
+		BP_CHEST  = new /datum/organ_description,
+		BP_GROIN  = new /datum/organ_description/groin,
+		BP_HEAD   = new /datum/organ_description/head,
+		BP_L_ARM  = new /datum/organ_description/arm/left,
+		BP_R_ARM  = new /datum/organ_description/arm/right,
+		BP_L_LEG  = new /datum/organ_description/leg/left,
+		BP_R_LEG  = new /datum/organ_description/leg/right,
+		BP_L_HAND = new /datum/organ_description/hand/left/seromi,
+		BP_R_HAND = new /datum/organ_description/hand/right/seromi,
+		BP_L_FOOT = new /datum/organ_description/foot/left/seromi,
+		BP_R_FOOT = new /datum/organ_description/foot/right/seromi
+	)
+
 	unarmed_attacks = list(
 		new /datum/unarmed_attack/bite/sharp,
 		new /datum/unarmed_attack/claws,
 		new /datum/unarmed_attack/stomp/weak
 	)
 
-	restricted_jobs = list("Captain", "Head of Personnel", "Security Commissioner", "Chief Engineer", "Chief Medical Officer", "Research Director",\
-							"Brig Overseer", "Investigator", "Forensic Technician", "Colonial Officer", "Colonial Senior Officer", "Medical Doctor", "Geneticist", "Paramedic",\
-							"Quartermaster", "Cargo Technician", "Shaft Miner", "Internal Affairs Agent")
+	restricted_jobs = list(
+		"Captain", "Head of Personnel", "Security Commissioner", "Chief Engineer", "Research Director",
+		"Brig Overseer", "Investigator", "Forensic Technician", "Colonial Officer", "Colonial Senior Officer",
+		"Chief Medical Officer", "Medical Doctor", "Geneticist", "Paramedic",
+		"Quartermaster", "Cargo Technician", "Shaft Miner", "Internal Affairs Agent"
+	)
 
 /*
 	var/shock_cap = 30
 	var/hallucination_cap = 25
-	restricted_jobs = list("Captain", "Head of Personnel", "Head of Security", "Chief Engineer", "Chief Medical Officer", "Research Director"
 
 // I'm... so... ronrery, so ronery...
 /datum/species/teshari/handle_environment_special(var/mob/living/carbon/human/H)

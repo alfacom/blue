@@ -28,3 +28,15 @@ var/global/list/limb_icon_cache = list()
 	dir = EAST
 	icon = mob_icon
 	return mob_icon
+
+/datum/organ_description/hand/left/seromi
+	default_type = /obj/item/organ/external/tiny/featers
+
+/datum/organ_description/hand/right/seromi
+	default_type = /obj/item/organ/external/tiny/featers
+
+/datum/organ_description/foot/left/seromi
+	default_type = /obj/item/organ/external/tiny/featers
+
+/datum/organ_description/foot/right/seromi
+	default_type = /obj/item/organ/external/tiny/featers
