@@ -1068,7 +1068,6 @@
 		new_species = "Human"
 
 	if(species)
-
 		if(species.name && species.name == new_species)
 			return
 		if(species.language)
