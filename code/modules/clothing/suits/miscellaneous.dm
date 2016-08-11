@@ -797,3 +797,19 @@
 	desc = "A comfy, aqua flannel shirt.  Unleash your inner hipster."
 	icon_state = "flannel_aqua"
 	item_state = "b_suit"
+
+/obj/item/clothing/suit/storage/russian_style
+	name = "Soviet Jacket"
+	desc = "Russian style jacket."
+	icon_state = "jacket"
+
+/obj/item/clothing/suit/storage/russian_style/verb/hide_collar()
+	set name = "Hide collar"
+	set category = "Objects"
+	if(icon_state == initial(icon_state))
+		icon_state = "jacket_alt"
+		usr << "<span class = 'notice'>You open collar</span>"
+	else
+		icon_state = initial(icon_state)
+		usr << "<span class = 'notice'>You hide collar</span>"
+	update_clothing_icon()

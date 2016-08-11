@@ -20,6 +20,10 @@
 	display_name = "kilt"
 	path = /obj/item/clothing/under/kilt
 
+/datum/gear/uniform/turtleneck
+	display_name = "civilian turtleneck"
+	path = /obj/item/clothing/under/turtleneck
+
 /datum/gear/uniform/croptop
 	display_name = "croptop, NT"
 	path = /obj/item/clothing/under/croptop

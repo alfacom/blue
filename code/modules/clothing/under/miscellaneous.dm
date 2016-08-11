@@ -26,6 +26,20 @@
 	item_state = "scratch"
 	worn_state = "scratch"
 
+/obj/item/clothing/under/turtleneck
+	name = "civilian turtleneck"
+	desc = "Classical civilian turtleneck" // Need new description.
+	icon_state = "turtleneck"
+	item_state = "turtleneck"
+	worn_state = "turtleneck"
+
+/obj/item/clothing/under/blue_shirt
+	name = "blue shirt"
+	desc = "classical blue shit. Colored in blue." // Need new description.
+	icon_state = "blue_shirt"
+	item_state = "blue_shirt"
+	worn_state = "blue_shirt"
+
 /obj/item/clothing/under/sl_suit
 	desc = "It's a very amish looking suit."
 	name = "amish suit"

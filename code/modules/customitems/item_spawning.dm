@@ -132,9 +132,9 @@
 	var/datum/custom_item/current_data
 	var/list/L
 
-	//Dangranos
-	custom_items["dangranos"] = list()
-	L = custom_items["dangranos"]
+////Dangranos////
+
+	L = list()
 
 	current_data = new()
 	current_data.assoc_key = "dangranos"
@@ -148,6 +148,38 @@
 	current_data.kit_icon = "rig-atmos_special"
 	L |= current_data
 	current_data = null
+
+	custom_items["dangranos"] = L
+
+///Shamah///
+/*
+	L = list()
+
+	current_data = new()
+	current_data.assoc_key = "shamah"
+	current_data.character_name = "Niels Johansson"
+	current_data.item_path = /obj/item/clothing/suit/storage/toggle/bomber/niels
+	L |= current_data
+
+	custom_items["shamah"] = L
+*/
+////DoubleComrader43////
+
+	L = list()
+
+	current_data = new()
+	current_data.assoc_key = "doublecomrader43"
+	current_data.character_name = "Nikolay Kowalski"
+	current_data.item_path = /obj/item/clothing/under/blue_shirt
+	L |= current_data
+
+	current_data = new()
+	current_data.assoc_key = "doublecomrader43"
+	current_data.character_name = "Nikolay Kowalski"
+	current_data.item_path = /obj/item/clothing/suit/storage/russian_style
+	L |= current_data
+
+	custom_items["doublecomrader43"] = L
 
 	return 1
 
