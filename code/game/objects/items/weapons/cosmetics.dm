@@ -6,38 +6,58 @@
 	icon_state = "lipstick"
 	w_class = 1.0
 	slot_flags = SLOT_EARS
-	var/colour = "red"
+	var/colour = "#F00000"
 	var/open = 0
 
+	New()
+		update_icon()
+		..()
 
 /obj/item/weapon/lipstick/purple
 	name = "purple lipstick"
-	colour = "purple"
+	colour = "#D55CD0"
 
 /obj/item/weapon/lipstick/jade
 	name = "jade lipstick"
-	colour = "jade"
+	colour = "#218C17"
 
 /obj/item/weapon/lipstick/black
 	name = "black lipstick"
-	colour = "black"
+	colour = "#56352F"
 
+/obj/item/weapon/lipstick/colorise
+	name = "multicolor lipctick"
+
+/obj/item/weapon/lipstick/colorise/attack_self(mob/user)
+	if(!open)
+		colour = input("Select new color!", "Color", colour) as color
+	..()
 
 /obj/item/weapon/lipstick/random
 	name = "lipstick"
 
 /obj/item/weapon/lipstick/random/New()
-	colour = pick("red","purple","jade","black")
-	name = "[colour] lipstick"
+	var/list/colors = list("red"="#F00000","purple"="#D55CD0","jade"="#218C17","black"="#56352F")
+	var/picked_color = pick(colors)
+	name = "[picked_color] lipstick"
+	colour = colors[picked_color]
+	..()
 
 
 /obj/item/weapon/lipstick/attack_self(mob/user as mob)
-	user << "<span class='notice'>You twist \the [src] [open ? "closed" : "open"].</span>"
 	open = !open
+	user << "<span class='notice'>You twist \the [src] [open ? "open" : "closed"].</span>"
+	update_icon()
+
+/obj/item/weapon/lipstick/update_icon()
+	overlays.Cut()
 	if(open)
-		icon_state = "[initial(icon_state)]_[colour]"
+		var/image/stick = image(icon = 'icons/obj/items.dmi', icon_state = "lipstick_open")
+		stick.color = colour
+		overlays += stick
 	else
-		icon_state = initial(icon_state)
+		overlays += "lipstick_closed"
+
 
 /obj/item/weapon/lipstick/attack(mob/M as mob, mob/user as mob)
 	if(!open)	return
@@ -78,4 +98,6 @@
 	item_state = "purplecomb"
 
 /obj/item/weapon/haircomb/attack_self(mob/living/user)
-	user.visible_message(text("<span class='notice'>[] uses [] to comb their hair with incredible style and sophistication. What a [].</span>", user, src, user.gender == FEMALE ? "lady" : "guy"))
+	if(user.r_hand == src || user.l_hand == src)
+		user.visible_message(text("\red [] uses [] to comb their hair with incredible style and sophistication. What a [].", user, src, user.gender == FEMALE ? "lady" : "guy"))
+	return
