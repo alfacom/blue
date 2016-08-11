@@ -880,6 +880,13 @@ CIRCUITS BELOW
 	build_path = /obj/item/weapon/circuitboard/message_monitor
 	sort_string = "HAACC"
 
+/datum/design/circuit/traffic_control
+	name = "traffic control console"
+	id = "traffic_control"
+	req_tech = list(TECH_DATA = 3)
+	build_path = /obj/item/weapon/circuitboard/comm_traffic
+	sort_string = "HAACD"
+
 /datum/design/circuit/aiupload
 	name = "AI upload console"
 	id = "aiupload"
