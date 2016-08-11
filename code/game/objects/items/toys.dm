@@ -827,6 +827,22 @@
 	else
 		user.visible_message("<span class='notice'><b>\The [user]</b> pokes the [src].</span>","<span class='notice'>You poke the [src].</span>")
 
+/obj/item/toy/plushie/attack(mob/living/target as mob, mob/user as mob)
+	if(istype(target))
+		user.visible_message("<span class='notice'><b>[target] has been [pick(attack_verb)] with [src] by [user]!</b></span>")
+		return 1
+	return ..()
+
+/obj/item/toy/plushie/man
+	name = "Ash Blackburn"
+	desc = "Totally what you think it is"
+	icon_state = "ashplushie"
+
+/obj/item/toy/plushie/pillow
+	name = "pillow"
+	desc = "Common white pillow. Useful for pillow-fight"
+	icon_state = "pillow"
+
 /obj/item/toy/plushie/nymph
 	name = "diona nymph plush"
 	desc = "A plushie of an adorable diona nymph! While its level of self-awareness is still being debated, its level of cuteness is not."
