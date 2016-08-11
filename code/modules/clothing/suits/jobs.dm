@@ -151,8 +151,7 @@
 	desc = "A snappy dress jacket."
 	icon_state = "suitjacket_blue_open"
 	item_state = "suitjacket_blue_open"
-	icon_open = "suitjacket_blue_open"
-	icon_closed = "suitjacket_blue"
+	base_icon = "suitjacket_blue"
 	blood_overlay_type = "coat"
 	body_parts_covered = UPPER_TORSO|ARMS
 
@@ -161,8 +160,7 @@
 	desc = "A snappy dress jacket."
 	icon_state = "suitjacket_purp_open"
 	item_state = "suitjacket_purp_open"
-	icon_open = "suitjacket_purp_open"
-	icon_closed = "suitjacket_purp"
+	base_icon = "suitjacket_purp"
 	blood_overlay_type = "coat"
 	body_parts_covered = UPPER_TORSO|ARMS
 
@@ -172,8 +170,7 @@
 	desc = "A smooth black jacket."
 	icon_state = "ia_jacket_open"
 	item_state = "ia_jacket"
-	icon_open = "ia_jacket_open"
-	icon_closed = "ia_jacket"
+	base_icon = "ia_jacket"
 	blood_overlay_type = "coat"
 	body_parts_covered = UPPER_TORSO|ARMS
 
@@ -185,8 +182,7 @@
 	desc = "A high-visibility jacket worn by medical first responders."
 	icon_state = "fr_jacket_open"
 	item_state = "fr_jacket"
-	icon_open = "fr_jacket_open"
-	icon_closed = "fr_jacket"
+	base_icon = "fr_jacket"
 	blood_overlay_type = "armor"
 	allowed = list(/obj/item/stack/medical, /obj/item/weapon/reagent_containers/dropper, /obj/item/weapon/reagent_containers/hypospray, /obj/item/weapon/reagent_containers/syringe, \
 	/obj/item/device/healthanalyzer, /obj/item/device/flashlight, /obj/item/device/radio, /obj/item/weapon/tank/emergency_oxygen)
@@ -195,10 +191,8 @@
 /obj/item/clothing/suit/storage/toggle/fr_jacket/ems
 	name = "\improper EMS jacket"
 	desc = "A dark blue, martian-pattern, EMS jacket. It sports high-visibility reflective stripes and a star of life on the back."
-	icon_state = "ems_jacket_closed"
-	item_state = "ems_jacket_closed"
-	icon_open = "ems_jacket_open"
-	icon_closed = "ems_jacket_closed"
+	icon_state = "ems_jacket"
+	item_state = "ems_jacket"
 
 //Mime
 /obj/item/clothing/suit/suspenders

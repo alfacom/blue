@@ -181,6 +181,80 @@
 
 	custom_items["doublecomrader43"] = L
 
+////Subber////
+
+	L = list()
+
+	current_data = new()
+	current_data.assoc_key = "subber"
+	current_data.character_name = "Claire Sandford"
+	current_data.item_path = /obj/item/clothing/suit/ianshirt/ash
+	L|=current_data
+
+	current_data = new()
+	current_data.assoc_key = "subber"
+	current_data.character_name = "Claire Sandford"
+	current_data.item_path = /obj/item/toy/plushie/man
+	L|=current_data
+
+	custom_items["subber"] = L
+
+////MarcusAga////
+
+	L = list()
+
+	current_data = new()
+	current_data.assoc_key = "marcusaga"
+	current_data.character_name = "Bertrand Francois"
+	current_data.item_path = /obj/item/clothing/under/pants/sweaterj
+	L |= current_data
+
+	current_data = new()
+	current_data.assoc_key = "marcusaga"
+	current_data.character_name = "Bertrand Francois"
+	current_data.item_path = /obj/item/clothing/suit/storage/pullover
+	L |= current_data
+
+	current_data = new()
+	current_data.assoc_key = "marcusaga"
+	current_data.character_name = "Bertrand Francois"
+	current_data.item_path = /obj/item/clothing/shoes/red_boots
+	L |= current_data
+
+/*
+	current_data = new()
+	current_data.assoc_key = "marcusaga"
+	current_data.character_name = "Bertrand Francois"
+	current_data.item_path = /obj/item/device/pda/chrome
+	L |= current_data
+*/
+
+	custom_items["marcusaga"] = L
+
+////Affectuum////
+
+	L = list()
+
+	current_data = new()
+	current_data.assoc_key = "affectuum"
+	current_data.character_name = "Sasha Winter"
+	current_data.item_path = /obj/item/clothing/under/pants/blouse
+	L|=current_data
+
+	current_data = new()
+	current_data.assoc_key = "affectuum"
+	current_data.character_name = "Sasha Winter"
+	current_data.item_path = /obj/item/clothing/suit/storage/cardigan
+	L|=current_data
+
+	current_data = new()
+	current_data.assoc_key = "affectuum"
+	current_data.character_name = "Sasha Winter"
+	current_data.item_path = /obj/item/clothing/shoes/gazelle
+	L|=current_data
+
+	custom_items["affectuum"] = L
+
 	return 1
 
 //gets the relevant list for the key from the listlist if it exists, check to make sure they are meant to have it and then calls the giving function

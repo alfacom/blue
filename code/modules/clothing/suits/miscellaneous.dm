@@ -177,6 +177,18 @@
  * Misc
  */
 
+/obj/item/clothing/suit/storage/pullover
+	name = "pullover"
+	desc = "Common space pullover"
+	icon_state = "pullover"
+	body_parts_covered = UPPER_TORSO|ARMS
+
+/obj/item/clothing/suit/storage/cardigan
+	name = "cardigan"
+	desc = "Common space cardigan"
+	icon_state = "cardigan"
+	body_parts_covered = UPPER_TORSO|ARMS
+
 /obj/item/clothing/suit/straight_jacket
 	name = "straight jacket"
 	desc = "A suit that completely restrains the wearer."
@@ -187,10 +199,17 @@
 
 /obj/item/clothing/suit/ianshirt
 	name = "worn shirt"
-	desc = "A worn out, curiously comfortable t-shirt with a picture of Ian. You wouldn't go so far as to say it feels like being hugged when you wear it but it's pretty close. Good for sleeping in."
+	desc = "A worn out, curiously comfortable t-shirt with a picture of Ian. \
+			You wouldn't go so far as to say it feels like being hugged when you wear it but it's pretty close. \
+			Good for sleeping in."
 	icon_state = "ianshirt"
 	item_state = "ianshirt"
 	body_parts_covered = UPPER_TORSO|ARMS
+
+/obj/item/clothing/suit/ianshirt/ash
+	name = "Ash t-shirt"
+	desc = "A t-shirt with a picture of some guy. Good for sleeping in. Smells like obsession."
+	icon_state = "ashshirt"
 
 //pyjamas
 //originally intended to be pinstripes >.>
@@ -402,8 +421,6 @@
 	desc = "A thick, well-worn WW2 leather bomber jacket."
 	icon_state = "bomber"
 	item_state = "bomber"
-	icon_open = "bomber_open"
-	icon_closed = "bomber"
 	body_parts_covered = UPPER_TORSO|ARMS
 	cold_protection = UPPER_TORSO|ARMS
 	min_cold_protection_temperature = T0C - 20
@@ -440,23 +457,17 @@
 	desc = "A brown leather coat."
 	icon_state = "brown_jacket"
 	item_state = "brown_jacket"
-	icon_open = "brown_jacket_open"
-	icon_closed = "brown_jacket"
 	body_parts_covered = UPPER_TORSO|ARMS
 
 /obj/item/clothing/suit/storage/toggle/brown_jacket/nanotrasen
 	desc = "A brown leather coat. A corporate logo is proudly displayed on the back."
 	icon_state = "brown_jacket_nt"
-	icon_open = "brown_jacket_nt_open"
-	icon_closed = "brown_jacket_nt"
 
 /obj/item/clothing/suit/storage/toggle/hoodie
 	name = "grey hoodie"
 	desc = "A warm, grey sweatshirt."
 	icon_state = "grey_hoodie"
 	item_state = "grey_hoodie"
-	icon_open = "grey_hoodie_open"
-	icon_closed = "grey_hoodie"
 	min_cold_protection_temperature = T0C - 20
 	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS
 
@@ -465,80 +476,60 @@
 	desc = "A warm, black sweatshirt."
 	icon_state = "black_hoodie"
 	item_state = "black_hoodie"
-	icon_open = "black_hoodie_open"
-	icon_closed = "black_hoodie"
 
 /obj/item/clothing/suit/storage/toggle/hoodie/red
 	name = "red hoodie"
 	desc = "A warm, red sweatshirt."
 	icon_state = "red_hoodie"
 	item_state = "red_hoodie"
-	icon_open = "red_hoodie_open"
-	icon_closed = "red_hoodie"
 
 /obj/item/clothing/suit/storage/toggle/hoodie/blue
 	name = "blue hoodie"
 	desc = "A warm, blue sweatshirt."
 	icon_state = "blue_hoodie"
 	item_state = "blue_hoodie"
-	icon_open = "blue_hoodie_open"
-	icon_closed = "blue_hoodie"
 
 /obj/item/clothing/suit/storage/toggle/hoodie/green
 	name = "green hoodie"
 	desc = "A warm, green sweatshirt."
 	icon_state = "green_hoodie"
 	item_state = "green_hoodie"
-	icon_open = "green_hoodie_open"
-	icon_closed = "green_hoodie"
 
 /obj/item/clothing/suit/storage/toggle/hoodie/orange
 	name = "orange hoodie"
 	desc = "A warm, orange sweatshirt."
 	icon_state = "orange_hoodie"
 	item_state = "orange_hoodie"
-	icon_open = "orange_hoodie_open"
-	icon_closed = "orange_hoodie"
 
 /obj/item/clothing/suit/storage/toggle/hoodie/yellow
 	name = "yellow hoodie"
 	desc = "A warm, yellow sweatshirt."
 	icon_state = "yellow_hoodie"
 	item_state = "yellow_hoodie"
-	icon_open = "yellow_hoodie_open"
-	icon_closed = "yellow_hoodie"
 
 /obj/item/clothing/suit/storage/toggle/hoodie/cti
 	name = "CTI hoodie"
 	desc = "A warm, black sweatshirt.  It bears the letters CTI on the back, a lettering to the prestigious university in Tau Ceti, Ceti Technical Institute.  There is a blue supernova embroidered on the front, the emblem of CTI."
 	icon_state = "cti_hoodie"
 	item_state = "cti_hoodie"
-	icon_open = "cti_hoodie_open"
-	icon_closed = "cti_hoodie"
 
 /obj/item/clothing/suit/storage/toggle/hoodie/mu
 	name = "mojave university hoodie"
 	desc = "A warm, gray sweatshirt.  It bears the letters MU on the front, a lettering to the well-known public college, Mojave University."
 	icon_state = "mu_hoodie"
 	item_state = "mu_hoodie"
-	icon_open = "mu_hoodie_open"
-	icon_closed = "mu_hoodie"
 
 /obj/item/clothing/suit/storage/toggle/hoodie/nt
 	name = "NT hoodie"
 	desc = "A warm, blue sweatshirt.  It proudly bears the silver NanoTrasen insignia lettering on the back.  The edges are trimmed with silver."
 	icon_state = "nt_hoodie"
 	item_state = "nt_hoodie"
-	icon_open = "nt_hoodie_open"
-	icon_closed = "nt_hoodie"
 
 /obj/item/clothing/suit/storage/toggle/hoodie/smw
 	name = "Space Mountain Wind hoodie"
 	desc = "A warm, black sweatshirt.  It has the logo for the popular softdrink Space Mountain Wind on both the front and the back."
 	icon_state = "smw_hoodie"
 	item_state = "smw_hoodie"
-	icon_open = "smw_hoodie_open"
-	icon_closed = "smw_hoodie"
 
 // FUN!
 
@@ -690,36 +681,26 @@
 	desc = "a track jacket, for the athletic."
 	icon_state = "trackjacket"
 	item_state = "trackjacket"
-	icon_open = "trackjacket_open"
-	icon_closed = "trackjacket"
 
 /obj/item/clothing/suit/storage/toggle/track/blue
 	name = "blue track jacket"
 	icon_state = "trackjacketblue"
 	item_state = "trackjacketblue"
-	icon_open = "trackjacketblue_open"
-	icon_closed = "trackjacketblue"
 
 /obj/item/clothing/suit/storage/toggle/track/green
 	name = "green track jacket"
 	icon_state = "trackjacketgreen"
 	item_state = "trackjacketgreen"
-	icon_open = "trackjacketgreen_open"
-	icon_closed = "trackjacketgreen"
 
 /obj/item/clothing/suit/storage/toggle/track/red
 	name = "red track jacket"
 	icon_state = "trackjacketred"
 	item_state = "trackjacketred"
-	icon_open = "trackjacketred_open"
-	icon_closed = "trackjacketred"
 
 /obj/item/clothing/suit/storage/toggle/track/white
 	name = "white track jacket"
 	icon_state = "trackjacketwhite"
 	item_state = "trackjacketwhite"
-	icon_open = "trackjacketwhite_open"
-	icon_closed = "trackjacketwhite"
 
 //Flannels
 
