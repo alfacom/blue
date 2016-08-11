@@ -68,7 +68,7 @@
 	if(owner.f_style)
 		var/datum/sprite_accessory/facial_hair_style = facial_hair_styles_list[owner.f_style]
 		if(facial_hair_style && facial_hair_style.species_allowed && (species.get_bodytype(owner) in facial_hair_style.species_allowed))
-			var/icon/facial = new/icon(facial_hair_style.icon, facial_hair_style.icon_state)
+			facial = new/icon(facial_hair_style.icon, facial_hair_style.icon_state)
 			if(facial_hair_style.do_colouration)
 				facial.Blend(owner.facial_color, ICON_ADD)
 			overlays |= facial
@@ -76,7 +76,7 @@
 	if(owner.h_style && !(owner.head && (owner.head.flags_inv & BLOCKHEADHAIR)))
 		var/datum/sprite_accessory/hair_style = hair_styles_list[owner.h_style]
 		if(hair_style && (species.get_bodytype(owner) in hair_style.species_allowed))
-			var/icon/hair = new/icon(hair_style.icon, hair_style.icon_state)
+			hair = new/icon(hair_style.icon, hair_style.icon_state)
 			if(hair_style.do_colouration && owner.hair_color)
 				hair.Blend(owner.hair_color, ICON_ADD)
 			overlays |= hair

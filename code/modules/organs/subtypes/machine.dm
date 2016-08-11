@@ -36,9 +36,6 @@
 
 /obj/item/organ/internal/mmi_holder/New(var/mob/living/carbon/human/new_owner, var/internal)
 	..(new_owner, internal)
-	var/mob/living/carbon/human/dummy/mannequin/M = new_owner
-	if(istype(M))
-		return
 	stored_mmi = new brain_type(src)
 	sleep(-1)
 	update_from_mmi()

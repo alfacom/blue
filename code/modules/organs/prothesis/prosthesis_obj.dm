@@ -29,7 +29,7 @@
 
 //// Unbranded ////
 
-/obj/item/prosthesis/legacy/l_arm
+/obj/item/prosthesis/l_arm
 	name = "Unbranded left arm"
 	icon_state = "l_arm"
 	part = list(

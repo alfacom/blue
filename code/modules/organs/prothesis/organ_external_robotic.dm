@@ -1,5 +1,5 @@
 /obj/item/organ/external/robotic
-	icon = 'icons/mob/human_races/robotic.dmi'
+	force_icon = 'icons/mob/human_races/robotic.dmi'
 	desc = "A skeletal limb wrapped in pseudomuscles, with a low-conductivity case."
 	dislocated = -1
 	cannot_break = 1
@@ -20,7 +20,7 @@
 
 	mob_icon = new /icon(force_icon, icon_state)
 	icon = mob_icon
-	dir = EAST
+	dir = SOUTH
 	return mob_icon
 
 /obj/item/organ/external/robotic/robotize(var/company)

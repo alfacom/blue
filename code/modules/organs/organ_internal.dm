@@ -12,8 +12,11 @@
 		icon_state = dead_icon
 
 /obj/item/organ/internal/install(mob/living/carbon/human/H)
-	if(..(H)) return 1
+	if(..()) return 1
 	H.internal_organs |= src
+	var/obj/item/organ/internal/outdated = H.internal_organs_by_name[organ_tag]
+	if(outdated)
+		outdated.removed()
 	H.internal_organs_by_name[organ_tag] = src
 	if(parent)
 		parent.internal_organs |= src
@@ -102,10 +105,11 @@
 	// what else kidneys can process in our reagent list.
 	var/datum/reagent/coffee = locate(/datum/reagent/drink/coffee) in owner.reagents.reagent_list
 	if(coffee)
-		if(is_bruised())
-			owner.adjustToxLoss(0.1 * PROCESS_ACCURACY)
-		else if(is_broken())
+		if(is_broken())
 			owner.adjustToxLoss(0.3 * PROCESS_ACCURACY)
+		else if(is_bruised())
+			owner.adjustToxLoss(0.1 * PROCESS_ACCURACY)
+
 
 /obj/item/organ/internal/eyes
 	name = "eyeballs"
@@ -150,7 +154,6 @@
 	// Apply our eye colour to the target.
 	if(eye_colour)
 		target.eyes_color = eye_colour
-		regenerate_icon()
 		target.update_eyes()
 
 /obj/item/organ/internal/eyes/proc/regenerate_icon()
