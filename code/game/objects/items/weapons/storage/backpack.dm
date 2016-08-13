@@ -146,7 +146,7 @@
  * Duffle Types
  */
 
-/obj/item/weapon/storage/backpack/dufflebag
+/obj/item/weapon/storage/backpack/duffle
 	name = "dufflebag"
 	desc = "A large dufflebag for holding extra things."
 	icon_state = "duffle"
@@ -157,7 +157,7 @@
 	slowdown = 1
 	max_storage_space = 36
 
-/obj/item/weapon/storage/backpack/dufflebag/syndie
+/obj/item/weapon/storage/backpack/duffle/syndie
 	name = "black dufflebag"
 	desc = "A large dufflebag for holding extra tactical supplies."
 	icon_state = "duffle_syndie"
@@ -167,7 +167,7 @@
 		)
 	slowdown = 0
 
-/obj/item/weapon/storage/backpack/dufflebag/syndie/med
+/obj/item/weapon/storage/backpack/duffle/syndie/med
 	name = "medical dufflebag"
 	desc = "A large dufflebag for holding extra tactical medical supplies."
 	icon_state = "duffle_syndiemed"
@@ -176,7 +176,7 @@
 		slot_r_hand_str = "duffle_syndiemed",
 		)
 
-/obj/item/weapon/storage/backpack/dufflebag/syndie/ammo
+/obj/item/weapon/storage/backpack/duffle/syndie/ammo
 	name = "ammunition dufflebag"
 	desc = "A large dufflebag for holding extra weapons ammunition and supplies."
 	icon_state = "duffle_syndieammo"
@@ -185,7 +185,7 @@
 		slot_r_hand_str = "duffle_syndieammo",
 		)
 
-/obj/item/weapon/storage/backpack/dufflebag/captain
+/obj/item/weapon/storage/backpack/duffle/captain
 	name = "captain's dufflebag"
 	desc = "A large dufflebag for holding extra captainly goods."
 	icon_state = "duffle_captain"
@@ -194,7 +194,7 @@
 		slot_r_hand_str = "duffle_captain",
 		)
 
-/obj/item/weapon/storage/backpack/dufflebag/med
+/obj/item/weapon/storage/backpack/duffle/med
 	name = "medical dufflebag"
 	desc = "A large dufflebag for holding extra medical supplies."
 	icon_state = "duffle_med"
@@ -203,7 +203,7 @@
 		slot_r_hand_str = "duffle_med",
 		)
 
-/obj/item/weapon/storage/backpack/dufflebag/emt
+/obj/item/weapon/storage/backpack/duffle/emt
 	name = "EMT dufflebag"
 	desc = "A large dufflebag for holding extra medical supplies. This one has reflective stripes!"
 	icon_state = "duffle_emt"
@@ -212,7 +212,7 @@
 		slot_r_hand_str = "duffle_emt",
 		)
 
-/obj/item/weapon/storage/backpack/dufflebag/sec
+/obj/item/weapon/storage/backpack/duffle/sec
 	name = "security dufflebag"
 	desc = "A large dufflebag for holding extra security supplies and ammunition."
 	icon_state = "duffle_sec"
@@ -221,7 +221,7 @@
 		slot_r_hand_str = "duffle_sec",
 		)
 
-/obj/item/weapon/storage/backpack/dufflebag/eng
+/obj/item/weapon/storage/backpack/duffle/eng
 	name = "industrial dufflebag"
 	desc = "A large dufflebag for holding extra tools and supplies."
 	icon_state = "duffle_eng"

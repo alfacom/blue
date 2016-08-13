@@ -191,3 +191,11 @@
 
 /obj/structure/bed/chair/wood/wings
 	icon_state = "wooden_chair_wings"
+
+/obj/structure/bed/chair/plastic/shuttle
+	name = "shuttle chair"
+	icon_state = "schair"
+	base_icon = "schair"
+
+/obj/structure/bed/chair/plastic/shuttle/New(var/newloc)
+  ..(newloc, "plastic", "plastic")

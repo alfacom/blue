@@ -67,7 +67,7 @@
 		else
 			new /obj/item/weapon/storage/backpack/satchel/med(src)
 		if(prob(50))
-			new /obj/item/weapon/storage/backpack/dufflebag/med(src)
+			new /obj/item/weapon/storage/backpack/duffle/med(src)
 		new /obj/item/clothing/under/rank/nursesuit (src)
 		new /obj/item/clothing/head/nursehat (src)
 		switch(pick("blue", "green", "purple", "black", "navyblue"))
@@ -131,7 +131,7 @@
 
 	New()
 		..()
-		new /obj/item/weapon/storage/backpack/dufflebag/emt(src)
+		new /obj/item/weapon/storage/backpack/duffle/emt(src)
 		new /obj/item/weapon/storage/box/autoinjectors(src)
 		new /obj/item/weapon/storage/box/syringes(src)
 		new /obj/item/weapon/reagent_containers/glass/beaker/bottle/inaprovaline(src)
@@ -171,7 +171,7 @@
 		else
 			new /obj/item/weapon/storage/backpack/satchel/med(src)
 		if(prob(50))
-			new /obj/item/weapon/storage/backpack/dufflebag/med(src)
+			new /obj/item/weapon/storage/backpack/duffle/med(src)
 		new /obj/item/clothing/suit/bio_suit/cmo(src)
 		new /obj/item/clothing/head/bio_hood/cmo(src)
 		new /obj/item/clothing/shoes/white(src)

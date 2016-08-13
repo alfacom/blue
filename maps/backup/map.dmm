@@ -1,0 +1,250 @@
+"aa" = (/turf/space,/area/space)
+"ab" = (/turf/simulated/wall,/area/hallway/secondary/entry/fore)
+"ac" = (/obj/machinery/light/small{dir = 8},/turf/simulated/floor/plating,/area/hallway/secondary/entry/fore)
+"ad" = (/turf/simulated/floor/plating,/area/hallway/secondary/entry/fore)
+"ae" = (/obj/structure/closet/emcloset,/turf/simulated/floor/plating,/area/hallway/secondary/entry/fore)
+"af" = (/obj/structure/closet,/obj/item/weapon/storage/backpack,/turf/simulated/floor/plating,/area/maintenance/arrivals)
+"ag" = (/turf/simulated/floor/plating,/area/maintenance/arrivals)
+"ah" = (/obj/item/weapon/cigbutt,/turf/simulated/floor/plating,/area/maintenance/arrivals)
+"ai" = (/obj/structure/grille,/obj/structure/window/reinforced{dir = 4},/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 8},/turf/simulated/floor/plating,/area/maintenance/arrivals)
+"aj" = (/obj/effect/decal/cleanable/blood/oil/streak{amount = 0},/turf/simulated/floor/plating,/area/maintenance/arrivals)
+"ak" = (/obj/machinery/door/airlock/maintenance{req_access = list(12)},/turf/simulated/floor/plating,/area/maintenance/arrivals)
+"al" = (/turf/simulated/wall/r_wall,/area/hallway/secondary/entry/fore)
+"am" = (/obj/machinery/door/airlock/external{frequency = 1380; icon_state = "door_locked"; id_tag = "escape_pod_1_berth_hatch"; locked = 1; name = "Escape Pod"; req_access = list(13)},/turf/simulated/floor/plating,/area/hallway/secondary/entry/fore)
+"an" = (/obj/structure/sign/pods,/turf/simulated/wall,/area/hallway/secondary/entry/fore)
+"ao" = (/obj/machinery/door/airlock/external{frequency = 1380; icon_state = "door_locked"; id_tag = "escape_pod_2_berth_hatch"; locked = 1; name = "Escape Pod"; req_access = list(13)},/turf/simulated/floor/plating,/area/hallway/secondary/entry/fore)
+"ap" = (/obj/machinery/door/airlock/maintenance{req_access = list(12)},/obj/machinery/door/firedoor/border_only,/turf/simulated/floor/plating,/area/hallway/secondary/entry/fore)
+"aq" = (/obj/structure/grille,/obj/structure/window/reinforced{dir = 4},/obj/structure/window/reinforced{dir = 8},/turf/simulated/floor/plating,/area/maintenance/arrivals)
+"ar" = (/obj/effect/decal/cleanable/dirt,/turf/simulated/floor/plating,/area/maintenance/arrivals)
+"as" = (/turf/simulated/wall,/area/maintenance/arrivals)
+"at" = (/obj/machinery/door/firedoor/border_only{dir = 2},/turf/simulated/floor/plating/with_grille/reinforced,/area/hallway/secondary/entry/fore)
+"au" = (/turf/simulated/floor{dir = 1; icon_state = "warning"},/area/hallway/secondary/entry/fore)
+"av" = (/obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{frequency = 1380; id_tag = "escape_pod_1_berth"; pixel_x = -25; pixel_y = 30; tag_door = "escape_pod_1_berth_hatch"},/turf/simulated/floor{dir = 1; icon_state = "warning"},/area/hallway/secondary/entry/fore)
+"aw" = (/obj/machinery/light{dir = 1},/turf/simulated/floor{dir = 1; icon_state = "warning"},/area/hallway/secondary/entry/fore)
+"ax" = (/obj/item/device/radio/intercom{broadcasting = 0; name = "Station Intercom (General)"; pixel_y = 20},/obj/machinery/camera/xray/security{c_tag = "Arrivals Escape Pods"},/turf/simulated/floor,/area/hallway/secondary/entry/fore)
+"ay" = (/obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{frequency = 1380; id_tag = "escape_pod_2_berth"; pixel_x = -25; pixel_y = 30; tag_door = "escape_pod_2_berth_hatch"},/turf/simulated/floor{dir = 1; icon_state = "warning"},/area/hallway/secondary/entry/fore)
+"az" = (/obj/machinery/alarm{pixel_y = 22},/turf/simulated/floor{dir = 1; icon_state = "arrival"},/area/hallway/secondary/entry/fore)
+"aA" = (/obj/machinery/light{dir = 1},/obj/machinery/power/apc/high{dir = 1; name = "north bump"; pixel_y = 24},/obj/structure/cable/green{d2 = 4; icon_state = "0-4"},/turf/simulated/floor{dir = 1; icon_state = "arrival"},/area/hallway/secondary/entry/fore)
+"aB" = (/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor{dir = 1; icon_state = "arrival"},/area/hallway/secondary/entry/fore)
+"aC" = (/obj/structure/cable/green{d1 = 2; d2 = 8; icon_state = "2-8"},/turf/simulated/floor{icon_state = "arrival"; dir = 5},/area/hallway/secondary/entry/fore)
+"aD" = (/turf/simulated/floor{icon_state = "warning"},/area/hallway/secondary/entry/fore)
+"aE" = (/turf/simulated/floor,/area/hallway/secondary/entry/fore)
+"aF" = (/obj/machinery/status_display{layer = 4; pixel_x = 0; pixel_y = -32},/turf/simulated/floor{icon_state = "warning"},/area/hallway/secondary/entry/fore)
+"aG" = (/turf/simulated/floor{icon_state = "warningcorner"; dir = 1},/area/hallway/secondary/entry/fore)
+"aH" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4},/turf/simulated/floor,/area/hallway/secondary/entry/fore)
+"aI" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor,/area/hallway/secondary/entry/fore)
+"aJ" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor{icon_state = "warningcorner"; dir = 2},/area/hallway/secondary/entry/fore)
+"aK" = (/obj/machinery/status_display{layer = 4; pixel_x = 0; pixel_y = -32},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor{icon_state = "warning"},/area/hallway/secondary/entry/fore)
+"aL" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor{icon_state = "warning"},/area/hallway/secondary/entry/fore)
+"aM" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor{icon_state = "warningcorner"; dir = 1},/area/hallway/secondary/entry/fore)
+"aN" = (/obj/structure/extinguisher_cabinet{pixel_x = 25; pixel_y = 0},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 10},/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor{dir = 4; icon_state = "arrival"},/area/hallway/secondary/entry/fore)
+"aO" = (/obj/structure/grille,/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 4},/obj/structure/window/reinforced{dir = 8},/turf/simulated/floor/plating,/area/maintenance/arrivals)
+"aP" = (/obj/structure/lattice,/turf/space,/area/space)
+"aQ" = (/turf/simulated/floor/plating/with_grille/reinforced,/area/hallway/secondary/entry/fore)
+"aR" = (/obj/machinery/door/airlock/external{name = "Arrival Airlock"},/obj/machinery/door/firedoor/border_only{dir = 2},/turf/simulated/floor/plating,/area/hallway/secondary/entry/fore)
+"aS" = (/turf/simulated/floor{dir = 8; icon_state = "warning"},/area/hallway/secondary/entry/fore)
+"aT" = (/turf/simulated/floor{dir = 4; icon_state = "warning"},/area/hallway/secondary/entry/fore)
+"aU" = (/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 4},/turf/simulated/floor{dir = 10; icon_state = "warning"},/area/hallway/secondary/entry/fore)
+"aV" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/turf/simulated/floor{icon_state = "warning"},/area/hallway/secondary/entry/fore)
+"aW" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/turf/simulated/floor{icon_state = "warningcorner"; dir = 1},/area/hallway/secondary/entry/fore)
+"aX" = (/obj/machinery/light{icon_state = "tube1"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 10},/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor{dir = 4; icon_state = "arrival"},/area/hallway/secondary/entry/fore)
+"aY" = (/obj/structure/girder,/turf/simulated/floor/plating,/area/maintenance/arrivals)
+"aZ" = (/obj/structure/sign/securearea{desc = "A warning sign which reads 'KEEP CLEAR OF DOCKING AREA'."; name = "KEEP CLEAR: DOCKING AREA"; pixel_y = 0},/turf/simulated/wall/r_wall,/area/hallway/secondary/entry/fore)
+"ba" = (/obj/structure/sign/securearea{desc = "A warning sign which reads 'EXTERNAL AIRLOCK'"; icon_state = "space"; layer = 4; name = "EXTERNAL AIRLOCK"; pixel_x = 0; pixel_y = 32},/turf/simulated/floor/plating/with_grille/reinforced,/area/hallway/secondary/entry/fore)
+"bb" = (/obj/structure/closet/emcloset,/turf/simulated/floor{dir = 10; icon_state = "warning"},/area/hallway/secondary/entry/fore)
+"bc" = (/obj/structure/closet/emcloset,/turf/simulated/floor{icon_state = "warning"},/area/hallway/secondary/entry/fore)
+"bd" = (/obj/machinery/camera/network/exodus{c_tag = "Arrivals North"; dir = 1},/turf/simulated/floor{icon_state = "warning"},/area/hallway/secondary/entry/fore)
+"be" = (/obj/machinery/vending/coffee,/turf/simulated/floor{dir = 6; icon_state = "warning"},/area/hallway/secondary/entry/fore)
+"bf" = (/obj/structure/sign/securearea{desc = "A warning sign which reads 'EXTERNAL AIRLOCK'"; icon_state = "space"; layer = 4; name = "EXTERNAL AIRLOCK"; pixel_x = 0; pixel_y = 32},/obj/machinery/door/firedoor/border_only{dir = 2},/turf/simulated/floor/plating/with_grille/reinforced,/area/hallway/secondary/entry/fore)
+"bg" = (/turf/simulated/wall/r_wall,/area/hallway/secondary/entry/port)
+"bh" = (/obj/machinery/door/firedoor/border_only{dir = 1; name = "Firelock North"},/turf/simulated/floor{dir = 8; icon_state = "warning"},/area/hallway/secondary/entry/port)
+"bi" = (/obj/machinery/door/firedoor/border_only{dir = 1; name = "Firelock North"},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor{dir = 4; icon_state = "arrival"},/area/hallway/secondary/entry/port)
+"bj" = (/turf/simulated/wall,/area/hallway/secondary/entry/port)
+"bk" = (/obj/machinery/light{icon_state = "tube1"; dir = 8},/turf/simulated/floor{dir = 8; icon_state = "warning"},/area/hallway/secondary/entry/port)
+"bl" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/camera/network/exodus{c_tag = "Arrivals Hallway"; dir = 8},/turf/simulated/floor{dir = 4; icon_state = "arrival"},/area/hallway/secondary/entry/port)
+"bm" = (/turf/simulated/wall,/area/security/checkpoint2)
+"bn" = (/turf/simulated/shuttle/wall{icon_state = "swall_s6"; dir = 2},/area/shuttle/arrival/station)
+"bo" = (/turf/simulated/shuttle/wall{icon_state = "swall12"; dir = 2},/area/shuttle/arrival/station)
+"bp" = (/obj/machinery/door/unpowered/shuttle,/turf/simulated/shuttle/floor,/area/shuttle/arrival/station)
+"bq" = (/obj/structure/window/shuttle{icon_state = "window4"},/obj/structure/grille,/turf/simulated/shuttle/plating,/area/shuttle/arrival/station)
+"br" = (/obj/structure/window/shuttle{icon_state = "window8"},/obj/structure/grille,/turf/simulated/shuttle/plating,/area/shuttle/arrival/station)
+"bs" = (/turf/simulated/shuttle/wall{icon_state = "swall14"; dir = 2},/area/shuttle/arrival/station)
+"bt" = (/turf/simulated/shuttle/wall{icon_state = "swall_s10"; dir = 2},/area/shuttle/arrival/station)
+"bu" = (/turf/simulated/floor{dir = 8; icon_state = "warning"},/area/hallway/secondary/entry/port)
+"bv" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/power/apc/high{dir = 4; name = "east bump"; pixel_x = 24},/obj/structure/cable/green,/obj/structure/cable/green{d2 = 2; icon_state = "0-2"},/turf/simulated/floor{dir = 4; icon_state = "arrival"},/area/hallway/secondary/entry/port)
+"bw" = (/obj/structure/closet/secure_closet/security,/obj/machinery/light{dir = 1},/obj/item/device/flashlight/flare,/turf/simulated/floor{icon_state = "red"; dir = 9},/area/security/checkpoint2)
+"bx" = (/obj/machinery/power/apc{dir = 1; name = "north bump"; pixel_x = 0; pixel_y = 24},/obj/structure/cable/green{d2 = 2; icon_state = "0-2"},/turf/simulated/floor{icon_state = "red"; dir = 1},/area/security/checkpoint2)
+"by" = (/obj/machinery/computer/security,/obj/structure/reagent_dispensers/peppertank{pixel_x = 0; pixel_y = 30},/turf/simulated/floor{icon_state = "red"; dir = 1},/area/security/checkpoint2)
+"bz" = (/obj/machinery/computer/card,/obj/machinery/status_display{density = 0; layer = 4; pixel_x = 0; pixel_y = 32},/turf/simulated/floor{icon_state = "red"; dir = 1},/area/security/checkpoint2)
+"bA" = (/turf/simulated/shuttle/wall{icon_state = "swall11"; dir = 2},/area/shuttle/arrival/station)
+"bB" = (/obj/machinery/light{dir = 8; icon_state = "tube1"; pixel_y = 0},/turf/simulated/shuttle/floor,/area/shuttle/arrival/station)
+"bC" = (/turf/simulated/shuttle/floor,/area/shuttle/arrival/station)
+"bD" = (/obj/machinery/computer/arcade,/turf/simulated/shuttle/floor,/area/shuttle/arrival/station)
+"bE" = (/obj/structure/closet/wardrobe/black,/obj/machinery/light{dir = 1},/turf/simulated/shuttle/floor,/area/shuttle/arrival/station)
+"bF" = (/obj/structure/closet/wardrobe/xenos,/turf/simulated/shuttle/floor,/area/shuttle/arrival/station)
+"bG" = (/obj/structure/closet/wardrobe/mixed,/turf/simulated/shuttle/floor,/area/shuttle/arrival/station)
+"bH" = (/obj/structure/closet/wardrobe/grey,/obj/machinery/light{dir = 1},/turf/simulated/shuttle/floor,/area/shuttle/arrival/station)
+"bI" = (/obj/machinery/light{dir = 4},/turf/simulated/shuttle/floor,/area/shuttle/arrival/station)
+"bJ" = (/turf/simulated/shuttle/wall{icon_state = "swall7"; dir = 2},/area/shuttle/arrival/station)
+"bK" = (/obj/structure/shuttle/engine/propulsion{icon_state = "burst_r"; dir = 8},/turf/space,/area/shuttle/arrival/station)
+"bL" = (/turf/simulated/floor/plating/with_grille/reinforced,/area/hallway/secondary/entry/port)
+"bM" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor{dir = 4; icon_state = "arrival"},/area/hallway/secondary/entry/port)
+"bN" = (/obj/structure/closet/wardrobe/red,/turf/simulated/floor{icon_state = "red"; dir = 8},/area/security/checkpoint2)
+"bO" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 6},/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor,/area/security/checkpoint2)
+"bP" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/turf/simulated/floor,/area/security/checkpoint2)
+"bQ" = (/obj/structure/bed/chair/office/dark,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/turf/simulated/floor,/area/security/checkpoint2)
+"bR" = (/turf/simulated/shuttle/floor,/turf/simulated/shuttle/wall{icon_state = "swall_f9"; dir = 2},/area/shuttle/arrival/station)
+"bS" = (/obj/structure/bed/chair/plastic/shuttle{tag = "icon-schair (WEST)"; icon_state = "schair"; dir = 8},/turf/simulated/shuttle/floor,/area/shuttle/arrival/station)
+"bT" = (/turf/simulated/shuttle/wall{icon_state = "swall3"; dir = 2},/area/shuttle/arrival/station)
+"bU" = (/obj/structure/bed/chair/plastic/shuttle{tag = "icon-schair (WEST)"; icon_state = "schair"; dir = 8},/obj/effect/landmark{name = "JoinLate"},/turf/simulated/shuttle/floor,/area/shuttle/arrival/station)
+"bV" = (/obj/structure/shuttle/engine/heater{icon_state = "heater"; dir = 4},/obj/structure/window/reinforced{dir = 8},/turf/simulated/floor/plating/airless,/area/shuttle/arrival/station)
+"bW" = (/obj/structure/shuttle/engine/propulsion{icon_state = "propulsion"; dir = 8},/turf/space,/area/shuttle/arrival/station)
+"bX" = (/obj/machinery/alarm{dir = 4; icon_state = "alarm0"; pixel_x = -22},/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4},/obj/machinery/camera/network/security{c_tag = "Security - Arrival Checkpoint"; dir = 1},/turf/simulated/floor{icon_state = "red"; dir = 10},/area/security/checkpoint2)
+"bY" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 10},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor{icon_state = "red"},/area/security/checkpoint2)
+"bZ" = (/obj/structure/table/reinforced,/obj/machinery/computer/skills{icon_state = "medlaptop"},/turf/simulated/floor{icon_state = "red"},/area/security/checkpoint2)
+"ca" = (/obj/structure/table/reinforced,/obj/item/weapon/paper_bin{pixel_x = 1; pixel_y = 9},/obj/item/weapon/pen,/turf/simulated/floor{icon_state = "red"},/area/security/checkpoint2)
+"cb" = (/obj/structure/window/shuttle,/obj/structure/grille,/turf/simulated/shuttle/plating,/area/shuttle/arrival/station)
+"cc" = (/obj/effect/landmark{name = "Observer-Start"},/turf/simulated/shuttle/floor,/area/shuttle/arrival/station)
+"cd" = (/obj/machinery/hologram/holopad,/turf/simulated/shuttle/floor,/area/shuttle/arrival/station)
+"ce" = (/obj/machinery/alarm{dir = 8; icon_state = "alarm0"; pixel_x = 24},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor{dir = 4; icon_state = "whitecorner"},/area/hallway/secondary/entry/port)
+"cf" = (/turf/simulated/wall,/area/hallway/secondary/entry/starboard)
+"cg" = (/obj/machinery/door/airlock/security{name = "Security Checkpoint"; req_access = list(1)},/obj/machinery/door/firedoor/border_only,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor,/area/security/checkpoint2)
+"ch" = (/obj/structure/grille,/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 4},/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 8},/obj/machinery/door/firedoor/border_only{dir = 2},/turf/simulated/floor/plating,/area/security/checkpoint2)
+"ci" = (/obj/machinery/door/firedoor/border_only{dir = 1; name = "Firelock North"},/obj/machinery/door/window/brigdoor{dir = 1; name = "Security Checkpoint"; req_access = list(63)},/turf/simulated/floor{icon_state = "delivery"},/area/security/checkpoint2)
+"cj" = (/turf/simulated/shuttle/floor,/turf/simulated/shuttle/wall{icon_state = "swall_f10"; dir = 2},/area/shuttle/arrival/station)
+"ck" = (/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 8},/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 8},/obj/structure/cable/green{d1 = 1; d2 = 4; icon_state = "1-4"},/turf/simulated/floor,/area/hallway/secondary/entry/port)
+"cl" = (/obj/machinery/door/firedoor/border_only{dir = 8; name = "Firelock West"},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor,/area/hallway/secondary/entry/starboard)
+"cm" = (/obj/item/device/radio/intercom{dir = 1; name = "Station Intercom (General)"; pixel_y = 20},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor{icon_state = "bot"},/area/hallway/secondary/entry/starboard)
+"cn" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 9; pixel_y = 0},/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 4},/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/structure/cable/green{d1 = 1; d2 = 4; icon_state = "1-4"},/turf/simulated/floor{icon_state = "bot"},/area/hallway/secondary/entry/starboard)
+"co" = (/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor{icon_state = "bot"},/area/hallway/secondary/entry/starboard)
+"cp" = (/turf/simulated/shuttle/wall{icon_state = "swall_s5"; dir = 2},/area/shuttle/arrival/station)
+"cq" = (/turf/simulated/shuttle/wall{icon_state = "swall13"; dir = 2},/area/shuttle/arrival/station)
+"cr" = (/obj/item/device/radio/intercom{name = "Station Intercom (General)"; pixel_y = -29},/obj/machinery/light,/turf/simulated/shuttle/floor,/area/shuttle/arrival/station)
+"cs" = (/obj/machinery/requests_console{department = "Arrival shuttle"; pixel_y = -30},/obj/machinery/light,/turf/simulated/shuttle/floor,/area/shuttle/arrival/station)
+"ct" = (/obj/structure/shuttle/engine/propulsion{icon_state = "burst_l"; dir = 8},/turf/space,/area/shuttle/arrival/station)
+"cu" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor,/area/hallway/secondary/entry/port)
+"cv" = (/obj/machinery/door/firedoor/border_only{dir = 8; name = "Firelock West"},/turf/simulated/floor{icon_state = "neutralcorner"; dir = 2},/area/hallway/secondary/entry/starboard)
+"cw" = (/turf/simulated/floor{icon_state = "neutral"},/area/hallway/secondary/entry/starboard)
+"cx" = (/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 1},/turf/simulated/floor{icon_state = "neutral"},/area/hallway/secondary/entry/starboard)
+"cy" = (/turf/simulated/shuttle/wall{icon_state = "swall_s9"; dir = 2},/area/shuttle/arrival/station)
+"cz" = (/obj/machinery/firealarm{dir = 8; pixel_x = -24},/turf/simulated/floor{dir = 8; icon_state = "warning"},/area/hallway/secondary/entry/port)
+"cA" = (/obj/structure/grille,/obj/structure/window/reinforced{dir = 4},/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 8},/obj/machinery/door/firedoor/border_only{dir = 2},/turf/simulated/floor/plating,/area/hallway/secondary/entry/starboard)
+"cB" = (/obj/structure/bed/chair/comfy/beige,/turf/simulated/floor{icon_state = "grimy"},/area/hallway/secondary/entry/starboard)
+"cC" = (/turf/simulated/floor{icon_state = "grimy"},/area/hallway/secondary/entry/starboard)
+"cD" = (/obj/machinery/door/firedoor/border_only{dir = 2},/turf/simulated/floor/plating/with_grille/reinforced,/area/hallway/secondary/entry/port)
+"cE" = (/obj/machinery/door/firedoor/border_only{dir = 2},/obj/machinery/door/airlock/external{name = "Arrival Airlock"},/turf/simulated/floor/plating,/area/hallway/secondary/entry/port)
+"cF" = (/obj/machinery/light{icon_state = "tube1"; dir = 8},/obj/item/device/radio/intercom{dir = 0; name = "Station Intercom (General)"; pixel_x = -27},/turf/simulated/floor{dir = 8; icon_state = "warning"},/area/hallway/secondary/entry/port)
+"cG" = (/obj/machinery/hologram/holopad,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor,/area/hallway/secondary/entry/port)
+"cH" = (/obj/structure/grille,/obj/structure/window/reinforced{dir = 4},/obj/structure/window/reinforced{dir = 8},/obj/machinery/door/firedoor/border_only{dir = 2},/turf/simulated/floor/plating,/area/hallway/secondary/entry/starboard)
+"cI" = (/obj/structure/table/woodentable,/obj/random/single{icon = 'icons/obj/playing_cards.dmi'; icon_state = "deck"; name = "randomly spawned deck of cards"; spawn_nothing_percentage = 50; spawn_object = /obj/item/weapon/deck},/turf/simulated/floor{icon_state = "grimy"},/area/hallway/secondary/entry/starboard)
+"cJ" = (/obj/structure/table/woodentable,/obj/item/weapon/reagent_containers/food/snacks/chips,/obj/random/single{icon = 'icons/obj/drinks.dmi'; icon_state = "cola"; name = "randomly spawned cola"; spawn_nothing_percentage = 50; spawn_object = /obj/item/weapon/reagent_containers/glass/drinks/cans/cola},/turf/simulated/floor/carpet,/area/hallway/secondary/entry/starboard)
+"cK" = (/turf/simulated/floor/carpet,/area/hallway/secondary/entry/starboard)
+"cL" = (/obj/structure/sign/securearea{desc = "A warning sign which reads 'KEEP CLEAR OF DOCKING AREA'."; name = "KEEP CLEAR: DOCKING AREA"; pixel_y = 0},/turf/simulated/wall/r_wall,/area/hallway/secondary/entry/port)
+"cM" = (/turf/simulated/floor/plating,/area/hallway/secondary/entry/port)
+"cN" = (/obj/machinery/vending/snack,/turf/simulated/floor{dir = 9; icon_state = "warning"},/area/hallway/secondary/entry/port)
+"cO" = (/obj/item/device/radio/beacon,/obj/machinery/camera/network/exodus{c_tag = "Arrivals South"},/turf/simulated/floor{dir = 1; icon_state = "warning"},/area/hallway/secondary/entry/port)
+"cP" = (/obj/structure/closet/emcloset,/turf/simulated/floor{dir = 1; icon_state = "warning"},/area/hallway/secondary/entry/port)
+"cQ" = (/obj/structure/closet/emcloset,/turf/simulated/floor{dir = 5; icon_state = "warning"},/area/hallway/secondary/entry/port)
+"cR" = (/obj/structure/extinguisher_cabinet{pixel_x = -24},/obj/machinery/camera/network/exodus{c_tag = "Arrivals Southeast"; dir = 4},/turf/simulated/floor{dir = 8; icon_state = "warning"},/area/hallway/secondary/entry/port)
+"cS" = (/obj/structure/table/woodentable,/obj/item/weapon/storage/fancy/cigarettes{pixel_y = 2},/obj/random/single{icon = 'icons/obj/items.dmi'; icon_state = "lighter-g"; name = "randomly spawned lighter"; spawn_nothing_percentage = 50; spawn_object = /obj/item/weapon/flame/lighter},/turf/simulated/floor{icon_state = "grimy"},/area/hallway/secondary/entry/starboard)
+"cT" = (/obj/structure/table/woodentable,/turf/simulated/floor/carpet,/area/hallway/secondary/entry/starboard)
+"cU" = (/obj/machinery/door/firedoor/border_only,/turf/simulated/floor/plating/with_grille/reinforced,/area/hallway/secondary/entry/port)
+"cV" = (/obj/machinery/camera/network/exodus{c_tag = "Arrivals Southwest"},/turf/simulated/floor,/area/hallway/secondary/entry/port)
+"cW" = (/obj/machinery/atmospherics/unary/vent_pump/on,/obj/structure/closet/emcloset,/turf/simulated/floor{dir = 4; icon_state = "warning"},/area/hallway/secondary/entry/port)
+"cX" = (/turf/simulated/floor,/area/hallway/secondary/entry/port)
+"cY" = (/turf/simulated/floor{dir = 4; icon_state = "warning"},/area/hallway/secondary/entry/port)
+"cZ" = (/obj/machinery/atmospherics/unary/vent_pump/on,/turf/simulated/floor{dir = 9; icon_state = "warning"},/area/hallway/secondary/entry/port)
+"da" = (/turf/simulated/floor{dir = 1; icon_state = "warning"},/area/hallway/secondary/entry/port)
+"db" = (/turf/simulated/floor{icon_state = "warningcorner"; dir = 4},/area/hallway/secondary/entry/port)
+"dc" = (/obj/structure/grille,/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 4},/obj/structure/window/reinforced{dir = 8},/obj/machinery/door/firedoor/border_only{dir = 2},/turf/simulated/floor/plating,/area/hallway/secondary/entry/starboard)
+"dd" = (/obj/structure/bed/chair/comfy/beige{dir = 1; icon_state = "comfychair_preview"; tag = "icon-comfychair (NORTH)"},/turf/simulated/floor{icon_state = "grimy"},/area/hallway/secondary/entry/starboard)
+"de" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{dir = 4; frequency = 1331; id_tag = "nuke_shuttle_dock_pump"},/obj/machinery/light/small{dir = 1},/turf/simulated/floor{dir = 9; icon_state = "warning"},/area/hallway/secondary/entry/port)
+"df" = (/obj/machinery/embedded_controller/radio/airlock/docking_port{frequency = 1331; id_tag = "nuke_shuttle_dock_airlock"; pixel_x = 0; pixel_y = 30; req_access = list(0); req_one_access = list(13); tag_airpump = "nuke_shuttle_dock_pump"; tag_chamber_sensor = "nuke_shuttle_dock_sensor"; tag_exterior_door = "nuke_shuttle_dock_outer"; tag_interior_door = "nuke_shuttle_dock_inner"},/obj/machinery/atmospherics/pipe/manifold/hidden{dir = 1; icon_state = "map"; tag = "icon-manifold-f (NORTH)"},/turf/simulated/floor{dir = 5; icon_state = "warning"},/area/hallway/secondary/entry/port)
+"dg" = (/obj/machinery/door/airlock/external{frequency = 1331; icon_state = "door_locked"; id_tag = "nuke_shuttle_dock_inner"; locked = 1; name = "Docking Port Airlock"; req_access = list(13)},/obj/machinery/atmospherics/pipe/simple/hidden{tag = "icon-intact (EAST)"; icon_state = "intact"; dir = 4},/turf/simulated/floor/plating,/area/hallway/secondary/entry/port)
+"dh" = (/obj/machinery/atmospherics/pipe/simple/hidden{tag = "icon-intact (EAST)"; icon_state = "intact"; dir = 4},/obj/machinery/access_button{command = "cycle_interior"; frequency = 1331; master_tag = "nuke_shuttle_dock_airlock"; name = "interior access button"; pixel_x = -28; pixel_y = 26; req_one_access = list(13)},/turf/simulated/floor{dir = 8; icon_state = "warning"},/area/hallway/secondary/entry/port)
+"di" = (/obj/machinery/atmospherics/pipe/simple/hidden{tag = "icon-intact (EAST)"; icon_state = "intact"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 5},/turf/simulated/floor{icon_state = "warningcorner"; dir = 8},/area/hallway/secondary/entry/port)
+"dj" = (/obj/structure/sign/securearea{desc = "A warning sign which reads 'EXTERNAL AIRLOCK'"; icon_state = "space"; layer = 4; name = "EXTERNAL AIRLOCK"; pixel_x = 0; pixel_y = 32},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden{tag = "icon-intact (EAST)"; icon_state = "intact"; dir = 4},/turf/simulated/floor{dir = 1; icon_state = "warning"},/area/hallway/secondary/entry/port)
+"dk" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden{tag = "icon-intact (EAST)"; icon_state = "intact"; dir = 4},/turf/simulated/floor,/area/hallway/secondary/entry/port)
+"dl" = (/obj/machinery/status_display{layer = 4; pixel_x = 0; pixel_y = 32},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden{tag = "icon-intact (EAST)"; icon_state = "intact"; dir = 4},/turf/simulated/floor{dir = 1; icon_state = "warning"},/area/hallway/secondary/entry/port)
+"dm" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden{tag = "icon-intact (EAST)"; icon_state = "intact"; dir = 4},/turf/simulated/floor{icon_state = "warningcorner"; dir = 4},/area/hallway/secondary/entry/port)
+"dn" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden{tag = "icon-intact (EAST)"; icon_state = "intact"; dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 6},/turf/simulated/floor,/area/hallway/secondary/entry/port)
+"do" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden{tag = "icon-intact (EAST)"; icon_state = "intact"; dir = 4},/turf/simulated/floor{icon_state = "warningcorner"; dir = 8},/area/hallway/secondary/entry/port)
+"dp" = (/obj/machinery/status_display{layer = 4; pixel_x = 0; pixel_y = 32},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden{tag = "icon-intact (EAST)"; icon_state = "intact"; dir = 4},/turf/simulated/floor{dir = 1; icon_state = "warning"},/area/hallway/secondary/entry/port)
+"dq" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden{tag = "icon-intact (EAST)"; icon_state = "intact"; dir = 4},/turf/simulated/floor,/area/hallway/secondary/entry/port)
+"dr" = (/obj/structure/sign/securearea{desc = "A warning sign which reads 'EXTERNAL AIRLOCK'"; icon_state = "space"; layer = 4; name = "EXTERNAL AIRLOCK"; pixel_x = 0; pixel_y = 32},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden{tag = "icon-intact (EAST)"; icon_state = "intact"; dir = 4},/turf/simulated/floor{dir = 1; icon_state = "warning"},/area/hallway/secondary/entry/port)
+"ds" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden{tag = "icon-intact (EAST)"; icon_state = "intact"; dir = 4},/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/turf/simulated/floor{icon_state = "warningcorner"; dir = 4},/area/hallway/secondary/entry/port)
+"dt" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden{dir = 10; icon_state = "intact"; tag = "icon-intact-f (SOUTHWEST)"},/turf/simulated/floor,/area/hallway/secondary/entry/port)
+"du" = (/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 4},/turf/simulated/floor,/area/hallway/secondary/entry/port)
+"dv" = (/obj/machinery/door/firedoor/border_only{dir = 8; name = "Firelock West"},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor{icon_state = "neutralcorner"; dir = 4},/area/hallway/secondary/entry/starboard)
+"dw" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor{icon_state = "neutral"; dir = 1},/area/hallway/secondary/entry/starboard)
+"dx" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 8},/turf/simulated/floor{icon_state = "neutral"; dir = 1},/area/hallway/secondary/entry/starboard)
+"dy" = (/turf/simulated/floor{icon_state = "neutral"; dir = 1},/area/hallway/secondary/entry/starboard)
+"dz" = (/turf/simulated/floor{dir = 10; icon_state = "warning"},/area/hallway/secondary/entry/port)
+"dA" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume{dir = 1; frequency = 1331; id_tag = "nuke_shuttle_dock_pump"},/obj/machinery/airlock_sensor{frequency = 1331; id_tag = "nuke_shuttle_dock_sensor"; pixel_x = 0; pixel_y = -25},/turf/simulated/floor{dir = 6; icon_state = "warning"},/area/hallway/secondary/entry/port)
+"dB" = (/obj/machinery/door/airlock/external{frequency = 1331; icon_state = "door_locked"; id_tag = "nuke_shuttle_dock_inner"; locked = 1; name = "Docking Port Airlock"; req_access = list(13)},/turf/simulated/floor/plating,/area/hallway/secondary/entry/port)
+"dC" = (/turf/simulated/floor{dir = 2; icon_state = "arrival"},/area/hallway/secondary/entry/port)
+"dD" = (/obj/machinery/light,/turf/simulated/floor{dir = 2; icon_state = "arrival"},/area/hallway/secondary/entry/port)
+"dE" = (/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 1},/turf/simulated/floor{dir = 2; icon_state = "arrival"},/area/hallway/secondary/entry/port)
+"dF" = (/turf/simulated/floor{dir = 8; icon_state = "whitecorner"},/area/hallway/secondary/entry/port)
+"dG" = (/obj/machinery/atmospherics/pipe/simple/hidden,/turf/simulated/floor,/area/hallway/secondary/entry/port)
+"dH" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor,/area/hallway/secondary/entry/port)
+"dI" = (/obj/machinery/door/firedoor/border_only{dir = 8; name = "Firelock West"},/turf/simulated/floor,/area/hallway/secondary/entry/starboard)
+"dJ" = (/turf/simulated/floor,/area/hallway/secondary/entry/starboard)
+"dK" = (/obj/machinery/door/firedoor/border_only{dir = 1; name = "Firelock North"},/obj/machinery/atmospherics/pipe/simple/hidden,/turf/simulated/floor,/area/hallway/secondary/entry/port)
+"dL" = (/obj/machinery/door/firedoor/border_only{dir = 1; name = "Firelock North"},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor,/area/hallway/secondary/entry/port)
+"dM" = (/turf/simulated/wall,/area/security/vacantoffice)
+"dN" = (/obj/structure/grille,/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 8},/obj/machinery/door/firedoor/border_only,/obj/machinery/door/blast/shutters{dir = 1; id = "office_shutter"; layer = 3.1; name = "Office Shutters"},/turf/simulated/floor/plating,/area/security/vacantoffice)
+"dO" = (/obj/structure/grille,/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 1},/obj/machinery/door/firedoor/border_only,/obj/machinery/door/blast/shutters{dir = 1; id = "office_shutter"; layer = 3.1; name = "Office Shutters"},/turf/simulated/floor/plating,/area/security/vacantoffice)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaabacadaeabacadaeabafagagagagagagahaiajakaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaalabamanalabaoanalabapabababababagaqarasaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaatauavawaxauayauazaAaBaBaBaBaCabajaqarasaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaataDaEaFaGaHaIaJaKaIaLaMaIaIaNabagaOararaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaPaPabaQaRaQaSaEaEaTaQaRaQaUaVaWaXabagasasaYaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaPaZalbaadaQbbbcbdbeaQadbfatbgbhbibjagagagagaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaataRaQaQaQaQaQaQaRataabgbkblbjbmbmbmbmaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaabnbobpbobobqbrbobobpbsbtbgbubvbjbwbxbybzaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aabnbsbobAbBbCbDbEbFbGbHbCbIbJbKbLbubMbjbNbObPbQaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aabJbRbSbTbCbUbCbUbCbUbCbUbCbVbWbLbubMbjbXbYbZcaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aacbbCbCbpbCbUbCbUccbUcdbUbCbVbWbLbucecfbmcgchciaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aabJcjbSbTbCbUbCbUbCbUbCbUbCbVbWbLbuckclcmcncocoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aacpcqbobAbBbCbCcrbCbCcsbCbIbJctbLbucucvcwcxcwcwaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaacpbobpbobobqbrbobobpcqcybgczcucAcBcBcCcBaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaacDcEbLbLbLbLbLbLcEcDaabgcFcGcHcIcJcKcKaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaPbgcLbgcDcMbLcNcOcPcQbLcMcDcDbgcRcucHcScTcKcKaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+cUcUcUcVcWcDcEbLbucXcXcYbLcEbLcZdadbcudcddddcCddaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+dedfdgdhdidjdkdldmdkdndodpdqdrdsdqdtdudvdwdxdydyaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+dzdAdBbudCdCdDdCdCdCdEdCdCdDdCdCdFdGdHdIdJdJdJdJaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+cUcUcUbgbgbgcUcUcUcUcUcUcUcUcUbgbjdKdLdMdNdOdOdOaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+"}

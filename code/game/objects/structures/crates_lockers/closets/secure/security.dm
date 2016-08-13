@@ -10,7 +10,7 @@
 
 	New()
 		..()
-		new /obj/item/weapon/storage/backpack/dufflebag/captain(src)
+		new /obj/item/weapon/storage/backpack/duffle/captain(src)
 		new /obj/item/clothing/suit/storage/vest(src)
 		new /obj/item/weapon/cartridge/captain(src)
 		new /obj/item/clothing/head/helmet/swat(src)
@@ -97,7 +97,7 @@
 		else
 			new /obj/item/weapon/storage/backpack/satchel/sec(src)
 		if(prob(50))
-			new /obj/item/weapon/storage/backpack/dufflebag/sec(src)
+			new /obj/item/weapon/storage/backpack/duffle/sec(src)
 		new /obj/item/clothing/head/helmet/secchief(src)
 		new /obj/item/clothing/suit/storage/vest/secchief(src)
 		new /obj/item/clothing/suit/armor/secchief(src)
@@ -139,7 +139,7 @@
 		else
 			new /obj/item/weapon/storage/backpack/satchel/sec(src)
 		if(prob(50))
-			new /obj/item/weapon/storage/backpack/dufflebag/sec(src)
+			new /obj/item/weapon/storage/backpack/duffle/sec(src)
 		new /obj/item/clothing/suit/storage/vest/overseer(src)
 		new /obj/item/clothing/under/rank/warden(src)
 		new /obj/item/clothing/suit/armor/vest/overseer(src)
@@ -180,7 +180,7 @@
 		else
 			new /obj/item/weapon/storage/backpack/satchel/sec(src)
 		if(prob(50))
-			new /obj/item/weapon/storage/backpack/dufflebag/sec(src)
+			new /obj/item/weapon/storage/backpack/duffle/sec(src)
 		new /obj/item/clothing/suit/storage/vest/seniorconstable(src)
 		new /obj/item/weapon/cartridge/security(src)
 		new /obj/item/device/radio/headset/headset_sec/alt(src)
@@ -226,7 +226,7 @@
 		else
 			new /obj/item/weapon/storage/backpack/satchel/sec(src)
 		if(prob(50))
-			new /obj/item/weapon/storage/backpack/dufflebag/sec(src)
+			new /obj/item/weapon/storage/backpack/duffle/sec(src)
 		new /obj/item/clothing/suit/storage/vest/constable(src)
 		new /obj/item/weapon/cartridge/security(src)
 		new /obj/item/device/radio/headset/headset_sec(src)
