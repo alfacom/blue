@@ -347,8 +347,10 @@
 /datum/reagent/silicate/touch_obj(var/obj/O)
 	if(istype(O, /obj/structure/window))
 		var/obj/structure/window/W = O
-		W.apply_silicate(volume)
-		remove_self(volume)
+
+		var/V = min(10, volume)
+		W.apply_silicate(V)
+		remove_self(V)
 	return
 
 /datum/reagent/glycerol
