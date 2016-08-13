@@ -33,7 +33,6 @@
 	desc = "A plastic bag designed for the storage and transportation of cadavers."
 	icon = 'icons/obj/bodybag.dmi'
 	icon_state = "bodybag_closed"
-	icon_closed = "bodybag_closed"
 	icon_opened = "bodybag_open"
 	open_sound = 'sound/items/zip.ogg'
 	close_sound = 'sound/items/zip.ogg'
@@ -104,7 +103,7 @@
 		if(contains_body > 0)
 			icon_state = "bodybag_closed1"
 		else
-			icon_state = icon_closed
+			icon_state = initial(icon_state)
 
 
 /obj/item/bodybag/cryobag

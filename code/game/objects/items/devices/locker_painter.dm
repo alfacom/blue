@@ -37,29 +37,27 @@
 		)
 
 	var/list/colours_secure = list(
-		"plain" = 				list("open" = "open", "closed" = "secure", "locked" = "secure1", "broken" = "securebroken", "off" = "secureoff"),
-		"medical-red" = 		list("open" = "medicalopen", "closed" = "medical", "locked" = "medical1", "broken" = "medicalbroken", "off" = "medicaloff"),
-		"medical-green" = 		list("open" = "securemedopen", "closed" = "securemed", "locked" = "securemed1", "broken" = "securemedbroken", "off" = "securemedoff"),
-		"CMO" = 				list("open" = "cmosecureopen", "closed" = "cmosecure", "locked" = "cmosecure1", "broken" = "cmosecurebroken", "off" = "cmosecureoff"),
-		"cargo" = 				list("open" = "securecargoopen", "closed" = "securecargo", "locked" = "securecargo1", "broken" = "securecargobroken", "off" = "securecargooff"),
-		"mining" = 				list("open" = "miningsecopen", "closed" = "miningsec", "locked" = "miningsec1", "broken" = "miningsecbroken", "off" = "miningsecoff"),
-		"QM" = 					list("open" = "secureqmopen", "closed" = "secureqm", "locked" = "secureqm1", "broken" = "secureqmbroken", "off" = "secureqmoff"),
-		"hydroponics" = 		list("open" = "hydrosecureopen", "closed" = "hydrosecure", "locked" = "hydrosecure1", "broken" = "hydrosecurebroken", "off" = "hydrosecureoff"),
-		"atmospherics" = 		list("open" = "secureatmopen", "closed" = "secureatm", "locked" = "secureatm1", "broken" = "secureatmbroken", "off" = "secureatmoff"),
-		"engineer" = 			list("open" = "secureengopen", "closed" = "secureeng", "locked" = "secureeng1", "broken" = "secureengbroken", "off" = "secureengoff"),
-		"CE" = 					list("open" = "secureceopen", "closed" = "securece", "locked" = "securece1", "broken" = "securecebroken", "off" = "secureceoff"),
-		"electrical" = 			list("open" = "toolclosetopen", "closed" = "secureengelec", "locked" = "secureengelec1", "broken" = "secureengelecbroken", "off" = "secureengelecoff"),
-		"welding" = 			list("open" = "toolclosetopen", "closed" = "secureengweld", "locked" = "secureengweld1", "broken" = "secureengweldbroken", "off" = "secureengweldoff"),
-		"research" = 			list("open" = "secureresopen", "closed" = "secureres", "locked" = "secureres1", "broken" = "secureresbroken", "off" = "secureresoff"),
-		"RD" = 					list("open" = "rdsecureopen", "closed" = "rdsecure", "locked" = "rdsecure1", "broken" = "rdsecurebroken", "off" = "rdsecureoff"),
-		"security" = 			list("open" = "secopen", "closed" = "sec", "locked" = "sec1", "broken" = "secbroken", "off" = "secoff"),
-		"warden" = 				list("open" = "wardensecureopen", "closed" = "wardensecure", "locked" = "wardensecure1", "broken" = "wardensecurebroken", "off" = "wardensecureoff"),
-		"HoS" = 				list("open" = "hossecureopen", "closed" = "hossecure", "locked" = "hossecure1", "broken" = "hossecurebroken", "off" = "hossecureoff"),
-		"HoP" = 				list("open" = "hopsecureopen", "closed" = "hopsecure", "locked" = "hopsecure1", "broken" = "hopsecurebroken", "off" = "hopsecureoff"),
-		"Captain" = 			list("open" = "capsecureopen", "closed" = "capsecure", "locked" = "capsecure1", "broken" = "capsecurebroken", "off" = "capsecureoff")
-		)
-
-/obj/item/device/closet_painter/afterattack(atom/A, var/mob/user, proximity)
+		"plain" = 			list("open" = "open", "closed" = "secure", "broken" = "securebroken"),
+		"medical-red" = 	list("open" = "medicalopen", "closed" = "medical", "broken" = "medicalbroken"),
+		"medical-green" = 	list("open" = "securemedopen", "closed" = "securemed", "broken" = "securemedbroken"),
+		"CMO" = 			list("open" = "cmosecureopen", "closed" = "cmosecure", "broken" = "cmosecurebroken"),
+		"cargo" = 			list("open" = "securecargoopen", "closed" = "securecargo", "broken" = "securecargobroken"),
+		"mining" = 			list("open" = "miningsecopen", "closed" = "miningsec", "broken" = "miningsecbroken"),
+		"QM" = 				list("open" = "secureqmopen", "closed" = "secureqm", "broken" = "secureqmbroken"),
+		"hydroponics" = 	list("open" = "hydrosecureopen", "closed" = "hydrosecure", "broken" = "hydrosecurebroken"),
+		"atmospherics" = 	list("open" = "secureatmopen", "closed" = "secureatm", "broken" = "secureatmbroken"),
+		"engineer" = 		list("open" = "secureengopen", "closed" = "secureeng", "broken" = "secureengbroken"),
+		"CE" = 				list("open" = "secureceopen", "closed" = "securece", "broken" = "securecebroken"),
+		"electrical" = 		list("open" = "toolclosetopen", "closed" = "secureengelec", "broken" = "secureengelecbroken"),
+		"welding" = 		list("open" = "toolclosetopen", "closed" = "secureengweld", "broken" = "secureengweldbroken"),
+		"research" = 		list("open" = "secureresopen", "closed" = "secureres", "broken" = "secureresbroken"),
+		"RD" = 				list("open" = "rdsecureopen", "closed" = "rdsecure", "broken" = "rdsecurebroken"),
+		"security" = 		list("open" = "secopen", "closed" = "sec", "broken" = "secbroken"),
+		"warden" = 			list("open" = "wardensecureopen", "closed" = "wardensecure", "broken" = "wardensecurebroken"),
+		"HoS" = 			list("open" = "hossecureopen", "closed" = "hossecure", "broken" = "hossecurebroken"),
+		"HoP" = 			list("open" = "hopsecureopen", "closed" = "hopsecure", "broken" = "hopsecurebroken"),
+		"Captain" = 		list("open" = "capsecureopen", "closed" = "capsecure", "broken" = "capsecurebroken")
+		)/obj/item/device/closet_painter/afterattack(atom/A, var/mob/user, proximity)
 	if(!proximity)
 		return
 
@@ -101,7 +99,8 @@
 		return
 
 /obj/item/device/closet_painter/attack_self(var/mob/user)
-	var/choice = input("Do you wish to change the regular closet colour or the secure closet colour?") as null|anything in list("Regular Closet Colour","Secure Closet Colour")
+	var/choice = input("Do you wish to change the regular closet colour or the secure closet colour?")\
+								as null|anything in list("Regular Closet Colour","Secure Closet Colour")
 	if(choice == "Regular Closet Colour")
 		choose_colour()
 	else if(choice == "Secure Closet Colour")

@@ -1,16 +1,16 @@
 /obj/structure/closet/secure_closet/captains
 	name = "captain's locker"
 	req_access = list(access_captain)
-	icon_state = "capsecure1"
-	icon_closed = "capsecure"
-	icon_locked = "capsecure1"
+	icon_state = "capsecure"
 	icon_opened = "capsecureopen"
 	icon_broken = "capsecurebroken"
-	icon_off = "capsecureoff"
 
 	New()
 		..()
-		new /obj/item/weapon/storage/backpack/duffle/captain(src)
+		switch(rand(3))
+			if(1) new /obj/item/weapon/storage/backpack/captain(src)
+			if(2) new /obj/item/weapon/storage/backpack/satchel/cap(src)
+			if(3) new /obj/item/weapon/storage/backpack/duffle/captain(src)
 		new /obj/item/clothing/suit/storage/vest(src)
 		new /obj/item/weapon/cartridge/captain(src)
 		new /obj/item/clothing/head/helmet/swat(src)
@@ -27,12 +27,9 @@
 /obj/structure/closet/secure_closet/hop
 	name = "head of personnel's locker"
 	req_access = list(access_hop)
-	icon_state = "hopsecure1"
-	icon_closed = "hopsecure"
-	icon_locked = "hopsecure1"
+	icon_state = "hopsecure"
 	icon_opened = "hopsecureopen"
 	icon_broken = "hopsecurebroken"
-	icon_off = "hopsecureoff"
 
 	New()
 		..()
@@ -50,12 +47,9 @@
 /obj/structure/closet/secure_closet/hop2
 	name = "head of personnel's attire"
 	req_access = list(access_hop)
-	icon_state = "hopsecure1"
-	icon_closed = "hopsecure"
-	icon_locked = "hopsecure1"
+	icon_state = "hopsecure"
 	icon_opened = "hopsecureopen"
 	icon_broken = "hopsecurebroken"
-	icon_off = "hopsecureoff"
 
 	New()
 		..()
@@ -82,22 +76,17 @@
 /obj/structure/closet/secure_closet/hos
 	name = "colonial commissioner's locker"
 	req_access = list(access_hos)
-	icon_state = "securesecchief1"
-	icon_closed = "securesecchief"
-	icon_locked = "securesecchief1"
+	icon_state = "securesecchief"
 	icon_opened = "securesecchiefopen"
 	icon_broken = "securesecchiefbroken"
-	icon_off = "securesecchiefoff"
 	storage_capacity = 2.5 * MOB_MEDIUM
 
 	New()
 		..()
-		if(prob(50))
-			new /obj/item/weapon/storage/backpack/security(src)
-		else
-			new /obj/item/weapon/storage/backpack/satchel/sec(src)
-		if(prob(50))
-			new /obj/item/weapon/storage/backpack/duffle/sec(src)
+		switch(rand(3))
+			if(1) new /obj/item/weapon/storage/backpack/security(src)
+			if(2) new /obj/item/weapon/storage/backpack/satchel/sec(src)
+			if(3) new /obj/item/weapon/storage/backpack/duffle/sec(src)
 		new /obj/item/clothing/head/helmet/secchief(src)
 		new /obj/item/clothing/suit/storage/vest/secchief(src)
 		new /obj/item/clothing/suit/armor/secchief(src)
@@ -124,22 +113,17 @@
 /obj/structure/closet/secure_closet/warden
 	name = "brig overseer's locker"
 	req_access = list(access_armory)
-	icon_state = "secureoverseer1"
-	icon_closed = "secureoverseer"
-	icon_locked = "secureoverseer1"
+	icon_state = "secureoverseer"
 	icon_opened = "secureoverseeropen"
 	icon_broken = "secureoverseerbroken"
-	icon_off = "secureoverseeroff"
 
 
 	New()
 		..()
-		if(prob(50))
-			new /obj/item/weapon/storage/backpack/security(src)
-		else
-			new /obj/item/weapon/storage/backpack/satchel/sec(src)
-		if(prob(50))
-			new /obj/item/weapon/storage/backpack/duffle/sec(src)
+		switch(rand(3))
+			if(1) new /obj/item/weapon/storage/backpack/security(src)
+			if(2) new /obj/item/weapon/storage/backpack/satchel/sec(src)
+			if(3) new /obj/item/weapon/storage/backpack/duffle/sec(src)
 		new /obj/item/clothing/suit/storage/vest/overseer(src)
 		new /obj/item/clothing/under/rank/warden(src)
 		new /obj/item/clothing/suit/armor/vest/overseer(src)
@@ -166,12 +150,9 @@
 /obj/structure/closet/secure_closet/seniorsecurity
 	name = "colonial senior officer's locker"
 	req_access = list(access_senior_security)
-	icon_state = "secureseniorconstable1"
-	icon_closed = "secureseniorconstable"
-	icon_locked = "secureseniorconstable1"
+	icon_state = "secureseniorconstable"
 	icon_opened = "secureseniorconstableopen"
 	icon_broken = "secureseniorconstablebroken"
-	icon_off = "secureseniorconstableoff"
 
 	New()
 		..()
@@ -212,21 +193,16 @@
 /obj/structure/closet/secure_closet/security
 	name = "colonial officer's locker"
 	req_access = list(access_brig)
-	icon_state = "secureconstable1"
-	icon_closed = "secureconstable"
-	icon_locked = "secureconstable1"
+	icon_state = "secureconstable"
 	icon_opened = "secureconstableopen"
 	icon_broken = "secureconstablebroken"
-	icon_off = "secureconstableoff"
 
 	New()
 		..()
-		if(prob(50))
-			new /obj/item/weapon/storage/backpack/security(src)
-		else
-			new /obj/item/weapon/storage/backpack/satchel/sec(src)
-		if(prob(50))
-			new /obj/item/weapon/storage/backpack/duffle/sec(src)
+		switch(rand(3))
+			if(1) new /obj/item/weapon/storage/backpack/security(src)
+			if(2) new /obj/item/weapon/storage/backpack/satchel/sec(src)
+			if(3) new /obj/item/weapon/storage/backpack/duffle/sec (src)
 		new /obj/item/clothing/suit/storage/vest/constable(src)
 		new /obj/item/weapon/cartridge/security(src)
 		new /obj/item/device/radio/headset/headset_sec(src)
@@ -287,15 +263,9 @@
 		return
 
 
-/obj/structure/closet/secure_closet/detective
+/obj/structure/closet/secure_closet/cabinet/detective
 	name = "detective's cabinet"
 	req_access = list(access_detective)
-	icon_state = "cabinetdetective_locked"
-	icon_closed = "cabinetdetective"
-	icon_locked = "cabinetdetective_locked"
-	icon_opened = "cabinetdetective_open"
-	icon_broken = "cabinetdetective_broken"
-	icon_off = "cabinetdetective_broken"
 
 	New()
 		..()
@@ -316,27 +286,9 @@
 		new /obj/item/weapon/melee/baton/shocker/loaded(src)
 		return
 
-/obj/structure/closet/secure_closet/detective/update_icon()
-	if(broken)
-		icon_state = icon_broken
-	else
-		if(!opened)
-			if(locked)
-				icon_state = icon_locked
-			else
-				icon_state = icon_closed
-		else
-			icon_state = icon_opened
-
-/obj/structure/closet/secure_closet/fortech
+/obj/structure/closet/secure_closet/cabinet/forentech
 	name = "forensic technician's cabinet"
 	req_access = list(access_forensics_lockers)
-	icon_state = "cabinetdetective_locked"
-	icon_closed = "cabinetdetective"
-	icon_locked = "cabinetdetective_locked"
-	icon_opened = "cabinetdetective_open"
-	icon_broken = "cabinetdetective_broken"
-	icon_off = "cabinetdetective_broken"
 
 	New()
 		..()
@@ -352,10 +304,10 @@
 		new /obj/item/weapon/melee/baton/shocker/loaded(src)
 		return
 
+
 /obj/structure/closet/secure_closet/injection
 	name = "lethal injections locker"
 	req_access = list(access_captain)
-
 
 	New()
 		..()
@@ -395,28 +347,4 @@
 		new /obj/item/weapon/storage/briefcase(src)
 		return
 
-/obj/structure/closet/secure_closet/wall
-	name = "wall locker"
-	req_access = list(access_security)
-	icon_state = "wall-locker1"
-	density = 1
-	icon_closed = "wall-locker"
-	icon_locked = "wall-locker1"
-	icon_opened = "wall-lockeropen"
-	icon_broken = "wall-lockerbroken"
-	icon_off = "wall-lockeroff"
 
-	//too small to put a man in
-	large = 0
-
-/obj/structure/closet/secure_closet/wall/update_icon()
-	if(broken)
-		icon_state = icon_broken
-	else
-		if(!opened)
-			if(locked)
-				icon_state = icon_locked
-			else
-				icon_state = icon_closed
-		else
-			icon_state = icon_opened

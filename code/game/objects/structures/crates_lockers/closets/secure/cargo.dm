@@ -1,21 +1,16 @@
 /obj/structure/closet/secure_closet/cargotech
 	name = "cargo technician's locker"
 	req_access = list(access_cargo)
-	icon_state = "securecargo1"
-	icon_closed = "securecargo"
-	icon_locked = "securecargo1"
+	icon_state = "securecargo"
 	icon_opened = "securecargoopen"
 	icon_broken = "securecargobroken"
-	icon_off = "securecargooff"
 
 	New()
 		..()
-		if(prob(75))
-			new /obj/item/weapon/storage/backpack(src)
-		else
-			new /obj/item/weapon/storage/backpack/satchel/norm(src)
-		if(prob(25))
-			new /obj/item/weapon/storage/backpack/duffle(src)
+		switch(rand(3))
+			if(1) new /obj/item/weapon/storage/backpack(src)
+			if(2) new /obj/item/weapon/storage/backpack/satchel/norm(src)
+			if(3) new /obj/item/weapon/storage/backpack/duffle(src)
 		new /obj/item/clothing/under/rank/cargotech(src)
 		new /obj/item/clothing/under/rank/cargotech/skirt(src)
 		new /obj/item/clothing/under/rank/cargotech/jeans(src)
@@ -32,21 +27,16 @@
 /obj/structure/closet/secure_closet/quartermaster
 	name = "quartermaster's locker"
 	req_access = list(access_qm)
-	icon_state = "secureqm1"
-	icon_closed = "secureqm"
-	icon_locked = "secureqm1"
+	icon_state = "secureqm"
 	icon_opened = "secureqmopen"
 	icon_broken = "secureqmbroken"
-	icon_off = "secureqmoff"
 
 	New()
 		..()
-		if(prob(75))
-			new /obj/item/weapon/storage/backpack(src)
-		else
-			new /obj/item/weapon/storage/backpack/satchel/norm(src)
-		if(prob(25))
-			new /obj/item/weapon/storage/backpack/duffle(src)
+		switch(rand(3))
+			if(1) new /obj/item/weapon/storage/backpack(src)
+			if(2) new /obj/item/weapon/storage/backpack/satchel/norm(src)
+			if(3) new /obj/item/weapon/storage/backpack/duffle(src)
 		new /obj/item/clothing/under/rank/cargo(src)
 		new /obj/item/clothing/under/rank/cargo/skirt(src)
 		new /obj/item/clothing/under/rank/cargo/jeans(src)

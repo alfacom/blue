@@ -1,22 +1,17 @@
 /obj/structure/closet/secure_closet/engineering_chief
 	name = "chief engineer's locker"
 	req_access = list(access_ce)
-	icon_state = "securece1"
-	icon_closed = "securece"
-	icon_locked = "securece1"
+	icon_state = "securece"
 	icon_opened = "secureceopen"
 	icon_broken = "securecebroken"
-	icon_off = "secureceoff"
 
 
 	New()
 		..()
-		if(prob(50))
-			new /obj/item/weapon/storage/backpack/industrial(src)
-		else
-			new /obj/item/weapon/storage/backpack/satchel/eng(src)
-		if(prob(50))
-			new /obj/item/weapon/storage/backpack/duffle/eng(src)
+		switch(rand(3))
+			if(1) new /obj/item/weapon/storage/backpack/industrial(src)
+			if(2) new /obj/item/weapon/storage/backpack/satchel/eng(src)
+			if(3)new /obj/item/weapon/storage/backpack/duffle/eng(src)
 		new /obj/item/clothing/accessory/storage/brown_vest(src)
 		new /obj/item/blueprints(src)
 		new /obj/item/clothing/under/rank/chief_engineer(src)
@@ -43,13 +38,9 @@
 /obj/structure/closet/secure_closet/engineering_electrical
 	name = "electrical supplies"
 	req_access = list(access_engine_equip)
-	icon_state = "secureengelec1"
-	icon_closed = "secureengelec"
-	icon_locked = "secureengelec1"
+	icon_state = "secureengelec"
 	icon_opened = "toolclosetopen"
 	icon_broken = "secureengelecbroken"
-	icon_off = "secureengelecoff"
-
 
 	New()
 		..()
@@ -71,13 +62,9 @@
 /obj/structure/closet/secure_closet/engineering_welding
 	name = "welding supplies"
 	req_access = list(access_construction)
-	icon_state = "secureengweld1"
-	icon_closed = "secureengweld"
-	icon_locked = "secureengweld1"
+	icon_state = "secureengweld"
 	icon_opened = "toolclosetopen"
 	icon_broken = "secureengweldbroken"
-	icon_off = "secureengweldoff"
-
 
 	New()
 		..()
@@ -100,22 +87,16 @@
 /obj/structure/closet/secure_closet/engineering_personal
 	name = "engineer's locker"
 	req_access = list(access_engine_equip)
-	icon_state = "secureeng1"
-	icon_closed = "secureeng"
-	icon_locked = "secureeng1"
+	icon_state = "secureeng"
 	icon_opened = "secureengopen"
 	icon_broken = "secureengbroken"
-	icon_off = "secureengoff"
-
 
 	New()
 		..()
-		if(prob(50))
-			new /obj/item/weapon/storage/backpack/industrial(src)
-		else
-			new /obj/item/weapon/storage/backpack/satchel/eng(src)
-		if(prob(50))
-			new /obj/item/weapon/storage/backpack/duffle/eng(src)
+		switch(rand(3))
+			if(1) new /obj/item/weapon/storage/backpack/industrial(src)
+			if(2) new /obj/item/weapon/storage/backpack/satchel/eng(src)
+			if(3) new /obj/item/weapon/storage/backpack/duffle/eng(src)
 		new /obj/item/clothing/accessory/storage/brown_vest(src)
 		new /obj/item/weapon/storage/toolbox/mechanical(src)
 		new /obj/item/device/radio/headset/headset_eng(src)
@@ -129,27 +110,19 @@
 		new /obj/item/weapon/tank/emergency_oxygen/engi(src)
 		return
 
-
-
 /obj/structure/closet/secure_closet/atmos_personal
 	name = "technician's locker"
 	req_access = list(access_atmospherics)
-	icon_state = "secureatm1"
-	icon_closed = "secureatm"
-	icon_locked = "secureatm1"
+	icon_state = "secureatm"
 	icon_opened = "secureatmopen"
 	icon_broken = "secureatmbroken"
-	icon_off = "secureatmoff"
-
 
 	New()
 		..()
-		if(prob(50))
-			new /obj/item/weapon/storage/backpack/industrial(src)
-		else
-			new /obj/item/weapon/storage/backpack/satchel/eng(src)
-		if(prob(50))
-			new /obj/item/weapon/storage/backpack/duffle/eng(src)
+		switch(rand(3))
+			if(1) new /obj/item/weapon/storage/backpack/industrial(src)
+			if(2) new /obj/item/weapon/storage/backpack/satchel/eng(src)
+			if(3) new /obj/item/weapon/storage/backpack/duffle/eng(src)
 		new /obj/item/clothing/accessory/storage/brown_vest(src)
 		new /obj/item/clothing/suit/fire/firefighter(src)
 		new /obj/item/device/flashlight(src)

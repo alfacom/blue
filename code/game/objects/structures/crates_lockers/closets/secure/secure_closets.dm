@@ -2,32 +2,43 @@
 	name = "secure locker"
 	desc = "It's an immobile card-locked storage unit."
 	icon = 'icons/obj/closet.dmi'
-	icon_state = "secure1"
+	icon_state = "secure"
 	density = 1
 	opened = 0
 	var/locked = 1
 	var/broken = 0
 	var/large = 1
-	icon_closed = "secure"
-	var/icon_locked = "secure1"
 	icon_opened = "secureopen"
+	var/locked_overlay = "locked"
 	var/icon_broken = "securebroken"
-	var/icon_off = "secureoff"
 	wall_mounted = 0 //never solid (You can always pass over it)
 	health = 200
+
+
+/obj/structure/closet/secure_closet/wall
+	name = "wall locker"
+	req_access = list(access_security)
+	density = 1
+	locked_overlay = "wall_locked"
+	anchored = 1
+	wall_mounted = 1
+	//too small to put a man in
+	large = 0
+
+
+/obj/structure/closet/secure_closet/New()
+	..()
+	update_icon()
+
+/obj/structure/closet/secure_closet/examine(mob/user, return_dist=1)
+	.=..()
+	if(broken)
+		user << "It appears to be broken."
 
 /obj/structure/closet/secure_closet/can_open()
 	if(src.locked)
 		return 0
 	return ..()
-
-/obj/structure/closet/secure_closet/close()
-	if(..())
-		if(broken)
-			icon_state = src.icon_off
-		return 1
-	else
-		return 0
 
 /obj/structure/closet/secure_closet/emp_act(severity)
 	for(var/obj/O in src)
@@ -40,7 +51,7 @@
 			if(!locked)
 				open()
 			else
-				src.req_access = list()
+				src.req_access.Cut()
 				src.req_access += pick(get_all_station_access())
 	..()
 
@@ -108,7 +119,7 @@
 		broken = 1
 		locked = 0
 		desc = "It appears to be broken."
-		icon_state = icon_off
+		update_icon()
 		flick(icon_broken, src)
 
 		if(visual_feedback)
@@ -142,18 +153,15 @@
 
 /obj/structure/closet/secure_closet/update_icon()//Putting the welded stuff in updateicon() so it's easy to overwrite for special cases (Fridges, cabinets, and whatnot)
 	overlays.Cut()
-
-	if(!opened)
-		if(broken)
-			icon_state = icon_off
-		else if(locked)
-			icon_state = icon_locked
-		else
-			icon_state = icon_closed
+	if(opened)
+		icon_state = icon_opened
+	else
+		icon_state = icon_closed
+		if(!broken)
+			overlays += "[locked_overlay][locked?"1":"0"]"
 		if(welded)
 			overlays += "welded"
-	else
-		icon_state = icon_opened
+
 
 /obj/structure/closet/secure_closet/req_breakout()
 	if(!opened && locked) return 1

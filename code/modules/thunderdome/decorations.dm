@@ -66,7 +66,6 @@
 	desc = "That's a sturdy wooden crate."
 	icon_state = "crate"
 	icon_opened = "crateopen"
-	icon_closed = "crate"
 
 
 /obj/structure/billboard

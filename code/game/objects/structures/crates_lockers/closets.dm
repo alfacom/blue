@@ -5,8 +5,8 @@
 	icon_state = "closed"
 	density = 1
 	w_class = 5
-	var/icon_closed = "closed"
 	var/icon_opened = "open"
+	var/icon_closed = ""
 	var/opened = 0
 	var/welded = 0
 	var/wall_mounted = 0 //never solid (You can always pass over it)
@@ -20,6 +20,10 @@
 	var/store_misc = 1
 	var/store_items = 1
 	var/store_mobs = 1
+
+/obj/structure/closet/New()
+	if(!icon_closed) icon_closed = icon_state
+	..()
 
 /obj/structure/closet/initialize()
 	if(!opened)		// if closed, any item at the crate's loc is put in the contents
@@ -90,8 +94,8 @@
 
 	src.dump_contents()
 
-	src.icon_state = src.icon_opened
 	src.opened = 1
+	update_icon()
 	playsound(src.loc, open_sound, 15, 1, -3)
 	density = 0
 	return 1
@@ -110,10 +114,9 @@
 		stored_units += store_items(stored_units)
 	if(store_mobs)
 		stored_units += store_mobs(stored_units)
-
-	src.icon_state = src.icon_closed
 	src.opened = 0
 
+	update_icon()
 	playsound(src.loc, close_sound, 15, 1, -3)
 	density = 1
 	return 1
@@ -230,11 +233,8 @@
 			return
 		if(W.loc != user) // This should stop mounted modules ending up outside the module.
 			return
-		usr.drop_item()
-		if(W)
-			W.forceMove(src.loc)
-			W.pixel_x = 0
-			W.pixel_y = 0
+		user.unEquip(W, src.loc)
+
 	else if(istype(W, /obj/item/weapon/packageWrap))
 		return
 	else if(istype(W, /obj/item/weapon/weldingtool))

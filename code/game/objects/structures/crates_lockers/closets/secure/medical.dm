@@ -1,14 +1,10 @@
 /obj/structure/closet/secure_closet/medical1
 	name = "medicine closet"
 	desc = "Filled with medical junk."
-	icon_state = "medical1"
-	icon_closed = "medical"
-	icon_locked = "medical1"
+	icon_state = "medical"
 	icon_opened = "medicalopen"
 	icon_broken = "medicalbroken"
-	icon_off = "medicaloff"
 	req_access = list(access_medical)
-
 
 	New()
 		..()
@@ -29,14 +25,10 @@
 /obj/structure/closet/secure_closet/medical2
 	name = "anesthetics closet"
 	desc = "Used to knock people out."
-	icon_state = "medical1"
-	icon_closed = "medical"
-	icon_locked = "medical1"
+	icon_state = "medical"
 	icon_opened = "medicalopen"
 	icon_broken = "medicalbroken"
-	icon_off = "medicaloff"
 	req_access = list(access_surgery)
-
 
 	New()
 		..()
@@ -53,21 +45,16 @@
 /obj/structure/closet/secure_closet/medical3
 	name = "medical doctor's locker"
 	req_access = list(access_medical_equip)
-	icon_state = "securemed1"
-	icon_closed = "securemed"
-	icon_locked = "securemed1"
+	icon_state = "securemed"
 	icon_opened = "securemedopen"
 	icon_broken = "securemedbroken"
-	icon_off = "securemedoff"
 
 	New()
 		..()
-		if(prob(50))
-			new /obj/item/weapon/storage/backpack/medic(src)
-		else
-			new /obj/item/weapon/storage/backpack/satchel/med(src)
-		if(prob(50))
-			new /obj/item/weapon/storage/backpack/duffle/med(src)
+		switch(rand(3))
+			if(1) new /obj/item/weapon/storage/backpack/medic(src)
+			if(2) new /obj/item/weapon/storage/backpack/satchel/med(src)
+			if(3) new /obj/item/weapon/storage/backpack/duffle/med(src)
 		new /obj/item/clothing/under/rank/nursesuit (src)
 		new /obj/item/clothing/head/nursehat (src)
 		switch(pick("blue", "green", "purple", "black", "navyblue"))
@@ -120,12 +107,9 @@
 /obj/structure/closet/secure_closet/paramedic
 	name = "paramedic locker"
 	desc = "Supplies for a first responder."
-	icon_state = "medical1"
-	icon_closed = "medical"
-	icon_locked = "medical1"
+	icon_state = "medical"
 	icon_opened = "medicalopen"
 	icon_broken = "medicalbroken"
-	icon_off = "medicaloff"
 	req_access = list(access_medical_equip)
 
 
@@ -157,21 +141,16 @@
 /obj/structure/closet/secure_closet/CMO
 	name = "chief medical officer's locker"
 	req_access = list(access_cmo)
-	icon_state = "cmosecure1"
-	icon_closed = "cmosecure"
-	icon_locked = "cmosecure1"
+	icon_state = "cmosecure"
 	icon_opened = "cmosecureopen"
 	icon_broken = "cmosecurebroken"
-	icon_off = "cmosecureoff"
 
 	New()
 		..()
-		if(prob(50))
-			new /obj/item/weapon/storage/backpack/medic(src)
-		else
-			new /obj/item/weapon/storage/backpack/satchel/med(src)
-		if(prob(50))
-			new /obj/item/weapon/storage/backpack/duffle/med(src)
+		switch(rand(3))
+			if(1) new /obj/item/weapon/storage/backpack/medic(src)
+			if(2) new /obj/item/weapon/storage/backpack/satchel/med(src)
+			if(3) new /obj/item/weapon/storage/backpack/duffle/med(src)
 		new /obj/item/clothing/suit/bio_suit/cmo(src)
 		new /obj/item/clothing/head/bio_hood/cmo(src)
 		new /obj/item/clothing/shoes/white(src)
@@ -227,12 +206,9 @@
 /obj/structure/closet/secure_closet/chemical
 	name = "chemical closet"
 	desc = "Store dangerous chemicals in here."
-	icon_state = "medical1"
-	icon_closed = "medical"
-	icon_locked = "medical1"
+	icon_state = "medical"
 	icon_opened = "medicalopen"
 	icon_broken = "medicalbroken"
-	icon_off = "medicaloff"
 	req_access = list(access_chemistry)
 
 
@@ -242,28 +218,11 @@
 		new /obj/item/weapon/storage/box/pillbottles(src)
 		return
 
-/obj/structure/closet/secure_closet/medical_wall
+/obj/structure/closet/secure_closet/wall/medical
 	name = "first aid closet"
 	desc = "It's a secure wall-mounted storage unit for first aid supplies."
-	icon_state = "medical_wall_locked"
-	icon_closed = "medical_wall_unlocked"
-	icon_locked = "medical_wall_locked"
+	icon_state = "medical_wall_sec"
 	icon_opened = "medical_wall_open"
-	icon_broken = "medical_wall_spark"
-	icon_off = "medical_wall_off"
-	anchored = 1
-	density = 0
-	wall_mounted = 1
+	icon_broken = "medical_wall_broken"
 	req_access = list(access_medical_equip)
 
-/obj/structure/closet/secure_closet/medical_wall/update_icon()
-	if(broken)
-		icon_state = icon_broken
-	else
-		if(!opened)
-			if(locked)
-				icon_state = icon_locked
-			else
-				icon_state = icon_closed
-		else
-			icon_state = icon_opened

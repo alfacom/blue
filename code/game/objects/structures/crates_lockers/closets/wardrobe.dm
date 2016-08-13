@@ -2,12 +2,10 @@
 	name = "wardrobe"
 	desc = "It's a storage unit for standard-issue attire."
 	icon_state = "blue"
-	icon_closed = "blue"
 
 /obj/structure/closet/wardrobe/sec
 	name = "security wardrobe"
 	icon_state = "secblue"
-	icon_closed = "secblue"
 
 /obj/structure/closet/wardrobe/red/New()
 	..()
@@ -48,7 +46,6 @@
 /obj/structure/closet/wardrobe/detective
 	name = "detective wardrobe"
 	icon_state = "cabinet_closed"
-	icon_closed = "cabinet_closed"
 	icon_opened = "cabinet_open"
 
 /obj/structure/closet/wardrobe/detective/New()
@@ -86,7 +83,6 @@
 /obj/structure/closet/wardrobe/pink
 	name = "pink wardrobe"
 	icon_state = "pink"
-	icon_closed = "pink"
 
 /obj/structure/closet/wardrobe/pink/New()
 	..()
@@ -101,7 +97,6 @@
 /obj/structure/closet/wardrobe/black
 	name = "black wardrobe"
 	icon_state = "black"
-	icon_closed = "black"
 
 /obj/structure/closet/wardrobe/black/New()
 	..()
@@ -127,7 +122,6 @@
 	name = "chapel wardrobe"
 	desc = "It's a storage unit for approved religious attire."
 	icon_state = "black"
-	icon_closed = "black"
 
 /obj/structure/closet/wardrobe/chaplain_black/New()
 	..()
@@ -149,7 +143,6 @@
 /obj/structure/closet/wardrobe/green
 	name = "green wardrobe"
 	icon_state = "green"
-	icon_closed = "green"
 
 /obj/structure/closet/wardrobe/green/New()
 	..()
@@ -170,7 +163,6 @@
 /obj/structure/closet/wardrobe/xenos
 	name = "xenos wardrobe"
 	icon_state = "green"
-	icon_closed = "green"
 
 /obj/structure/closet/wardrobe/xenos/New()
 	..()
@@ -190,7 +182,6 @@
 	name = "prison wardrobe"
 	desc = "It's a storage unit for regulation prisoner attire."
 	icon_state = "orange"
-	icon_closed = "orange"
 
 /obj/structure/closet/wardrobe/orange/New()
 	..()
@@ -206,7 +197,6 @@
 /obj/structure/closet/wardrobe/yellow
 	name = "yellow wardrobe"
 	icon_state = "yellow"
-	icon_closed = "yellow"
 
 /obj/structure/closet/wardrobe/yellow/New()
 	..()
@@ -228,7 +218,6 @@
 /obj/structure/closet/wardrobe/atmospherics_yellow
 	name = "atmospherics wardrobe"
 	icon_state = "yellow"
-	icon_closed = "yellow"
 
 /obj/structure/closet/wardrobe/atmospherics_yellow/New()
 	..()
@@ -258,7 +247,6 @@
 /obj/structure/closet/wardrobe/engineering_yellow
 	name = "engineering wardrobe"
 	icon_state = "yellow"
-	icon_closed = "yellow"
 
 /obj/structure/closet/wardrobe/engineering_yellow/New()
 	..()
@@ -292,7 +280,6 @@
 /obj/structure/closet/wardrobe/white
 	name = "white wardrobe"
 	icon_state = "white"
-	icon_closed = "white"
 
 /obj/structure/closet/wardrobe/white/New()
 	..()
@@ -311,7 +298,6 @@
 /obj/structure/closet/wardrobe/pjs
 	name = "pajama wardrobe"
 	icon_state = "white"
-	icon_closed = "white"
 
 /obj/structure/closet/wardrobe/pjs/New()
 	..()
@@ -329,7 +315,6 @@
 /obj/structure/closet/wardrobe/science_white
 	name = "science wardrobe"
 	icon_state = "white"
-	icon_closed = "white"
 
 /obj/structure/closet/wardrobe/science_white/New()
 	..()
@@ -357,7 +342,6 @@
 /obj/structure/closet/wardrobe/robotics_black
 	name = "robotics wardrobe"
 	icon_state = "black"
-	icon_closed = "black"
 
 /obj/structure/closet/wardrobe/robotics_black/New()
 	..()
@@ -379,7 +363,6 @@
 /obj/structure/closet/wardrobe/chemistry_white
 	name = "chemistry wardrobe"
 	icon_state = "white"
-	icon_closed = "white"
 
 /obj/structure/closet/wardrobe/chemistry_white/New()
 	..()
@@ -401,7 +384,6 @@
 /obj/structure/closet/wardrobe/genetics_white
 	name = "genetics wardrobe"
 	icon_state = "white"
-	icon_closed = "white"
 
 /obj/structure/closet/wardrobe/genetics_white/New()
 	..()
@@ -423,7 +405,6 @@
 /obj/structure/closet/wardrobe/virology_white
 	name = "virology wardrobe"
 	icon_state = "white"
-	icon_closed = "white"
 
 /obj/structure/closet/wardrobe/virology_white/New()
 	..()
@@ -447,7 +428,6 @@
 /obj/structure/closet/wardrobe/medic_white
 	name = "medical wardrobe"
 	icon_state = "white"
-	icon_closed = "white"
 
 /obj/structure/closet/wardrobe/medic_white/New()
 	..()
@@ -479,7 +459,6 @@
 /obj/structure/closet/wardrobe/grey
 	name = "grey wardrobe"
 	icon_state = "grey"
-	icon_closed = "grey"
 
 /obj/structure/closet/wardrobe/grey/New()
 	..()
@@ -498,7 +477,6 @@
 /obj/structure/closet/wardrobe/mixed
 	name = "mixed wardrobe"
 	icon_state = "mixed"
-	icon_closed = "mixed"
 
 /obj/structure/closet/wardrobe/mixed/New()
 	..()
@@ -533,7 +511,6 @@
 /obj/structure/closet/wardrobe/tactical
 	name = "tactical equipment"
 	icon_state = "syndicate1"
-	icon_closed = "syndicate1"
 	icon_opened = "syndicate1open"
 
 /obj/structure/closet/wardrobe/tactical/New()
@@ -558,7 +535,6 @@
 /obj/structure/closet/wardrobe/ert
 	name = "emergency response team equipment"
 	icon_state = "syndicate1"
-	icon_closed = "syndicate1"
 	icon_opened = "syndicate1open"
 
 /obj/structure/closet/wardrobe/ert/New()
@@ -579,7 +555,6 @@
 /obj/structure/closet/wardrobe/suit
 	name = "suit locker"
 	icon_state = "mixed"
-	icon_closed = "mixed"
 
 /obj/structure/closet/wardrobe/suit/New()
 	..()
@@ -602,7 +577,6 @@
 /obj/structure/closet/wardrobe/captain
 	name = "captain's wardrobe"
 	icon_state = "cabinet_closed"
-	icon_closed = "cabinet_closed"
 	icon_opened = "cabinet_open"
 
 /obj/structure/closet/wardrobe/captain/New()
