@@ -138,7 +138,7 @@ var/list/ai_verbs_hidden = list( // For why this exists, refer to https://xkcd.c
 	aiRadio = new(src)
 	common_radio = aiRadio
 	aiRadio.myAi = src
-	additional_law_channels["Binary"] = "#b"
+	additional_law_channels["Binary"] = ":b"
 	additional_law_channels["Holopad"] = ":h"
 
 	aiCamera = new/obj/item/device/camera/siliconcam/ai_camera(src)
@@ -192,7 +192,7 @@ var/list/ai_verbs_hidden = list( // For why this exists, refer to https://xkcd.c
 	src << "<B>To look at other parts of the station, click on yourself to get a camera menu.</B>"
 	src << "<B>While observing through a camera, you can use most (networked) devices which you can see, such as computers, APCs, intercoms, doors, etc.</B>"
 	src << "To use something, simply click on it."
-	src << "Use <B>say #b</B> to speak to your cyborgs through binary. Use say :h to speak from an active holopad."
+	src << "Use <B>say :b</B> to speak to your cyborgs through binary. Use say :h to speak from an active holopad."
 	src << "For department channels, use the following say commands:"
 
 	var/radio_text = ""

@@ -78,7 +78,7 @@
 	var/can_state = statelaw("[prefix]Current Active Laws:")
 
 	for(var/datum/ai_law/law in laws.laws_to_state())
-		can_state = statelaw("[prefix][law.get_index()]. [law.law]")
+		can_state = statelaw(":[prefix][law.get_index()]. [law.law]")
 		if(!can_state)
 			break
 
