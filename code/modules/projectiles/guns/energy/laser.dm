@@ -209,3 +209,16 @@ obj/item/weapon/gun/energy/retro
  	fire_delay = 1
  	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 2, TECH_POWER = 3)
  	accuracy = 1
+
+/obj/item/weapon/gun/energy/wasp
+	name = "Wasp MKI"
+	desc = "A low-power laser gun capable of expelling concentrated photon blasts."
+	icon_state = "wasp"
+	item_state = "lasercannon"
+	fire_sound = 'sound/weapons/laser3.ogg'
+	projectile_type = /obj/item/projectile/beam/lightlaser
+	charge_cost = 50
+	max_shots = 20
+	fire_delay = 2
+	self_recharge = 1
+	slot_flags = null

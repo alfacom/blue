@@ -28,6 +28,9 @@
 	icon_state = "laser"
 	damage = 15
 
+/obj/item/projectile/beam/lightlaser
+	damage = 18
+
 /obj/item/projectile/beam/midlaser
 	damage = 40
 	armor_penetration = 20
