@@ -561,7 +561,7 @@ This function completely restores a damaged organ to perfect condition.
 		wounds += I
 		owner.custom_pain("You feel something rip in your [name]!", 1)
 
- 
+
 	//Burn damage can cause fluid loss due to blistering and cook-off
 	if((damage > 5 || damage + burn_dam >= 15) && type == BURN && (robotic < ORGAN_ROBOT))
 		var/fluid_loss = (damage/(owner.maxHealth - config.health_threshold_dead)) * owner.species.blood_volume*(1 - BLOOD_VOLUME_SURVIVE/100)
@@ -1118,12 +1118,13 @@ Note that amputating the affected organ does in fact remove the infection from t
 		if(!R || (species && (species.name in R.species_cannot_use)))
 			R = basic_robolimb
 		if(R)
+			var/datum/organ_description/desc = species.has_limbs[organ_tag]
 			force_icon = R.icon
 			if(R.lifelike)
 				robotic = ORGAN_LIFELIKE
-				name = "[initial(name)]"
+				name = "[desc.name]"
 			else
-				name = "robotic [initial(name)]"
+				name = "robotic [desc.name]"
 			desc = "[R.desc] It looks like it was produced by [R.company]."
 
 	dislocated = -1

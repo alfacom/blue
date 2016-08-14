@@ -83,6 +83,7 @@
 /datum/design/item/prosfab/pros/external/head
 	name = "Prosthetic head"
 	id = "pros_head"
+	OD = new/datum/organ_description/head
 	build_path = /obj/item/organ/external/head
 	time = 30
 	materials = list(DEFAULT_WALL_MATERIAL = 18750, "glass" = 3750, "plasteel" = 750)
