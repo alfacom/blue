@@ -142,6 +142,11 @@
 	icon_state = "bunny"
 	body_parts_covered = 0
 
+/obj/item/clothing/head/sol_beret
+	name = "sol beret"
+	desc = "A blue beret. Only dumb martians wear this!"
+	icon_state = "sol_beret"
+
 /obj/item/clothing/head/flatcap
 	name = "flat cap"
 	desc = "A working man's cap."

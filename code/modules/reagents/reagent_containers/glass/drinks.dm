@@ -275,3 +275,20 @@
 	volume = 30
 	center_of_mass = list("x"=15, "y"=13)
 	isGlass = 1
+
+/obj/item/weapon/reagent_containers/glass/drinks/irecup
+	name = "cup"
+	desc = "A cup with the Irish flag emblazoned on it."
+	icon_state = "irecup"
+	volume = 30
+	center_of_mass = list("x"=15, "y"=13)
+	isGlass = 1
+
+/obj/item/weapon/reagent_containers/glass/drinks/ntcup
+	name = "cup"
+	desc = "A cup with the NT logo emblazoned on it."
+	icon_state = "nt"
+	volume = 30
+	center_of_mass = list("x"=15, "y"=13)
+	isGlass = 1
+

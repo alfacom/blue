@@ -47,6 +47,11 @@
 	flags_inv = HIDEJUMPSUIT
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
 
+/obj/item/clothing/suit/storage/sol_goverment
+	name = "sol government officer jacket"
+	desc = "A stylish suit made of martian cotton."
+	icon_state = "sol_goverment"
+	body_parts_covered = UPPER_TORSO|ARMS
 
 /obj/item/clothing/suit/cyborg_suit
 	name = "cyborg suit"
