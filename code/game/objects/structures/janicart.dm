@@ -25,6 +25,25 @@
 	//everything else is visible, so doesn't need to be mentioned
 
 
+/obj/structure/janitorialcart/AltClick()
+
+	if(mymop || !Adjacent(usr))
+		..()
+		return
+
+	var/obj/item/I = usr.get_active_hand()
+	if(!istype(I, /obj/item/weapon/mop))
+		..()
+		return
+
+	usr.drop_item()
+	mymop = I
+	I.loc = src
+	update_icon()
+	updateUsrDialog()
+	usr << "<span class='notice'>You put [I] into [src].</span>"
+
+
 /obj/structure/janitorialcart/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/weapon/storage/bag/trash) && !mybag)
 		user.drop_item()
@@ -35,11 +54,11 @@
 		user << "<span class='notice'>You put [I] into [src].</span>"
 
 	else if(istype(I, /obj/item/weapon/mop))
-		if(I.reagents.total_volume < I.reagents.maximum_volume)	//if it's not completely soaked we assume they want to wet it, otherwise store it
+		if(I.reagents.total_volume < I.reagents.maximum_volume) //if it's not completely soaked we assume they want to wet it, otherwise store it
 			if(reagents.total_volume < 1)
 				user << "<span class='warning'>[src] is out of water!</span>"
 			else
-				reagents.trans_to_obj(I, 5)	//
+				reagents.trans_to_obj(I, 10)	//
 				user << "<span class='notice'>You wet [I] in [src].</span>"
 				playsound(loc, 'sound/effects/slosh.ogg', 25, 1)
 				return

@@ -10,8 +10,6 @@
 	w_class = 4.0//So you can't hide it in your pocket or some such.
 	attack_verb = list("mopped", "bashed", "bludgeoned", "whacked")
 	var/mob/living/creator
-	var/mopping = 0
-	var/mopcount = 0
 
 
 /obj/item/weapon/mop_deploy/New()
