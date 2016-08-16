@@ -324,3 +324,9 @@ BLIND     // can't see anything
 	desc = "A set of implantable lenses designed to augment your vision"
 	icon_state = "thermalimplants"
 	item_state = "syringe_kit"
+
+/obj/item/clothing/glasses/safety
+	name = "safety glasses"
+	desc = "...actually, they didn't provide any protection."
+	icon_state = "safetyglasses"
+	item_state = "safetyglasses"

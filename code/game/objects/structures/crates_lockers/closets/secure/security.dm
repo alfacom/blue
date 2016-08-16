@@ -264,7 +264,7 @@
 
 
 /obj/structure/closet/secure_closet/cabinet/detective
-	name = "detective's cabinet"
+	name = "investigator's cabinet"
 	req_access = list(access_detective)
 
 	New()
@@ -274,7 +274,6 @@
 		new /obj/item/weapon/storage/belt/detective(src)
 		new /obj/item/weapon/storage/box/evidence(src)
 		new /obj/item/device/radio/headset/headset_sec(src)
-		new /obj/item/device/radio/headset/headset_sec/alt(src)
 		new /obj/item/clothing/suit/armor/det_suit(src)
 		new /obj/item/ammo_magazine/c45m(src)
 		new /obj/item/ammo_magazine/c45m(src)
@@ -284,6 +283,13 @@
 		new /obj/item/device/flashlight/maglight(src)
 		new /obj/item/weapon/reagent_containers/glass/drinks/flask/detflask(src)
 		new /obj/item/weapon/melee/baton/shocker/loaded(src)
+		new /obj/item/clothing/under/investigator(src)
+		new /obj/item/clothing/under/investigator/alt(src)
+		new /obj/item/clothing/suit/storage/toggle/investigator(src)
+		new /obj/item/clothing/suit/storage/toggle/investigator/alt(src)
+		new /obj/item/clothing/gloves/black(src)
+		new /obj/item/clothing/shoes/laceup(src)
+		new /obj/item/clothing/shoes/leather(src)
 		return
 
 /obj/structure/closet/secure_closet/cabinet/forentech
@@ -302,6 +308,12 @@
 		new /obj/item/device/flashlight/maglight(src)
 		new /obj/item/weapon/storage/briefcase/crimekit(src)
 		new /obj/item/weapon/melee/baton/shocker/loaded(src)
+		new /obj/item/clothing/suit/storage/toggle/labcoat/forensic(src)
+		new /obj/item/clothing/suit/storage/forensics/blue(src)
+		new /obj/item/clothing/suit/storage/forensics/blue/long(src)
+		new /obj/item/clothing/under/forensic(src)
+		new /obj/item/clothing/shoes/black(src)
+		new /obj/item/clothing/glasses/safety(src)
 		return
 
 

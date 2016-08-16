@@ -125,7 +125,7 @@
 	slot_flags = SLOT_TIE | SLOT_BELT
 
 /obj/item/clothing/accessory/badge/sec/detective
-	name = "detective's badge"
-	desc = "An immaculately polished gold security badge on leather. Labeled 'Detective.'"
+	name = "investigator's badge"
+	desc = "An immaculately polished gold security badge on leather. Labeled 'Investigator.'"
 	icon_state = "badge"
 	slot_flags = SLOT_TIE | SLOT_BELT

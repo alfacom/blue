@@ -270,3 +270,11 @@
 /datum/gear/suit/flannel/aqua
 	display_name = "aqua flannel"
 	path = /obj/item/clothing/suit/storage/flannel/aqua
+
+/datum/gear/suit/flannel/trenchcoat
+	display_name = "brown coat"
+	path = /obj/item/clothing/suit/storage/det_trench
+
+/datum/gear/suit/flannel/trenchcoat/grey
+	display_name = "grey coat"
+	path = /obj/item/clothing/suit/storage/det_trench/grey
