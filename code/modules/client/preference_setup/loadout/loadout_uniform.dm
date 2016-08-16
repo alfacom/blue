@@ -369,3 +369,15 @@
 /datum/gear/uniform/whitewedding
 	display_name= "white wedding dress"
 	path = /obj/item/clothing/under/dress/white
+
+/datum/gear/uniform/noir
+	display_name= "noir suit"
+	path = /obj/item/clothing/under/det
+
+/datum/gear/uniform/noir/grey
+	display_name= "grey noir suit"
+	path = /obj/item/clothing/under/det/grey
+
+/datum/gear/uniform/noir/black
+	display_name= "black noir suit"
+	path = /obj/item/clothing/under/det/black

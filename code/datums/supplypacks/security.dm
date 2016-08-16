@@ -150,17 +150,16 @@
 /datum/supply_packs/security/detectiveclothes
 	name = "Investigation apparel"
 	contains = list(
-			/obj/item/clothing/under/det/black = 2,
-			/obj/item/clothing/under/det/grey = 2,
-			/obj/item/clothing/head/det/grey = 2,
-			/obj/item/clothing/under/det = 2,
-			/obj/item/clothing/head/det = 2,
-			/obj/item/clothing/suit/storage/det_trench,
-			/obj/item/clothing/suit/storage/det_trench/grey,
-			/obj/item/clothing/suit/storage/forensics/red,
+			/obj/item/clothing/under/investigator = 2,
+			/obj/item/clothing/under/investigator/alt = 2,
+			/obj/item/clothing/under/forensic = 2,
+			/obj/item/clothing/suit/storage/toggle/investigator,
+			/obj/item/clothing/suit/storage/toggle/investigator/alt,
+			/obj/item/clothing/suit/storage/forensics/red/long,
 			/obj/item/clothing/suit/storage/forensics/blue,
-			/obj/item/clothing/under/det/corporate = 2,
-			/obj/item/clothing/gloves/black = 2
+			/obj/item/clothing/suit/storage/forensics/blue/long,
+			/obj/item/clothing/gloves/black = 2,
+			/obj/item/clothing/shoes/laceup = 2
 			)
 	cost = 10
 	containertype = "/obj/structure/closet/crate/secure"

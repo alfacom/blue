@@ -180,3 +180,11 @@
 /datum/gear/head/turban/New()
 	..()
 	gear_tweaks = list(gear_tweak_free_color_choice)
+
+/datum/gear/head/fedora
+	display_name = "fedora, brown"
+	path = /obj/item/clothing/head/det
+
+/datum/gear/head/fedora/grey
+	display_name = "fedora, grey"
+	path = /obj/item/clothing/head/det/grey

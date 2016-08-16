@@ -659,3 +659,55 @@
 	icon_state = "darkreddress"
 	item_state = "darkreddress"
 	worn_state = "darkreddress"
+
+/obj/item/clothing/under/det
+	name = "noir suit"
+	desc = "A rumpled white dress shirt paired with well-worn grey slacks."
+	icon_state = "detective"
+	item_state = "det"
+	worn_state = "detective"
+	siemens_coefficient = 0.9
+	rolled_sleeves = 0
+	starting_accessories = list(/obj/item/clothing/accessory/blue_clip)
+
+/obj/item/clothing/under/det/grey
+	icon_state = "detective2"
+	worn_state = "detective2"
+	desc = "A serious-looking tan dress shirt paired with freshly-pressed black slacks."
+	starting_accessories = list(/obj/item/clothing/accessory/red_long)
+
+/obj/item/clothing/under/det/black
+	icon_state = "detective3"
+	worn_state = "detective3"
+	item_state = "sl_suit"
+	desc = "An immaculate white dress shirt, paired with a pair of dark grey dress pants, a red tie, and a charcoal vest."
+	starting_accessories = list(/obj/item/clothing/accessory/red_long, /obj/item/clothing/accessory/vest)
+
+/obj/item/clothing/under/det/waistcoat
+	icon_state = "detective_waistcoat"
+	worn_state = "detective_waistcoat"
+	desc = "A rumpled white dress shirt paired with well-worn grey slacks, complete with a blue striped tie, faux-gold tie clip, and waistcoat."
+
+/obj/item/clothing/under/det/grey/waistcoat
+	icon_state = "detective2_waistcoat"
+	worn_state = "detective2_waistcoat"
+	desc = "A serious-looking tan dress shirt paired with freshly-pressed black slacks, complete with a red striped tie and waistcoat."
+
+
+/obj/item/clothing/head/det
+	name = "fedora"
+	desc = "A brown fedora - either the cornerstone of a detective's style or a poor attempt at looking cool, depending on the person wearing it."
+	icon_state = "detective"
+	item_state_slots = list(
+		slot_l_hand_str = "det_hat",
+		slot_r_hand_str = "det_hat",
+		)
+	allowed = list(/obj/item/weapon/reagent_containers/food/snacks/candy_corn, /obj/item/weapon/pen)
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+	siemens_coefficient = 0.9
+	body_parts_covered = 0
+
+/obj/item/clothing/head/det/grey
+	icon_state = "detective2"
+	desc = "A grey fedora - either the cornerstone of a detective's style or a poor attempt at looking cool, depending on the person wearing it."
+
