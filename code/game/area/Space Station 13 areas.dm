@@ -2104,6 +2104,10 @@ area/space/atmosalert()
 	name = "\improper Research Storage"
 	icon_state = "research_storage"
 
+/area/rnd/brainstorm
+	name = "\improper Brainstorm Office"
+	icon_state = "res_break"
+
 /area/rnd/docking
 	name = "\improper Research Dock"
 	icon_state = "research_dock"
