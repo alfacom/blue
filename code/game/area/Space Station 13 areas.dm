@@ -1944,7 +1944,12 @@ area/space/atmosalert()
 	icon_state = "riot_control"
 
 /area/security/detectives_office
-	name = "\improper Security - Forensic Office"
+	name = "\improper Security - Investigator Office"
+	icon_state = "detective"
+	sound_env = MEDIUM_SOFTFLOOR
+
+/area/security/forensics
+	name = "\improper Security - Forensic Lab"
 	icon_state = "detective"
 	sound_env = MEDIUM_SOFTFLOOR
 
