@@ -123,7 +123,8 @@ var/global/list/string_slot_flags = list(
 	paths = typesof(/datum/body_build)
 	for(var/path in paths)
 		var/datum/body_build/B = new path()
-		body_builds[B.gender][B.name] = B
+		for(var/g in B.genders)
+			body_builds[g][B.name] = B
 
 	//Hair - Initialise all /datum/sprite_accessory/hair into an list indexed by hair-style name
 	paths = typesof(/datum/sprite_accessory/hair) - /datum/sprite_accessory/hair

@@ -1,6 +1,6 @@
 /datum/body_build
 	var/name			= "Default"
-	var/gender			= MALE
+	var/genders			= list(MALE, FEMALE, NEUTER, PLURAL)
 	var/index			= ""	// For icon_ovveride body_build supply
 	var/uniform_icon	= 'icons/mob/uniform.dmi'
 	var/suit_icon		= 'icons/mob/suit.dmi'
@@ -16,19 +16,10 @@
 	var/backpack_icon	= 'icons/mob/back.dmi'
 	var/ties_icon		= 'icons/mob/ties.dmi'
 
-/datum/body_build/female
-	gender			= FEMALE
-
-/datum/body_build/neuter
-	gender			= NEUTER
-
-/datum/body_build/plural
-	gender			= PLURAL
-
 /datum/body_build/slim
 	name			= "Slim"
 	index			= "_slim"
-	gender			= FEMALE
+	genders			= list(FEMALE)
 	uniform_icon	= 'icons/mob/uniform_slim.dmi'
 	suit_icon		= 'icons/mob/suit_slim.dmi'
 	gloves_icon		= 'icons/mob/hands_slim.dmi'
