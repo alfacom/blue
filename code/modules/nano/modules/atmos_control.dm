@@ -35,7 +35,7 @@
 
 	// TODO: Move these to a cache, similar to cameras
 	for(var/obj/machinery/alarm/alarm in (monitored_alarms.len ? monitored_alarms : machines))
-		alarms[++alarms.len] = list("name" = sanitize(alarm.name), "ref"= "\ref[alarm]", "danger" = max(alarm.danger_level, alarm.alarm_area.atmosalm))
+		alarms[++alarms.len] = list("name" = alarm.name, "ref"= "\ref[alarm]", "danger" = max(alarm.danger_level, alarm.alarm_area.atmosalm))
 	data["alarms"] = alarms
 
 	ui = nanomanager.try_update_ui(user, src, ui_key, ui, data, force_open)

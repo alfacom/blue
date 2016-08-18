@@ -523,7 +523,7 @@
 					continue
 				vents[++vents.len] = list(
 						"id_tag"	= id_tag,
-						"long_name" = sanitize(long_name),
+						"long_name" = long_name,
 						"power"		= info["power"],
 						"checks"	= info["checks"],
 						"direction"	= info["direction"],
@@ -539,7 +539,7 @@
 					continue
 				scrubbers[++scrubbers.len] = list(
 						"id_tag"	= id_tag,
-						"long_name" = sanitize(long_name),
+						"long_name" = long_name,
 						"power"		= info["power"],
 						"scrubbing"	= info["scrubbing"],
 						"panic"		= info["panic"],
