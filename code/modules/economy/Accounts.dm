@@ -1,4 +1,3 @@
-
 /datum/money_account
 	var/owner_name = ""
 	var/account_number = 0
@@ -18,7 +17,7 @@
 	var/time = ""
 	var/source_terminal = ""
 
-/proc/create_account(var/new_owner_name = "Default user", var/starting_funds = 0, var/obj/machinery/account_database/source_db)
+/proc/create_account(var/new_owner_name = "Default user", var/starting_funds = 0, var/obj/machinery/computer/account_database/source_db)
 
 	//create a new account
 	var/datum/money_account/M = new()

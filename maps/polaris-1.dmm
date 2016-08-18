@@ -4302,7 +4302,7 @@
 "bEL" = (/obj/structure/table/reinforced,/obj/machinery/computer/skills,/obj/effect/floor_decal/corner/blue/full{dir = 8},/turf/simulated/floor/tiled,/area/crew_quarters/heads/hop)
 "bEM" = (/obj/structure/table/reinforced,/obj/item/weapon/paper_bin{pixel_x = -3; pixel_y = 7},/obj/effect/floor_decal/corner/blue{dir = 5},/obj/machinery/computer/guestpass{pixel_x = 0; pixel_y = 30},/obj/item/weapon/folder/blue_hop,/obj/item/weapon/pen,/turf/simulated/floor/tiled,/area/crew_quarters/heads/hop)
 "bEN" = (/obj/structure/filingcabinet/chestdrawer,/obj/effect/floor_decal/corner/blue{dir = 5},/obj/machinery/newscaster/security_unit{pixel_x = 0; pixel_y = 32},/turf/simulated/floor/tiled,/area/crew_quarters/heads/hop)
-"bEO" = (/obj/machinery/account_database,/obj/effect/floor_decal/corner/blue/full{dir = 1},/obj/machinery/light{dir = 1},/turf/simulated/floor/tiled,/area/crew_quarters/heads/hop)
+"bEO" = (/obj/machinery/computer/account_database,/obj/effect/floor_decal/corner/blue/full{dir = 1},/obj/machinery/light{dir = 1},/turf/simulated/floor/tiled,/area/crew_quarters/heads/hop)
 "bEP" = (/obj/effect/floor_decal/industrial/loading,/obj/machinery/door/firedoor/border_only,/obj/structure/plasticflaps{opacity = 1},/obj/machinery/navbeacon{codes_txt = "delivery;dir=2"; freq = 1400; location = "Command"},/turf/simulated/floor/tiled,/area/bridge_hallway)
 "bEQ" = (/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/door/airlock/maintenance{name = "Bridge Maintenance"; req_access = list(19)},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/door/firedoor,/turf/simulated/floor/tiled,/area/bridge_hallway)
 "bER" = (/turf/simulated/wall,/area/bridge_hallway)

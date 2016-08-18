@@ -1718,7 +1718,7 @@
 "aHb" = (/obj/machinery/door/airlock/external,/obj/effect/floor_decal/industrial/warning,/turf/unsimulated/floor{icon_state = "steel"},/area/centcom/tram)
 "aHc" = (/obj/machinery/door/airlock/glass{name = "Arrivals Processing"},/turf/unsimulated/floor{icon_state = "steel"},/area/centcom/terminal)
 "aHd" = (/obj/machinery/door/airlock/security{name = "Equipment Storage"},/turf/unsimulated/floor{icon_state = "vault"; dir = 5},/area/centcom/security)
-"aHe" = (/obj/machinery/account_database{name = "CentComm Accounts database"},/turf/unsimulated/floor{icon_state = "steel"},/area/centcom/command)
+"aHe" = (/obj/machinery/computer/account_database{name = "CentComm Accounts database"},/turf/unsimulated/floor{icon_state = "steel"},/area/centcom/command)
 "aHf" = (/obj/structure/bed/chair{dir = 4},/turf/unsimulated/floor{icon_state = "steel"},/area/centcom/tram)
 "aHg" = (/turf/simulated/shuttle/wall{tag = "icon-swall (SOUTHEAST)"; icon_state = "swall"; dir = 6},/area/centcom/tram)
 "aHh" = (/turf/simulated/shuttle/wall{tag = "icon-swall_straight (WEST)"; icon_state = "swall_straight"; dir = 8},/area/centcom/tram)
