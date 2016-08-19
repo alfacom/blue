@@ -175,24 +175,32 @@
 	penetrating = 1
 
 /obj/item/projectile/bullet/rifle/a762
-	damage = 35
+	damage = 30
+	armor_penetration = 20
+	sharp = 0
 
 /obj/item/projectile/bullet/rifle/a762/ap
-	damage = 30
-	armor_penetration = 60 // At 40 or more armor, this will do more damage than standard rounds.
+	damage = 25
+	armor_penetration = 60
+	penetrating = 1
+	sharp = 0
+	embed = 0
 
 /obj/item/projectile/bullet/rifle/a762/hp
-	damage = 55
+	damage = 50
+	armor_penetration = 5
 
 /obj/item/projectile/bullet/rifle/a556
 	damage = 35
+	armor_penetration = 10
 
 /obj/item/projectile/bullet/rifle/a556/ap
 	damage = 30
-	armor_penetration = 60 // At 30 or more armor, this will do more damage than standard rounds.
+	armor_penetration = 35
+	embed = 0
 
 /obj/item/projectile/bullet/rifle/a556/hp
-	damage = 55
+	damage = 60
 
 /obj/item/projectile/bullet/rifle/a145
 	damage = 80

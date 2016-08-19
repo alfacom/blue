@@ -587,67 +587,24 @@
 	max_ammo = 7
 	multiple_sprites = 1
 
-//tdome stuff
+//shotgun clips
 
-/obj/item/ammo_magazine/ar556
-	name = "magazine (5.56mm)"
-	icon_state = "5.56ar"
-	mag_type = MAGAZINE
-	caliber = "a556"
-	ammo_type = /obj/item/ammo_casing/a556
-	max_ammo = 30
+/obj/item/ammo_magazine/clip/shotgungauge
+	name = "ammo clip (12 gauge, beanbag)"
+	icon_state = "shotgunclip_beanbag"
+	desc = "That's the clip for rapid reloading of shotguns."
+	caliber = "shotgun"
+	ammo_type = /obj/item/ammo_casing/shotgun/beanbag
+	matter = list(DEFAULT_WALL_MATERIAL = 1200)
+	max_ammo = 6
 	multiple_sprites = 1
 
-/obj/item/ammo_magazine/r556
-	name = "magazine (5.56mm)"
-	icon_state = "5.56rifle"
-	mag_type = MAGAZINE
-	caliber = "a556"
-	ammo_type = /obj/item/ammo_casing/a556/hp
-	max_ammo = 15
+/obj/item/ammo_magazine/clip/shotgungaugepellet
+	name = "ammo clip (12 gauge, pellet)"
+	icon_state = "shotgunclip_pellet"
+	desc = "That's the clip for rapid reloading of shotguns."
+	caliber = "shotgun"
+	ammo_type = /obj/item/ammo_casing/shotgun/pellet
+	matter = list(DEFAULT_WALL_MATERIAL = 1200)
+	max_ammo = 6
 	multiple_sprites = 1
-
-/obj/item/ammo_magazine/saw556
-	name = "magazine box (5.56mm)"
-	icon_state = "5.56saw"
-	mag_type = MAGAZINE
-	caliber = "a556"
-	ammo_type = /obj/item/ammo_casing/a556/ap
-	max_ammo = 100
-	w_class = 3
-	multiple_sprites = 1
-
-/obj/item/ammo_magazine/ar762
-	name = "magazine (7.62mm)"
-	icon_state = "7.62ar"
-	mag_type = MAGAZINE
-	caliber = "a762"
-	ammo_type = /obj/item/ammo_casing/a762
-	max_ammo = 30
-	multiple_sprites = 1
-
-/obj/item/ammo_magazine/r762
-	name = "magazine (7.62mm)"
-	icon_state = "7.62rifle"
-	mag_type = MAGAZINE
-	caliber = "a762"
-	ammo_type = /obj/item/ammo_casing/a762/hp
-	max_ammo = 15
-	multiple_sprites = 1
-
-/obj/item/ammo_magazine/saw762
-	name = "magazine box (7.62mm)"
-	icon_state = "7.62saw"
-	mag_type = MAGAZINE
-	caliber = "a762"
-	ammo_type = /obj/item/ammo_casing/a762/ap
-	max_ammo = 100
-	w_class = 3
-	multiple_sprites = 1
-
-/obj/item/ammo_magazine/a127
-	name = "ammunition clip (12.7mm)"
-	icon_state = "12.7"
-	caliber = "a127"
-	ammo_type = /obj/item/ammo_casing/a127
-	max_ammo = 5

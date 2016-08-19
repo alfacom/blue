@@ -10,7 +10,7 @@
 	slot_flags = SLOT_BACK
 	caliber = "shotgun"
 	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 2)
-	load_method = SINGLE_CASING
+	load_method = SINGLE_CASING|SPEEDLOADER
 	ammo_type = /obj/item/ammo_casing/shotgun/beanbag
 	handle_casings = HOLD_CASINGS
 	fire_sound = 'sound/weapons/shotgun.ogg'
@@ -120,17 +120,8 @@
 
 /obj/item/weapon/gun/projectile/shotgun/pump/combat/m5shotgun
 	name = "M5 shotgun"
-	desc = "no desc"
+	desc = "That's a Ithaca M5 shotgun. Makes you feel like a goddamn sheriff!"
 	icon_state = "m5shotgun"
 	item_state = "cshotgun"
-	max_shells = 7
+	max_shells = 5
 	ammo_type = /obj/item/ammo_casing/shotgun/pellet
-
-/obj/item/weapon/gun/projectile/shotgun/pump/combat/nmoz54
-	name = "NMOZ-54 shotgun"
-	desc = "no desc"
-	icon_state = "nmoz54"
-	item_state = "cshotgun"
-	max_shells = 7
-	ammo_type = /obj/item/ammo_casing/shotgun/pellet
-

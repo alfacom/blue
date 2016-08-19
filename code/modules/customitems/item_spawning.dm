@@ -261,6 +261,20 @@
 
 	current_data = new()
 	current_data.assoc_key = "d00kn00kem"
+	current_data.character_name = "Lorenzo Shere"
+	current_data.item_path = /obj/item/clothing/head/helmet/secchief/hosold
+	current_data.req_titles = list("Security Commissioner")
+	L |= current_data
+
+	current_data = new()
+	current_data.assoc_key = "d00kn00kem"
+	current_data.character_name = "Lorenzo Shere"
+	current_data.item_path = /obj/item/clothing/suit/armor/secchief/hosold
+	current_data.req_titles = list("Security Commissioner")
+	L |= current_data
+
+	current_data = new()
+	current_data.assoc_key = "d00kn00kem"
 	current_data.character_name = "Natalia Lynn"
 	current_data.item_path = /obj/item/clothing/suit/storage/toggle/labcoat/augmented
 	L|=current_data
