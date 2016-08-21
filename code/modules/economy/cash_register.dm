@@ -117,11 +117,9 @@
 			if("custom_order")
 				var/t_purpose = sanitize(input("Enter purpose", "New purpose") as text)
 				if (!t_purpose || !Adjacent(usr)) return
-				transaction_purpose += "<br>[t_purpose] : "
 				item_list += t_purpose
 				var/t_amount = round(input("Enter price", "New price") as num)
 				if (!t_amount || !Adjacent(usr)) return
-				transaction_purpose += "[t_amount] Thaler\s<br>"
 				transaction_amount += t_amount
 				price_list += t_amount
 				playsound(src, 'sound/machines/twobeep.ogg', 25)
@@ -246,6 +244,12 @@
 				if(transaction_amount > D.money)
 					src.visible_message("\icon[src]<span class='warning'>Not enough funds.</span>")
 				else
+					var/item_name
+					for(var/i=1,i<=item_list.len,i++)
+						item_name = item_list[i]
+						if(transaction_purpose)
+							transaction_purpose += "<br>"
+						transaction_purpose += "[item_list[i]] : [price_list[item_name] ? price_list[item_name] : price_list[i]] Thaler/s"
 					// Transfer the money
 					D.money -= transaction_amount
 					linked_account.money += transaction_amount
@@ -294,6 +298,12 @@
 		if(transaction_amount > E.worth)
 			src.visible_message("\icon[src]<span class='warning'>Not enough funds.</span>")
 		else
+			var/item_name
+			for(var/i=1,i<=item_list.len,i++)
+				item_name = item_list[i]
+				if(transaction_purpose)
+					transaction_purpose += "<br>"
+				transaction_purpose += "[item_list[i]] : [price_list[item_name] ? price_list[item_name] : price_list[i]] Thaler/s"
 			// Transfer the money
 			E.worth -= transaction_amount
 			linked_account.money += transaction_amount
@@ -365,9 +375,6 @@
 	// Call out item cost
 	src.visible_message("\icon[src]\A [O]: [price ? "[price] Thaler\s" : "free of charge"].")
 	// Note the transaction purpose for later use
-	if(transaction_purpose)
-		transaction_purpose += "<br>"
-	transaction_purpose += "[O]: [price] Thaler\s"
 	transaction_amount += price
 	for(var/previously_scanned in item_list)
 		if(price == price_list[previously_scanned] && O.name == previously_scanned)
@@ -451,7 +458,7 @@
 
 /obj/machinery/cash_register/proc/reset_memory()
 	transaction_amount = null
-	transaction_purpose = ""
+	transaction_purpose = null
 	item_list.Cut()
 	price_list.Cut()
 	confirm_item = null
