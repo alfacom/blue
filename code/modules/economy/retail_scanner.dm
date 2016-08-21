@@ -109,11 +109,11 @@
 			if("custom_order")
 				var/t_purpose = sanitize(input("Enter purpose", "New purpose") as text)
 				if (!t_purpose || !Adjacent(usr)) return
-				transaction_purpose += "[t_purpose] = "
+				transaction_purpose += "<br>[t_purpose] : "
 				item_list += t_purpose
 				var/t_amount = round(input("Enter price", "New price") as num)
 				if (!t_amount || !Adjacent(usr)) return
-				transaction_purpose += "[t_amount]<br>"
+				transaction_purpose += "[t_amount] Thaler\s<br>"
 				transaction_amount += t_amount
 				price_list += t_amount
 				playsound(src, 'sound/machines/twobeep.ogg', 25)
