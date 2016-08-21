@@ -117,14 +117,15 @@
 			if("custom_order")
 				var/t_purpose = sanitize(input("Enter purpose", "New purpose") as text)
 				if (!t_purpose || !Adjacent(usr)) return
-				transaction_purpose = t_purpose
+				transaction_purpose += "[t_purpose] ="
 				item_list += t_purpose
 				var/t_amount = round(input("Enter price", "New price") as num)
 				if (!t_amount || !Adjacent(usr)) return
+				transaction_purpose += "[t_amount]<br>"
 				transaction_amount += t_amount
 				price_list += t_amount
 				playsound(src, 'sound/machines/twobeep.ogg', 25)
-				src.visible_message("\icon[src][transaction_purpose]: [t_amount] Thaler\s.")
+				src.visible_message("\icon[src][t_purpose]: [t_amount] Thaler\s.")
 			if("set_amount")
 				var/item_name = locate(href_list["item"])
 				var/n_amount = round(input("Enter amount", "New amount") as num)
@@ -395,7 +396,7 @@
 	var/item_name
 	for(var/i=1, i<=item_list.len, i++)
 		item_name = item_list[i]
-		dat += "<tr><td class=\"tx-name-r\">[item_list[item_name] ? "<a href='?src=\ref[src];choice=subtract;item=\ref[item_name]'>-</a> <a href='?src=\ref[src];choice=set_amount;item=\ref[item_name]'>Set</a> <a href='?src=\ref[src];choice=add;item=\ref[item_name]'>+</a> [item_list[item_name]] x " : ""][item_name] <a href='?src=\ref[src];choice=clear;item=\ref[item_name]'>Remove</a></td><td class=\"tx-data-r\" width=50>[price_list[item_name] * item_list[item_name]] &thorn</td></tr>"
+		dat += "<tr><td class=\"tx-name-r\">[item_list[item_name] ? "<a href='?src=\ref[src];choice=subtract;item=\ref[item_name]'>-</a> <a href='?src=\ref[src];choice=set_amount;item=\ref[item_name]'>Set</a> <a href='?src=\ref[src];choice=add;item=\ref[item_name]'>+</a> [item_list[item_name]] x " : ""][item_name] <a href='?src=\ref[src];choice=clear;item=\ref[item_name]'>Remove</a></td><td class=\"tx-data-r\" width=50>[price_list[item_name] ? price_list[item_name] * item_list[item_name] : price_list[i]] &thorn</td></tr>"
 	dat += "</table><table width=300>"
 	dat += "<tr><td class=\"tx-name-r\"><a href='?src=\ref[src];choice=clear'>Clear Entry</a></td><td class=\"tx-name-r\" style='text-align: right'><b>Total Amount: [transaction_amount] &thorn</b></td></tr>"
 	dat += "</table></html>"
@@ -421,7 +422,7 @@
 	var/item_name
 	for(var/i=1, i<=item_list.len, i++)
 		item_name = item_list[i]
-		dat += "<tr><td class=\"tx-name\">[item_list[item_name] ? "[item_list[item_name]] x " : ""][item_name]</td><td class=\"tx-data\" width=50>[price_list[item_name] * item_list[item_name]] &thorn</td></tr>"
+		dat += "<tr><td class=\"tx-name\">[item_list[item_name] ? "[item_list[item_name]] x " : ""][item_name]</td><td class=\"tx-data\" width=50>[price_list[item_name] ? price_list[item_name] * item_list[item_name] : price_list[i]] &thorn</td></tr>"
 	dat += "<tr></tr><tr><td colspan=\"2\" class=\"tx-name\" style='text-align: right'><b>Total Amount: [transaction_amount] &thorn</b></td></tr>"
 	dat += "</table></html>"
 
