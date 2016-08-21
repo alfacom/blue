@@ -2514,6 +2514,10 @@ area/space/atmosalert()
 
 
 
+/area/lift
+	name = "Lift"
+	icon_state = "lift"
+
 /area/wreck/ai
 	name = "\improper AI Chamber"
 	icon_state = "ai"
@@ -2779,6 +2783,8 @@ var/list/the_station_areas = list (
 	/area/shuttle/administration/station,
 	/area/shuttle/specops/station,
 	/area/maintenance,
+	/area/gateway,
+	/area/lift,
 	/area/hallway,
 	/area/bridge,
 	/area/crew_quarters,
