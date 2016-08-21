@@ -75,7 +75,7 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 
 
 	   /** #### - Artificial Broadcast - #### **/
-	   			// (Imitates a mob)
+				// (Imitates a mob)
 
 		if(signal.data["type"] == 2)
 
@@ -234,40 +234,33 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 
 	// --- Broadcast only to intercom devices ---
 
-	if(data == 1)
-
-		for (var/obj/item/device/radio/intercom/R in connection.devices["[RADIO_CHAT]"])
-			if(R.receive_range(display_freq, level) > -1)
-				radios += R
-
-	// --- Broadcast only to intercoms and station-bounced radios ---
-
-	else if(data == 2)
-
-		for (var/obj/item/device/radio/R in connection.devices["[RADIO_CHAT]"])
-
-			if(istype(R, /obj/item/device/radio/headset))
-				continue
-
-			if(R.receive_range(display_freq, level) > -1)
-				radios += R
-
-	// --- Broadcast to antag radios! ---
-
-	else if(data == 3)
-		for(var/antag_freq in ANTAG_FREQS)
-			var/datum/radio_frequency/antag_connection = radio_controller.return_frequency(antag_freq)
-			for (var/obj/item/device/radio/R in antag_connection.devices["[RADIO_CHAT]"])
-				if(R.receive_range(antag_freq, level) > -1)
+	switch(data)
+		if(1)
+			for (var/obj/item/device/radio/intercom/R in connection.devices["[RADIO_CHAT]"])
+				if(R.receive_range(display_freq, level) > -1)
 					radios += R
 
-	// --- Broadcast to ALL radio devices ---
+		// --- Broadcast only to intercoms and station-bounced radios ---
+		if(2)
+			for (var/obj/item/device/radio/R in connection.devices["[RADIO_CHAT]"])
+				if(istype(R, /obj/item/device/radio/headset))
+					continue
+				if(R.receive_range(display_freq, level) > -1)
+					radios += R
 
-	else
+		// --- Broadcast to antag radios! ---
+		if(3)
+			for(var/antag_freq in ANTAG_FREQS)
+				var/datum/radio_frequency/antag_connection = radio_controller.return_frequency(antag_freq)
+				for (var/obj/item/device/radio/R in antag_connection.devices["[RADIO_CHAT]"])
+					if(R.receive_range(antag_freq, level) > -1)
+						radios += R
 
-		for (var/obj/item/device/radio/R in connection.devices["[RADIO_CHAT]"])
-			if(R.receive_range(display_freq, level) > -1)
-				radios += R
+		// --- Broadcast to ALL radio devices ---
+		else
+			for (var/obj/item/device/radio/R in connection.devices["[RADIO_CHAT]"])
+				if(R.receive_range(display_freq, level) > -1)
+					radios += R
 
 	// Get a list of mobs who can hear from the radios we collected.
 	var/list/receive = get_mobs_in_radio_ranges(radios)
@@ -275,15 +268,15 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
   /* ###### Organize the receivers into categories for displaying the message ###### */
 
   	// Understood the message:
-	var/list/heard_masked 	= list() // masked name or no real name
-	var/list/heard_normal 	= list() // normal message
+	var/list/heard_masked	= list() // masked name or no real name
+	var/list/heard_normal	= list() // normal message
 
 	// Did not understand the message:
 	var/list/heard_voice 	= list() // voice message	(ie "chimpers")
 	var/list/heard_garbled	= list() // garbled message (ie "f*c* **u, **i*er!")
 	var/list/heard_gibberish= list() // completely screwed over message (ie "F%! (O*# *#!<>&**%!")
 
-	for (var/mob/R in receive)
+	for(var/mob/R in receive)
 
 	  /* --- Loop through the receivers and categorize them --- */
 		if (!R.is_preference_enabled(/datum/client_preference/holder/hear_radio))
