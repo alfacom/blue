@@ -111,11 +111,6 @@
 	body_parts_covered = 0
 	siemens_coefficient = 0.8
 
-/obj/item/clothing/head/helmet/secchief/hosold
-	name = "old security chief's hat hat"
-	desc = "The hat of the Head of Security. For showing the officers who's in charge."
-	icon_state = "hoscapold"
-
 /obj/item/clothing/head/helmet/secchief/dermal
 	name = "Dermal Armour Patch"
 	desc = "You're not quite sure how you manage to take it on and off, but it implants nicely in your head."
@@ -131,10 +126,6 @@
 	armor = list(melee = 65, bullet = 30, laser = 50, energy = 10, bomb = 25, bio = 0, rad = 0)
 	flags_inv = HIDEJUMPSUIT
 	siemens_coefficient = 0.6
-
-/obj/item/clothing/suit/armor/secchief/hosold
-	icon_state = "secchiefcoat"
-	item_state = "secchiefcoat"
 
 
 //Jensen cosplay gear

@@ -33,13 +33,6 @@
 	item_state = "turtleneck"
 	worn_state = "turtleneck"
 
-/obj/item/clothing/under/blue_shirt
-	name = "blue shirt"
-	desc = "classical blue shit. Colored in blue." // Need new description.
-	icon_state = "blue_shirt"
-	item_state = "blue_shirt"
-	worn_state = "blue_shirt"
-
 /obj/item/clothing/under/sl_suit
 	desc = "It's a very amish looking suit."
 	name = "amish suit"
@@ -582,7 +575,7 @@
 
 /obj/item/clothing/under/croptop
 	name = "crop top"
-	desc = "A shirt that has had the top cropped. This one is NT sponsored."
+	desc = "A shirt that has had the top cropped."
 	icon_state = "croptop"
 	item_state = "gy_suit"
 	worn_state = "croptop"

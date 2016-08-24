@@ -138,16 +138,6 @@
 	desc = "A pair of track pants, for the athletic."
 	icon_state = "baggy_trackpants"
 
-/obj/item/clothing/under/pants/sweaterj
-	name = "sweaterj"
-	desc = "Common space sweater."
-	icon_state = "sweaterj"
-
-/obj/item/clothing/under/pants/blouse
-	name = "blouse"
-	desc = "Common space blouse."
-	icon_state = "blouse"
-
 /obj/item/clothing/under/pants/baggy/khaki
 	name = "baggy khaki pants"
 	desc = "A pair of dust beige khaki pants."

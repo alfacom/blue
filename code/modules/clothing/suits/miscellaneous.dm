@@ -182,18 +182,6 @@
  * Misc
  */
 
-/obj/item/clothing/suit/storage/pullover
-	name = "pullover"
-	desc = "Common space pullover"
-	icon_state = "pullover"
-	body_parts_covered = UPPER_TORSO|ARMS
-
-/obj/item/clothing/suit/storage/cardigan
-	name = "cardigan"
-	desc = "Common space cardigan"
-	icon_state = "cardigan"
-	body_parts_covered = UPPER_TORSO|ARMS
-
 /obj/item/clothing/suit/straight_jacket
 	name = "straight jacket"
 	desc = "A suit that completely restrains the wearer."
@@ -210,11 +198,6 @@
 	icon_state = "ianshirt"
 	item_state = "ianshirt"
 	body_parts_covered = UPPER_TORSO|ARMS
-
-/obj/item/clothing/suit/ianshirt/ash
-	name = "Ash t-shirt"
-	desc = "A t-shirt with a picture of some guy. Good for sleeping in. Smells like obsession."
-	icon_state = "ashshirt"
 
 //pyjamas
 //originally intended to be pinstripes >.>
@@ -783,19 +766,3 @@
 	desc = "A comfy, aqua flannel shirt.  Unleash your inner hipster."
 	icon_state = "flannel_aqua"
 	item_state = "b_suit"
-
-/obj/item/clothing/suit/storage/russian_style
-	name = "Soviet Jacket"
-	desc = "Russian style jacket."
-	icon_state = "jacket"
-
-/obj/item/clothing/suit/storage/russian_style/verb/hide_collar()
-	set name = "Hide collar"
-	set category = "Objects"
-	if(icon_state == initial(icon_state))
-		icon_state = "jacket_alt"
-		usr << "<span class = 'notice'>You open collar</span>"
-	else
-		icon_state = initial(icon_state)
-		usr << "<span class = 'notice'>You hide collar</span>"
-	update_clothing_icon()

@@ -13,11 +13,6 @@
 			/obj/item/weapon/reagent_containers/pill,/obj/item/weapon/storage/pill_bottle,/obj/item/weapon/paper)
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 50, rad = 0)
 
-/obj/item/clothing/suit/storage/toggle/labcoat/augmented
-	name = "augmented labcoat"
-	desc = "What a lovely diods! Blink."
-	icon_state = "labcoat_aug"
-
 /obj/item/clothing/suit/storage/toggle/labcoat/red
 	name = "red labcoat"
 	desc = "A suit that protects against minor chemical spills. This one is red."
