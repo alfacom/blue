@@ -1,5 +1,5 @@
 ////Affectuum////
-
+/*
 /obj/item/clothing/under/blouse
 	name = "blouse"
 	desc = "Common space blouse."
@@ -15,7 +15,7 @@
 	name = "gazelle"
 	desc = "A pair of common space gazelle"
 	icon_state = "gazelle"
-
+*/
 
 ////DoubleComrader43////
 

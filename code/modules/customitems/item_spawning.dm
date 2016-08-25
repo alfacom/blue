@@ -233,7 +233,7 @@
 	custom_items["marcusaga"] = L
 
 ////Affectuum////
-
+/*
 	L = list()
 
 	current_data = new()
@@ -255,6 +255,7 @@
 	L|=current_data
 
 	custom_items["affectuum"] = L
+*/
 
 ////D00k_N00kem///
 
