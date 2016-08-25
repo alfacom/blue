@@ -11,6 +11,8 @@ README.md
 data/
 config/
 tools/
+maps/backup/
+
 
 /.gitattributes
 /.gitignore
