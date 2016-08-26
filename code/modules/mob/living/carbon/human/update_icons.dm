@@ -308,7 +308,6 @@ var/global/list/damage_icon_parts = list()
 	//END CACHED ICON GENERATION.
 	stand_icon.Blend(base_icon,ICON_OVERLAY)
 
-
 	//tail
 	update_tail_showing(0)
 
@@ -988,7 +987,7 @@ var/global/list/damage_icon_parts = list()
 	var/species_tail = species.get_tail(src)
 
 	if(species_tail && !(wear_suit && wear_suit.flags_inv & HIDETAIL))
-		var/icon/tail = species.get_icobase(src)
+		var/icon/tail = species.get_tail_animation(src)
 		overlays_standing[TAIL_LAYER] = image(tail, "tail")
 		animate_tail_reset(0)
 
