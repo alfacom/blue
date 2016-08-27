@@ -199,10 +199,12 @@ var/global/list/damage_icon_parts = list()
 		O.update_icon()
 		if(O.damage_state == "00") continue
 		var/icon/DI
-		var/cache_index = "[O.damage_state]/[O.organ_tag]/[species.get_blood_colour(src)]/[species.get_bodytype(src)]"
+		var/cache_index = "[O.damage_state]/[O.organ_tag][body_build.index]/[species.get_blood_colour(src)]/[species.get_bodytype(src)]"
 		if(damage_icon_parts[cache_index] == null)
-			DI = new /icon(species.get_damage_overlays(src), O.damage_state)			// the damage icon for whole human
-			DI.Blend(new /icon(species.get_damage_mask(src), O.organ_tag), ICON_MULTIPLY)	// mask with this organ's pixels
+			// the damage icon for whole human
+			DI = new /icon(species.get_damage_overlays(src), O.damage_state)
+			// mask with this organ's pixels
+			DI.Blend(new /icon(species.get_damage_mask(src), "[O.organ_tag][body_build.index]"), ICON_MULTIPLY)
 			DI.Blend(species.get_blood_colour(src), ICON_MULTIPLY)
 			damage_icon_parts[cache_index] = DI
 		else
@@ -479,7 +481,7 @@ var/global/list/damage_icon_parts = list()
 
 		//apply blood overlay
 		if(w_uniform.blood_DNA)
-			var/image/bloodsies	= image(species.get_blood_mask(src), "uniformblood")
+			var/image/bloodsies	= image(species.get_blood_mask(src), "uniformblood[body_build.index]")
 			bloodsies.color		= w_uniform.blood_color
 			standing.overlays	+= bloodsies
 
@@ -538,7 +540,7 @@ var/global/list/damage_icon_parts = list()
 			standing = image(body_build.gloves_icon, t_state)
 
 		if(gloves.blood_DNA)
-			var/image/bloodsies	= image(species.get_blood_mask(src), "bloodyhands")
+			var/image/bloodsies	= image(species.get_blood_mask(src), "bloodyhands[body_build.index]")
 			bloodsies.color = gloves.blood_color
 			standing.overlays	+= bloodsies
 		gloves.screen_loc = ui_gloves
@@ -546,7 +548,7 @@ var/global/list/damage_icon_parts = list()
 		overlays_standing[GLOVES_LAYER]	= standing
 	else
 		if(blood_DNA)
-			var/image/bloodsies	= image(species.get_blood_mask(src), "bloodyhands")
+			var/image/bloodsies	= image(species.get_blood_mask(src), "bloodyhands[body_build.index]")
 			bloodsies.color = hand_blood_color
 			overlays_standing[GLOVES_LAYER]	= bloodsies
 		else
@@ -626,14 +628,14 @@ var/global/list/damage_icon_parts = list()
 			standing = image(body_build.shoes_icon, shoes.icon_state)
 
 		if(shoes.blood_DNA)
-			var/image/bloodsies = image(species.get_blood_mask(src), "shoeblood")
+			var/image/bloodsies = image(species.get_blood_mask(src), "shoeblood[body_build.index]")
 			bloodsies.color = shoes.blood_color
 			standing.overlays += bloodsies
 		standing.color = shoes.color
 		overlays_standing[SHOES_LAYER] = standing
 	else
 		if(feet_blood_DNA)
-			var/image/bloodsies = image(species.get_blood_mask(src), "shoeblood")
+			var/image/bloodsies = image(species.get_blood_mask(src), "shoeblood[body_build.index]")
 			bloodsies.color = feet_blood_color
 			overlays_standing[SHOES_LAYER] = bloodsies
 		else
@@ -685,7 +687,7 @@ var/global/list/damage_icon_parts = list()
 		var/image/standing = image(t_icon, t_state)
 
 		if(head.blood_DNA)
-			var/image/bloodsies = image(species.get_blood_mask(src), "helmetblood")
+			var/image/bloodsies = image(species.get_blood_mask(src), "helmetblood[body_build.index]")
 			bloodsies.color = head.blood_color
 			standing.overlays	+= bloodsies
 
@@ -765,7 +767,7 @@ var/global/list/damage_icon_parts = list()
 		if(wear_suit.blood_DNA)
 			var/obj/item/clothing/suit/S = wear_suit
 			if(istype(S)) //You can put non-suits in your suit slot (diona nymphs etc).
-				var/image/bloodsies = image(species.get_blood_mask(src), "[S.blood_overlay_type]blood")
+				var/image/bloodsies = image(species.get_blood_mask(src), "[S.blood_overlay_type]blood[body_build.index]")
 				bloodsies.color = wear_suit.blood_color
 				standing.overlays	+= bloodsies
 
@@ -812,7 +814,7 @@ var/global/list/damage_icon_parts = list()
 		standing.color = wear_mask.color
 
 		if( !istype(wear_mask, /obj/item/clothing/mask/smokable/cigarette) && wear_mask.blood_DNA )
-			var/image/bloodsies = image(species.get_blood_mask(src), "maskblood")
+			var/image/bloodsies = image(species.get_blood_mask(src), "maskblood[body_build.index]")
 			bloodsies.color = wear_mask.blood_color
 			standing.overlays	+= bloodsies
 		overlays_standing[FACEMASK_LAYER]	= standing
