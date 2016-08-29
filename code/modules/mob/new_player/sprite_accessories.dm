@@ -666,7 +666,12 @@
 
 	taj_ears
 		name = "Tajaran Ears"
-		icon_state = "ears_plain"
+		icon_state = "ears_plain" //Sprites should be blank. Don't ask me why.
+		species_allowed = list("Tajara")
+
+	taj_ears_tufts
+		name = "Tajara Tufts"
+		icon_state = "ears_tufts"
 		species_allowed = list("Tajara")
 
 	taj_ears_clean
@@ -722,6 +727,11 @@
 	taj_ears_messy
 		name = "Tajara Messy"
 		icon_state = "hair_messy"
+		species_allowed = list("Tajara")
+
+	taj_ears_chalma
+		name = "Tajara Chalma"
+		icon_state = "hair_chalma"
 		species_allowed = list("Tajara")
 
 	taj_ears_curls
