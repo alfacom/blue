@@ -295,9 +295,6 @@
 	if (camera)
 		camera.c_tag = changed_name
 
-	if(!custom_sprite) //Check for custom sprite
-		set_custom_sprite()
-
 	//Flavour text.
 	if(client)
 		var/module_flavour = client.prefs.flavour_texts_robot[modtype]

@@ -25,32 +25,29 @@
 	if(owner)
 		owner.internal_organs.Remove(src)
 		owner.internal_organs_by_name[organ_tag] = null
-		owner.internal_organs_by_name -= organ_tag
-		while(null in owner.internal_organs)
-			owner.internal_organs -= null
-		var/obj/item/organ/external/E = owner.organs_by_name[parent_organ]
-		if(istype(E)) E.internal_organs -= src
+	if(parent)
+		parent.internal_organs -= src
+		parent = null
 	return ..()
 
 /obj/item/organ/internal/removed(var/mob/living/user)
+	if(owner)
+		owner.internal_organs -= src
+		owner.internal_organs_by_name[organ_tag] = null
+	if(parent)
+		parent.internal_organs -= src
+		parent = null
 	..()
 
-	owner.internal_organs_by_name[organ_tag] = null
-	owner.internal_organs -= src
-
-	// Remove parent references
-	parent.internal_organs -= src
-	parent = null
 
 /obj/item/organ/internal/remove_rejuv()
 	if(owner)
 		owner.internal_organs -= src
 		owner.internal_organs_by_name[organ_tag] = null
-		owner.internal_organs_by_name -= organ_tag
-		while(null in owner.internal_organs)
-			owner.internal_organs -= null
-		var/obj/item/organ/external/E = owner.organs_by_name[parent_organ]
-		if(istype(E)) E.internal_organs -= src
+	if(parent)
+		parent.internal_organs -= src
+		parent = null
+
 	..()
 
 // Brain is defined in brain_item.dm.

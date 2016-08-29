@@ -163,6 +163,7 @@
 
 	custom_items["shamah"] = L
 */
+
 ////DoubleComrader43////
 
 	L = list()
@@ -206,7 +207,7 @@
 	current_data = new()
 	current_data.assoc_key = "marcusaga"
 	current_data.character_name = "Bertrand Francois"
-	current_data.item_path = /obj/item/clothing/under/pants/sweaterj
+	current_data.item_path = /obj/item/clothing/under/sweaterj
 	L |= current_data
 
 	current_data = new()
@@ -232,13 +233,13 @@
 	custom_items["marcusaga"] = L
 
 ////Affectuum////
-
+/*
 	L = list()
 
 	current_data = new()
 	current_data.assoc_key = "affectuum"
 	current_data.character_name = "Sasha Winter"
-	current_data.item_path = /obj/item/clothing/under/pants/blouse
+	current_data.item_path = /obj/item/clothing/under/blouse
 	L|=current_data
 
 	current_data = new()
@@ -254,6 +255,7 @@
 	L|=current_data
 
 	custom_items["affectuum"] = L
+*/
 
 ////D00k_N00kem///
 
