@@ -419,7 +419,7 @@
 /obj/item/clothing/shoes/proc/draw_knife()
 	set name = "Draw Boot Knife"
 	set desc = "Pull out your boot knife."
-	set category = "IC"
+	set category = "Object"
 	set src in usr
 
 	if(usr.stat || usr.restrained() || usr.incapacitated())
