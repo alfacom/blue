@@ -1091,7 +1091,7 @@ var/global/list/damage_icon_parts = list()
 /mob/living/carbon/human/update_fire(var/update_icons=1)
 	overlays_standing[FIRE_LAYER] = null
 	if(on_fire)
-		overlays_standing[FIRE_LAYER] = image('icons/mob/OnFire.dmi', "Standing", FIRE_LAYER)
+		overlays_standing[FIRE_LAYER] = image('icons/mob/OnFire.dmi', "Standing[body_build.index]", FIRE_LAYER)
 
 	if(update_icons)   update_icons()
 
