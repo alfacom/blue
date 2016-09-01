@@ -16,6 +16,9 @@
 	var/backpack_icon	= 'icons/mob/back.dmi'
 	var/ties_icon		= 'icons/mob/ties.dmi'
 
+	//Rig vars
+	var/rig_back		= 'icons/mob/rig_back.dmi'
+
 /datum/body_build/slim
 	name			= "Slim"
 	index			= "_slim"
@@ -30,6 +33,8 @@
 	belt_icon		= 'icons/mob/belt_slim.dmi'
 	backpack_icon	= 'icons/mob/back_slim.dmi'
 	ties_icon		= 'icons/mob/ties_slim.dmi'
+	//Rig.
+	rig_back		= 'icons/mob/rig_back_slim.dmi'
 
 /proc/get_body_build(gender, body_build = "Default", var/list/limited_to)
 	if(limited_to && !(body_build in limited_to))

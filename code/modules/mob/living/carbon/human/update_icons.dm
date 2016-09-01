@@ -831,14 +831,12 @@ var/global/list/damage_icon_parts = list()
 		var/icon/overlay_icon
 		if(back.icon_override)
 			overlay_icon = back.icon_override
-		else if(istype(back, /obj/item/weapon/rig))
-			//If this is a rig and a mob_icon is set, it will take species into account in the rig update_icon() proc.
-			var/obj/item/weapon/rig/rig = back
-			overlay_icon = rig.mob_icon
 		else if(back.sprite_sheets && back.sprite_sheets[species.get_bodytype(src)])
 			overlay_icon = back.sprite_sheets[species.get_bodytype(src)]
 		else if(back.item_icons && (slot_back_str in back.item_icons))
 			overlay_icon = back.item_icons[slot_back_str]
+		else if(istype(back, /obj/item/weapon/rig))
+			overlay_icon = body_build.rig_back
 		else
 			overlay_icon = body_build.backpack_icon
 
