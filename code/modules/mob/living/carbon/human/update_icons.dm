@@ -801,7 +801,11 @@ var/global/list/damage_icon_parts = list()
 
 
 /mob/living/carbon/human/update_inv_wear_mask(var/update_icons=1)
-	if( wear_mask && ( istype(wear_mask, /obj/item/clothing/mask) || istype(wear_mask, /obj/item/clothing/accessory) || istype(wear_mask, /obj/item/weapon/grenade) ) && !(head && head.flags_inv & HIDEMASK))
+	if( wear_mask && (
+			istype(wear_mask, /obj/item/clothing/mask)\
+			||istype(wear_mask, /obj/item/clothing/accessory)\
+			|| istype(wear_mask, /obj/item/weapon/grenade)\
+		) && !(head && head.flags_inv & HIDEMASK))
 		wear_mask.screen_loc = ui_mask	//TODO
 
 		var/image/standing
@@ -1096,7 +1100,7 @@ var/global/list/damage_icon_parts = list()
 	var/image/total = new
 	for(var/obj/item/organ/external/E in organs)
 		if(E.open)
-			var/image/I = image('icons/mob/surgery.dmi', "[E.name][round(E.open)]", -SURGERY_LEVEL)
+			var/image/I = image('icons/mob/surgery.dmi', "[E.name][round(E.open)][body_build.index]", -SURGERY_LEVEL)
 			total.overlays += I
 	overlays_standing[SURGERY_LEVEL] = total
 	if(update_icons)   update_icons()
