@@ -157,6 +157,7 @@ var/global/list/protected_objects = list(/obj/structure/table, /obj/structure/ca
 		name = O.name
 		desc = O.desc
 		icon = O.icon
+		overlays = O.overlays.Copy()
 		icon_state = O.icon_state
 		icon_living = icon_state
 
