@@ -724,7 +724,12 @@
 	// hide called by levelupdate if turf intact status changes
 	// change visibility status and force update of icon
 	hide(var/intact)
-		invisibility = intact ? 101: 0	// hide if floor is intact
+		if(intact)
+			invisibility = 101	// hide if floor is intact
+			mouse_opacity = 0
+		else
+			invisibility = 0
+			mouse_opacity = 1
 		updateicon()
 
 	// update actual icon_state depending on visibility
@@ -732,10 +737,6 @@
 	// this will be revealed if a T-scanner is used
 	// if visible, use regular icon_state
 	proc/updateicon()
-/*		if(invisibility)	//we hide things with alpha now, no need for transparent icons
-			icon_state = "[base_icon_state]f"
-		else
-			icon_state = base_icon_state*/
 		icon_state = base_icon_state
 		return
 
@@ -780,7 +781,6 @@
 				qdel(H)
 
 		else	// no specified direction, so throw in random direction
-
 			playsound(src, 'sound/machines/hiss.ogg', 50, 0, 0)
 			if(H)
 				for(var/atom/movable/AM in H)

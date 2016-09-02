@@ -98,7 +98,12 @@
 	// hide called by levelupdate if turf intact status changes
 	// change visibility status and force update of icon
 	hide(var/intact)
-		invisibility = (intact && level==1) ? 101: 0	// hide if floor is intact
+		if(intact && level==1)
+			invisibility = 101	// hide if floor is intact
+			mouse_opacity = 0
+		else
+			invisibility = 0
+			mouse_opacity = 1
 		update()
 
 

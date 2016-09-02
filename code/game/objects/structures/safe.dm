@@ -179,7 +179,12 @@ obj/structure/safe/ex_act(severity)
 	update_icon()
 
 /obj/structure/safe/floor/hide(var/intact)
-	invisibility = intact ? 101 : 0
+	if(intact)
+		invisibility = 101	// hide if floor is intact
+		mouse_opacity = 0
+	else
+		invisibility = 0
+		mouse_opacity = 1
 
 /obj/structure/safe/floor/hides_under_flooring()
 	return 1

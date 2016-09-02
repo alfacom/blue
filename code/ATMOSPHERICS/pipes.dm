@@ -25,6 +25,15 @@
 /obj/machinery/atmospherics/pipe/hides_under_flooring()
 	return level != 2
 
+/obj/machinery/atmospherics/pipe/hide(var/i)
+	if(istype(loc, /turf/simulated) && i)
+		invisibility = 101	// hide if floor is intact
+		mouse_opacity = 0
+	else
+		invisibility = 0
+		mouse_opacity = 1
+	update_icon()
+
 /obj/machinery/atmospherics/pipe/proc/pipeline_expansion()
 	return null
 
@@ -112,21 +121,6 @@
 	pipe_color = new_color
 	update_icon()
 
-/*
-/obj/machinery/atmospherics/pipe/add_underlay(var/obj/machinery/atmospherics/node, var/direction)
-	if(istype(src, /obj/machinery/atmospherics/pipe/tank))	//todo: move tanks to unary devices
-		return ..()
-
-	if(node)
-		var/temp_dir = get_dir(src, node)
-		underlays += icon_manager.get_atmos_icon("pipe_underlay_intact", temp_dir, color_cache_name(node))
-		return temp_dir
-	else if(direction)
-		underlays += icon_manager.get_atmos_icon("pipe_underlay_exposed", direction, pipe_color)
-	else
-		return null
-*/
-
 /obj/machinery/atmospherics/pipe/color_cache_name(var/obj/machinery/atmospherics/node)
 	if(istype(src, /obj/machinery/atmospherics/pipe/tank))
 		return ..()
@@ -186,11 +180,6 @@
 			initialize_directions = SOUTH|EAST
 		if(SOUTHWEST)
 			initialize_directions = SOUTH|WEST
-
-/obj/machinery/atmospherics/pipe/simple/hide(var/i)
-	if(istype(loc, /turf/simulated))
-		invisibility = i ? 101 : 0
-	update_icon()
 
 /obj/machinery/atmospherics/pipe/simple/process()
 	if(!parent) //This should cut back on the overhead calling build_network thousands of times per cycle
@@ -449,10 +438,6 @@
 		if(WEST)
 			initialize_directions = NORTH|EAST|SOUTH
 
-/obj/machinery/atmospherics/pipe/manifold/hide(var/i)
-	if(istype(loc, /turf/simulated))
-		invisibility = i ? 101 : 0
-	update_icon()
 
 /obj/machinery/atmospherics/pipe/manifold/pipeline_expansion()
 	return list(node1, node2, node3)
@@ -813,11 +798,6 @@
 	..()
 	update_icon()
 
-/obj/machinery/atmospherics/pipe/manifold4w/hide(var/i)
-	if(istype(loc, /turf/simulated))
-		invisibility = i ? 101 : 0
-	update_icon()
-
 /obj/machinery/atmospherics/pipe/manifold4w/initialize()
 
 	for(var/obj/machinery/atmospherics/target in get_step(src,1))
@@ -957,11 +937,6 @@
 /obj/machinery/atmospherics/pipe/cap/New()
 	..()
 	initialize_directions = dir
-
-/obj/machinery/atmospherics/pipe/cap/hide(var/i)
-	if(istype(loc, /turf/simulated))
-		invisibility = i ? 101 : 0
-	update_icon()
 
 /obj/machinery/atmospherics/pipe/cap/pipeline_expansion()
 	return list(node)
