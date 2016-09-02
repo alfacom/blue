@@ -7,19 +7,28 @@
 	w_class = 2
 	gas_transfer_coefficient = 0.90
 	voicechange = 1
+	say_messages = list("Mmfph!", "Mmmf mrrfff!", "Mmmf mnnf!")
+	say_verbs = list("mumbles", "says")
+
+/obj/item/clothing/mask/muzzle/ballgag
+	name = "ballgag"
+	desc = "For when Master wants silence."
+	icon_state = "ballgag"
+	item_state = "ballgag"
 
 /obj/item/clothing/mask/muzzle/tape
-	name = "length of tape"
+	name = "tape piece"
 	desc = "It's a robust DIY muzzle!"
-	icon = 'icons/obj/bureaucracy.dmi'
-	icon_state = "tape_cross"
+	icon_state = "tape"
 	item_state = null
 	w_class = 1
 
-/obj/item/clothing/mask/muzzle/New()
-    ..()
-    say_messages = list("Mmfph!", "Mmmf mrrfff!", "Mmmf mnnf!")
-    say_verbs = list("mumbles", "says")
+/obj/item/clothing/mask/muzzle/tape/dropped()
+	name = "utilized tape piece"
+	slot_flags = 0
+	icon = 'icons/obj/items.dmi'
+	icon_state = "taperoll_piece"
+
 
 // Clumsy folks can't take the mask off themselves.
 /obj/item/clothing/mask/muzzle/attack_hand(mob/living/user as mob)

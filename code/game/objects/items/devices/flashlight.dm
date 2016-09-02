@@ -109,6 +109,24 @@
 	matter = list(DEFAULT_WALL_MATERIAL = 200,"glass" = 50)
 	hitsound = "swing_hit"
 
+/obj/item/device/flashlight/seclite
+	name = "security flashlight"
+	desc = "A hand-held security flashlight. Very robust."
+	icon = 'icons/obj/lighting.dmi'
+	icon_state = "seclite"
+	item_state = "seclite"
+	brightness_on = 5
+	force = 10.0
+	hitsound = 'sound/weapons/genhit1.ogg'
+
+/obj/item/device/flashlight/heavy
+	name = "heavy duty flashlight"
+	desc = "A hand-held heavy-duty light."
+	icon = 'icons/obj/lighting.dmi'
+	icon_state = "heavyduty"
+	item_state = "heavyduty"
+	brightness_on = 6
+
 /obj/item/device/flashlight/drone
 	name = "low-power flashlight"
 	desc = "A miniature lamp, that might be used by small robots."
