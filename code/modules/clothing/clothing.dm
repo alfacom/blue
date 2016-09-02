@@ -26,6 +26,10 @@
 /obj/item/clothing/clean_blood()
 	..()
 	gunshot_residue = null
+	if(istype(loc, /mob))
+		var/mob/M = loc
+		M.update_icon = 1
+		M.update_icons()
 
 /obj/item/clothing/New()
 	..()

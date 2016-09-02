@@ -91,6 +91,7 @@
 		new /obj/item/clothing/suit/storage/vest/secchief(src)
 		new /obj/item/clothing/suit/armor/secchief(src)
 		new /obj/item/clothing/head/helmet/secchief/dermal(src)
+		new /obj/item/clothing/under/rank/head_of_security(src)
 		new /obj/item/weapon/cartridge/hos(src)
 		new /obj/item/device/radio/headset/heads/hos(src)
 		new /obj/item/device/radio/headset/heads/hos/alt(src)
