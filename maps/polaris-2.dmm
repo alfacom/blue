@@ -2066,7 +2066,7 @@
 "aNL" = (/obj/structure/bed/chair/comfy/brown{dir = 1},/obj/effect/floor_decal/carpet,/turf/unsimulated/floor{dir = 2; icon_state = "carpet"},/area/centcom/bar)
 "aNM" = (/obj/structure/bed/chair/comfy/brown{dir = 1},/obj/effect/floor_decal/carpet{dir = 4},/obj/effect/floor_decal/carpet,/obj/effect/floor_decal/carpet{dir = 6},/turf/unsimulated/floor{dir = 2; icon_state = "carpet"},/area/centcom/bar)
 "aNN" = (/obj/structure/closet/secure_closet/cabinet/bar,/turf/unsimulated/floor{icon_state = "lino"},/area/centcom/bar)
-"aNO" = (/obj/structure/table/woodentable{dir = 5},/obj/item/weapon/book/manual/barman_recipes,/obj/item/weapon/reagent_containers/glass/rag,/turf/unsimulated/floor{icon_state = "lino"},/area/centcom/bar)
+"aNO" = (/obj/structure/table/woodentable{dir = 5},/obj/item/weapon/book/manual/barman_recipes,/obj/item/weapon/reagent_containers/rag,/turf/unsimulated/floor{icon_state = "lino"},/area/centcom/bar)
 "aNP" = (/obj/structure/table/woodentable{dir = 5},/obj/machinery/chemical_dispenser/bar_alc/full,/turf/unsimulated/floor{icon_state = "lino"},/area/centcom/bar)
 "aNQ" = (/obj/structure/table/woodentable{dir = 5},/obj/machinery/chemical_dispenser/bar_soft/full,/turf/unsimulated/floor{icon_state = "lino"},/area/centcom/bar)
 "aNR" = (/obj/machinery/porta_turret/crescent,/turf/unsimulated/floor{icon_state = "lino"},/area/centcom/tram)
