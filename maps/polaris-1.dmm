@@ -7263,7 +7263,7 @@
 "cJI" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1},/turf/simulated/floor/wood,/area/crew_quarters/bar)
 "cJJ" = (/obj/structure/sign/securearea{desc = "Under the painting a plaque reads: 'While the meat grinder may not have spared you, fear not. Not one part of you has gone to waste... You were delicious.'"; icon_state = "monkey_painting"; name = "Mr. Deempisi portrait"; pixel_x = 28; pixel_y = 4},/obj/structure/sink{dir = 4; icon_state = "sink"; pixel_x = 11; pixel_y = 0},/turf/simulated/floor/wood,/area/crew_quarters/bar)
 "cJK" = (/obj/effect/landmark/start{name = "Bartender"},/turf/simulated/floor/lino,/area/crew_quarters/bar)
-"cJL" = (/obj/structure/table/reinforced,/obj/structure/window/reinforced{dir = 4},/obj/item/weapon/reagent_containers/glass/rag,/turf/simulated/floor/lino,/area/crew_quarters/bar)
+"cJL" = (/obj/structure/table/reinforced,/obj/structure/window/reinforced{dir = 4},/obj/item/weapon/reagent_containers/rag,/turf/simulated/floor/lino,/area/crew_quarters/bar)
 "cJM" = (/obj/machinery/light{dir = 4; icon_state = "tube1"},/turf/simulated/floor/wood,/area/crew_quarters/bar)
 "cJN" = (/obj/machinery/door/airlock{name = "Unit 1"},/turf/simulated/floor/tiled/freezer,/area/crew_quarters/barrestroom)
 "cJO" = (/obj/machinery/door/airlock{name = "Unit 2"},/turf/simulated/floor/tiled/freezer,/area/crew_quarters/barrestroom)
