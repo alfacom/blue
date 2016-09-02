@@ -42,7 +42,7 @@
 			/obj/item/weapon/storage/bag/trash,
 			/obj/item/device/lightreplacer,
 			/obj/item/weapon/reagent_containers/spray/cleaner,
-			/obj/item/weapon/reagent_containers/glass/rag,
+			/obj/item/weapon/reagent_containers/rag,
 			/obj/item/weapon/grenade/chem_grenade/cleaner = 3,
 			/obj/structure/mopbucket
 			)
