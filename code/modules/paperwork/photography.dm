@@ -48,6 +48,13 @@ var/global/photo_count = 0
 			scribble = txt
 	..()
 
+/obj/item/weapon/photo/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
+	if(user.zone_sel.selecting == O_EYES)
+		user.visible_message("<span class='notice'> [user] holds up \a [src] and shows it to [M]. </span>",\
+			"<span class='notice'>You show \the [src] to [M]. </span>")
+		M.examinate(src)
+	else ..()
+
 /obj/item/weapon/photo/examine(mob/user)
 	if(in_range(user, src))
 		show(user)
