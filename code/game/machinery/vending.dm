@@ -731,6 +731,9 @@
 					/obj/item/weapon/reagent_containers/glass/drinks/cans/iced_tea = 1,/obj/item/weapon/reagent_containers/glass/drinks/cans/grape_juice = 1)
 	idle_power_usage = 211 //refrigerator - believe it or not, this is actually the average power consumption of a refrigerated vending machine according to NRCan.
 
+/obj/machinery/vending/cola/soda
+	icon_state = "soda"
+
 /obj/machinery/vending/fitness
 	name = "SweatMAX"
 	desc = "Fueled by your inner inadequacy!"
