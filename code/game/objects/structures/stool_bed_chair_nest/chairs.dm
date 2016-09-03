@@ -192,6 +192,30 @@
 /obj/structure/bed/chair/wood/wings
 	icon_state = "wooden_chair_wings"
 
+// Bar
+
+/obj/structure/bed/chair/plastic/bar
+	name = "bar stool"
+	color = "#FFFFFF"
+	icon_state = "stool_padded_new"
+	base_icon = "stool_padded_new"
+	can_buckle = 0
+
+/obj/structure/bed/chair/plastic/bar/attackby(obj/item/weapon/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/weapon/screwdriver))
+		anchored = !anchored
+		playsound(src.loc, 'sound/items/Ratchet.ogg', 75, 1)
+		if(anchored)
+			user.visible_message("[user.name] secures [src] to the floor.", \
+				"You secure the bolts to the floor.", \
+				"You hear a ratchet")
+		else
+			user.visible_message("[user.name] unsecures [src] from the floor.", \
+				"You undo the bolts.", \
+				"You hear a ratchet")
+		return 1
+	else return ..()
+
 /obj/structure/bed/chair/plastic/shuttle
 	name = "shuttle chair"
 	icon_state = "schair"
