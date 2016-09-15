@@ -54,6 +54,7 @@
 	for(var/obj/machinery/door/firedoor/F in loc)
 		if(F != src)
 			spawn(1)
+				world.log << "Multiple firedoor at ([x],[y],[z])."
 				qdel(src)
 			return .
 	var/area/A = get_area(src)
@@ -62,8 +63,11 @@
 	A.all_doors.Add(src)
 	areas_added = list(A)
 
+	var/turf/neighbor = null
 	for(var/direction in cardinal)
-		A = get_area(get_step(src,direction))
+		neighbor = get_step(src,direction)
+		if(neighbor.blocks_air || !Adjacent(neighbor)) continue
+		A = get_area(neighbor)
 		if(istype(A) && !(A in areas_added))
 			A.all_doors.Add(src)
 			areas_added += A
