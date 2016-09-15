@@ -124,18 +124,6 @@
 	display_name = "scarf, christmas"
 	path = /obj/item/clothing/accessory/scarf/christmas
 
-/datum/gear/accessory/scarf/stripedred
-	display_name = "scarf, striped red"
-	path = /obj/item/clothing/accessory/stripedredscarf
-
-/datum/gear/accessory/scarf/stripedgreen
-	display_name = "scarf, striped green"
-	path = /obj/item/clothing/accessory/stripedgreenscarf
-
-/datum/gear/accessory/scarf/stripedblue
-	display_name = "scarf, striped blue"
-	path = /obj/item/clothing/accessory/stripedbluescarf
-
 /datum/gear/accessory/suitjacket
 	display_name = "suit jacket, tan"
 	path = /obj/item/clothing/accessory/tan_jacket

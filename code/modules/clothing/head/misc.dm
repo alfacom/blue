@@ -33,6 +33,14 @@
 /obj/item/clothing/head/hairflower/orange
 	icon_state = "hairflower_orange"
 
+/obj/item/clothing/head/bow
+	name = "head bow"
+	desc = "Classic head bow"
+	icon_state = "bow"
+	slot_flags = SLOT_HEAD | SLOT_EARS
+	flags = 0
+	body_parts_covered = 0
+
 /obj/item/clothing/head/powdered_wig
 	name = "powdered wig"
 	desc = "A powdered wig."

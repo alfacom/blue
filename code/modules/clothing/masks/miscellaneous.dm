@@ -88,47 +88,61 @@
 	body_parts_covered = 0
 
 //scarves (fit in in mask slot)
-//None of these actually have on-mob sprites...
-/obj/item/clothing/mask/bluescarf
+/obj/item/clothing/mask/scarf
+	body_parts_covered = FACE
+	item_flags = FLEXIBLEMATERIAL
+	w_class = 2
+	gas_transfer_coefficient = 0.90
+
+/obj/item/clothing/mask/scarf/blue
 	name = "blue neck scarf"
 	desc = "A blue neck scarf."
 	icon_state = "blueneckscarf"
 	item_state = "blueneckscarf"
-	body_parts_covered = FACE
-	item_flags = FLEXIBLEMATERIAL
-	w_class = 2
-	gas_transfer_coefficient = 0.90
 
-/obj/item/clothing/mask/redscarf
+/obj/item/clothing/mask/scarf/redwhite
 	name = "red scarf"
 	desc = "A red and white checkered neck scarf."
 	icon_state = "redwhite_scarf"
 	item_state = "redwhite_scarf"
-	body_parts_covered = FACE
-	item_flags = FLEXIBLEMATERIAL
-	w_class = 2
-	gas_transfer_coefficient = 0.90
 
-/obj/item/clothing/mask/greenscarf
+/obj/item/clothing/mask/scarf/red
+	name = "red scarf"
+	desc = "A red neck scarf."
+	icon_state = "red_scarf"
+	item_state = "red_scarf"
+
+/obj/item/clothing/mask/scarf/green
 	name = "green scarf"
 	desc = "A green neck scarf."
 	icon_state = "green_scarf"
 	item_state = "green_scarf"
-	body_parts_covered = FACE
-	item_flags = FLEXIBLEMATERIAL
-	w_class = 2
-	gas_transfer_coefficient = 0.90
 
-/obj/item/clothing/mask/ninjascarf
+/obj/item/clothing/mask/scarf/ninja
 	name = "ninja scarf"
 	desc = "A stealthy, dark scarf."
 	icon_state = "ninja_scarf"
 	item_state = "ninja_scarf"
-	body_parts_covered = FACE
-	item_flags = FLEXIBLEMATERIAL
-	w_class = 2
-	gas_transfer_coefficient = 0.90
 	siemens_coefficient = 0
+
+/obj/item/clothing/mask/scarf/long_blue
+	name = "long blue scarf"
+	desc = "A long blue neck scarf."
+	icon_state = "stripedbluescarf"
+	item_state = "stripedbluescarf"
+
+/obj/item/clothing/mask/scarf/long_red
+	name = "long red scarf"
+	desc = "A long red neck scarf."
+	icon_state = "stripedredscarf"
+	item_state = "stripedredscarf"
+
+/obj/item/clothing/mask/scarf/long_green
+	name = "long green scarf"
+	desc = "A long green neck scarf."
+	icon_state = "stripedgreenscarf"
+	item_state = "stripedgreenscarf"
+
 
 /obj/item/clothing/mask/pig
 	name = "pig mask"
