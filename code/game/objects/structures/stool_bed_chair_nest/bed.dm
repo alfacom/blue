@@ -91,6 +91,14 @@
 		playsound(src.loc, 'sound/items/Ratchet.ogg', 50, 1)
 		dismantle()
 		qdel(src)
+	else if(istype(W, /obj/item/weapon/bedsheet))
+		if(buckled_mob)
+			W.attack_self(user)
+			src.visible_message("<span class='notice'>[user] covers [buckled_mob] with \the [W].")
+		else
+			user.drop_from_inventory(W)
+			src.visible_message("<span class='notice'>[user] makes the bed with \the [W].")
+		W.forceMove(src.loc)
 	else if(istype(W,/obj/item/stack))
 		if(padding_material)
 			user << "\The [src] is already padded."
@@ -301,3 +309,33 @@
 		spawn(0)
 			qdel(src)
 		return
+
+/obj/structure/bed/sofa/right
+	name = "comfy sofa"
+	desc = "So lovely, uh."
+	icon_state = "sofa_right"
+	base_icon = "sofa_right"
+	buckle_dir = 0
+	buckle_lying = 0
+	color = null
+
+
+/obj/structure/bed/sofa/left
+	name = "comfy sofa"
+	desc = "So lovely, uh."
+	icon_state = "sofa_left"
+	base_icon = "sofa_left"
+	buckle_lying = 0
+	buckle_dir = 0
+	color = null
+
+/obj/structure/bed/sofa/New(var/newloc)
+	..(newloc,"plastic")
+
+
+/obj/structure/bed/sofa/update_icon()
+	..()
+	if(src.dir == NORTH)
+		src.layer = 5
+	else
+		src.layer = OBJ_LAYER

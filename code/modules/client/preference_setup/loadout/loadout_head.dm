@@ -102,6 +102,12 @@
 	display_name = "hair flower pin, orange"
 	path = /obj/item/clothing/head/hairflower/orange
 
+/datum/gear/head/bow
+	display_name = "head bow"
+	path = /obj/item/clothing/head/bow
+	New()
+		gear_tweaks = list(gear_tweak_free_color_choice)
+
 /datum/gear/head/hardhat
 	display_name = "hardhat, yellow"
 	path = /obj/item/clothing/head/hardhat

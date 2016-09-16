@@ -1411,6 +1411,10 @@ area/space/atmosalert()
 	name = "\improper Bar Restroom"
 	icon_state = "bar"
 
+area/crew_quarters/barman
+	name = "\improper Barman"
+	icon_state = "barman"
+
 /area/crew_quarters/theatre
 	name = "\improper Theatre"
 	icon_state = "Theatre"

@@ -801,7 +801,11 @@ var/global/list/damage_icon_parts = list()
 
 
 /mob/living/carbon/human/update_inv_wear_mask(var/update_icons=1)
-	if( wear_mask && ( istype(wear_mask, /obj/item/clothing/mask) || istype(wear_mask, /obj/item/clothing/accessory) || istype(wear_mask, /obj/item/weapon/grenade) ) && !(head && head.flags_inv & HIDEMASK))
+	if( wear_mask && (
+			istype(wear_mask, /obj/item/clothing/mask)\
+			||istype(wear_mask, /obj/item/clothing/accessory)\
+			|| istype(wear_mask, /obj/item/weapon/grenade)\
+		) && !(head && head.flags_inv & HIDEMASK))
 		wear_mask.screen_loc = ui_mask	//TODO
 
 		var/image/standing
@@ -831,14 +835,12 @@ var/global/list/damage_icon_parts = list()
 		var/icon/overlay_icon
 		if(back.icon_override)
 			overlay_icon = back.icon_override
-		else if(istype(back, /obj/item/weapon/rig))
-			//If this is a rig and a mob_icon is set, it will take species into account in the rig update_icon() proc.
-			var/obj/item/weapon/rig/rig = back
-			overlay_icon = rig.mob_icon
 		else if(back.sprite_sheets && back.sprite_sheets[species.get_bodytype(src)])
 			overlay_icon = back.sprite_sheets[species.get_bodytype(src)]
 		else if(back.item_icons && (slot_back_str in back.item_icons))
 			overlay_icon = back.item_icons[slot_back_str]
+		else if(istype(back, /obj/item/weapon/rig))
+			overlay_icon = body_build.rig_back
 		else
 			overlay_icon = body_build.backpack_icon
 
@@ -1089,7 +1091,7 @@ var/global/list/damage_icon_parts = list()
 /mob/living/carbon/human/update_fire(var/update_icons=1)
 	overlays_standing[FIRE_LAYER] = null
 	if(on_fire)
-		overlays_standing[FIRE_LAYER] = image('icons/mob/OnFire.dmi', "Standing", FIRE_LAYER)
+		overlays_standing[FIRE_LAYER] = image('icons/mob/OnFire.dmi', "Standing[body_build.index]", FIRE_LAYER)
 
 	if(update_icons)   update_icons()
 
@@ -1098,7 +1100,7 @@ var/global/list/damage_icon_parts = list()
 	var/image/total = new
 	for(var/obj/item/organ/external/E in organs)
 		if(E.open)
-			var/image/I = image('icons/mob/surgery.dmi', "[E.name][round(E.open)]", -SURGERY_LEVEL)
+			var/image/I = image('icons/mob/surgery.dmi', "[E.name][round(E.open)][body_build.index]", -SURGERY_LEVEL)
 			total.overlays += I
 	overlays_standing[SURGERY_LEVEL] = total
 	if(update_icons)   update_icons()

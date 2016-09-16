@@ -128,6 +128,7 @@
 			qdel(O)
 
 	if(owner)
+		drop_items()
 		owner.organs -= src
 		owner.organs_by_name[organ_tag] = null
 
@@ -166,7 +167,8 @@
 	// Grab all the internal giblets too.
 	for(var/obj/item/organ/organ in internal_organs)
 		organ.removed()
-		organ.loc = src
+		if(src)
+			organ.loc = src
 
 	// Remove parent references
 	parent.children -= src

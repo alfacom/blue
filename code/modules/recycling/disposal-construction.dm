@@ -12,7 +12,7 @@
 	pressure_resistance = 5*ONE_ATMOSPHERE
 	matter = list(DEFAULT_WALL_MATERIAL = 1850)
 	level = 2
-	var/sortType = ""
+	var/sortTypes = ""
 	var/ptype = 0
 	// 0=straight, 1=bent, 2=junction-j1, 3=junction-j2, 4=junction-y, 5=trunk, 6=disposal bin, 7=outlet, 8=inlet 9=pipe-j1s 10=pipe-j2s
 	var/subtype = 0
@@ -98,7 +98,12 @@
 	// hide called by levelupdate if turf intact status changes
 	// change visibility status and force update of icon
 	hide(var/intact)
-		invisibility = (intact && level==1) ? 101: 0	// hide if floor is intact
+		if(intact && level==1)
+			invisibility = 101	// hide if floor is intact
+			mouse_opacity = 0
+		else
+			invisibility = 0
+			mouse_opacity = 1
 		update()
 
 
@@ -289,7 +294,7 @@
 							//Needs some special treatment ;)
 							if(ptype==9 || ptype==10)
 								var/obj/structure/disposalpipe/sortjunction/SortP = P
-								SortP.sortType = sortType
+								SortP.sortTypes = sortTypes
 								SortP.updatedir()
 								SortP.updatedesc()
 								SortP.updatename()

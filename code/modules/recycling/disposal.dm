@@ -655,7 +655,7 @@
 	var/health = 10 	// health points 0-10
 	layer = 2.3			// slightly lower than wires and other pipes
 	var/base_icon_state	// initial icon state on map
-	var/sortType = ""
+	var/list/sortTypes = list()
 	var/subtype = 0
 	// new pipe, set the icon_state as on map
 	New()
@@ -724,7 +724,12 @@
 	// hide called by levelupdate if turf intact status changes
 	// change visibility status and force update of icon
 	hide(var/intact)
-		invisibility = intact ? 101: 0	// hide if floor is intact
+		if(intact)
+			invisibility = 101	// hide if floor is intact
+			mouse_opacity = 0
+		else
+			invisibility = 0
+			mouse_opacity = 1
 		updateicon()
 
 	// update actual icon_state depending on visibility
@@ -732,10 +737,6 @@
 	// this will be revealed if a T-scanner is used
 	// if visible, use regular icon_state
 	proc/updateicon()
-/*		if(invisibility)	//we hide things with alpha now, no need for transparent icons
-			icon_state = "[base_icon_state]f"
-		else
-			icon_state = base_icon_state*/
 		icon_state = base_icon_state
 		return
 
@@ -780,7 +781,6 @@
 				qdel(H)
 
 		else	// no specified direction, so throw in random direction
-
 			playsound(src, 'sound/machines/hiss.ogg', 50, 0, 0)
 			if(H)
 				for(var/atom/movable/AM in H)
@@ -904,10 +904,10 @@
 				C.ptype = 5
 			if("pipe-j1s")
 				C.ptype = 9
-				C.sortType = sortType
+				C.sortTypes = sortTypes
 			if("pipe-j2s")
 				C.ptype = 10
-				C.sortType = sortType
+				C.sortTypes = sortTypes
 ///// Z-Level stuff
 			if("pipe-u")
 				C.ptype = 11
@@ -1187,14 +1187,19 @@
 
 	proc/updatedesc()
 		desc = initial(desc)
-		if(sortType)
-			desc += "\nIt's filtering objects with the '[sortType]' tag."
+		if(sortTypes.len)
+			desc += "\nIt's filtering objects with following tags:"
+			for(tag in sortTypes)
+				desc += "\n - [tag]"
 
 	proc/updatename()
-		if(sortType)
-			name = "[initial(name)] ([sortType])"
-		else
-			name = initial(name)
+		switch(sortTypes.len)
+			if(0)
+				name = initial(name)
+			if(1)
+				name = "[initial(name)] ([sortTypes[1]])"
+			else
+				name = "[initial(name)] (multiple tags)"
 
 	proc/updatedir()
 		posdir = dir
@@ -1209,7 +1214,7 @@
 
 	New()
 		. = ..()
-		if(sortType) tagger_locations |= sortType
+		if(sortTypes) tagger_locations |= sortTypes
 
 		updatedir()
 		updatename()
@@ -1222,16 +1227,18 @@
 
 		if(istype(I, /obj/item/device/destTagger))
 			var/obj/item/device/destTagger/O = I
-
-			if(O.currTag)// Tag set
-				sortType = O.currTag
-				playsound(src.loc, 'sound/machines/twobeep.ogg', 100, 1)
-				user << "\blue Changed filter to '[sortType]'."
-				updatename()
-				updatedesc()
+			if(O.currTag in sortTypes)// Tag set
+				sortTypes -= O.currTag
+				user << "\blue Add tag '[O.currTag]' to filtering."
+			else
+				sortTypes += O.currTag
+				user << "\blue Remove tag '[O.currTag]' from filtering."
+			playsound(src.loc, 'sound/machines/twobeep.ogg', 100, 1)
+			updatename()
+			updatedesc()
 
 	proc/divert_check(var/checkTag)
-		return sortType == checkTag
+		return checkTag in sortTypes
 
 	// next direction to move
 	// if coming in from negdir, then next is primary dir or sortdir

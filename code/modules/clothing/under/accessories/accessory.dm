@@ -247,15 +247,3 @@
 /obj/item/clothing/accessory/scarf/christmas
 	name = "christmas scarf"
 	icon_state = "christmasscarf"
-
-/obj/item/clothing/accessory/stripedredscarf
-	name = "striped red scarf"
-	icon_state = "stripedredscarf"
-
-/obj/item/clothing/accessory/stripedgreenscarf
-	name = "striped green scarf"
-	icon_state = "stripedgreenscarf"
-
-/obj/item/clothing/accessory/stripedbluescarf
-	name = "striped blue scarf"
-	icon_state = "stripedbluescarf"

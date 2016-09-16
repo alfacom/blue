@@ -64,7 +64,12 @@ var/global/list/navbeacons			// no I don't like putting this in, but it will do 
 	// called when turf state changes
 	// hide the object if turf is intact
 	hide(var/intact)
-		invisibility = intact ? 101 : 0
+		if(intact)
+			invisibility = 101	// hide if floor is intact
+			mouse_opacity = 0
+		else
+			invisibility = 0
+			mouse_opacity = 1
 		updateicon()
 
 	// update the icon_state

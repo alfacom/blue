@@ -52,7 +52,6 @@
 	var/obj/item/rig_module/vision/visor                      // Kinda shitty to have a var for a module, but saves time.
 	var/obj/item/rig_module/voice/speech                      // As above.
 	var/mob/living/carbon/human/wearer                        // The person currently wearing the rig.
-	var/image/mob_icon                                        // Holder for on-mob icon.
 	var/list/installed_modules = list()                       // Power consumption/use bookkeeping.
 
 	// Rig status vars.
@@ -142,7 +141,7 @@
 		piece.canremove = 0
 		piece.name = "[suit_type] [initial(piece.name)]"
 		piece.desc = "It seems to be part of a [src.name]."
-		piece.icon_state = "[initial(icon_state)]"
+		piece.icon_state = initial(icon_state)
 		piece.min_cold_protection_temperature = min_cold_protection_temperature
 		piece.max_heat_protection_temperature = max_heat_protection_temperature
 		if(piece.siemens_coefficient > siemens_coefficient) //So that insulated gloves keep their insulation.
@@ -151,7 +150,7 @@
 		piece.unacidable = unacidable
 		if(islist(armor)) piece.armor = armor.Copy()
 
-	update_icon(1)
+	update_icon()
 
 /obj/item/weapon/rig/Destroy()
 	for(var/obj/item/piece in list(gloves,boots,helmet,chest))
@@ -187,7 +186,7 @@
 		piece.icon_state = "[initial(icon_state)]"
 		if(airtight)
 			piece.item_flags &= ~(STOPPRESSUREDAMAGE|AIRTIGHT)
-	update_icon(1)
+	update_icon()
 
 /obj/item/weapon/rig/proc/toggle_seals(var/mob/living/carbon/human/M,var/instant)
 
@@ -277,7 +276,7 @@
 		canremove = !seal_target
 		if(airtight)
 			update_component_sealed()
-		update_icon(1)
+		update_icon()
 		return 0
 
 	// Success!
@@ -289,7 +288,7 @@
 			module.deactivate()
 	if(airtight)
 		update_component_sealed()
-	update_icon(1)
+	update_icon()
 
 /obj/item/weapon/rig/proc/update_component_sealed()
 	for(var/obj/item/piece in list(helmet,boots,gloves,chest))
@@ -297,7 +296,7 @@
 			piece.item_flags &= ~(STOPPRESSUREDAMAGE|AIRTIGHT)
 		else
 			piece.item_flags |=  (STOPPRESSUREDAMAGE|AIRTIGHT)
-	update_icon(1)
+	update_icon()
 
 /obj/item/weapon/rig/process()
 
@@ -464,22 +463,12 @@
 		ui.open()
 		ui.set_auto_update(1)
 
-/obj/item/weapon/rig/update_icon(var/update_mob_icon)
-
-	//TODO: Maybe consider a cache for this (use mob_icon as blank canvas, use suit icon overlay).
-	overlays.Cut()
-	if(!mob_icon || update_mob_icon)
-		var/species_icon = 'icons/mob/rig_back.dmi'
-		// Since setting mob_icon will override the species checks in
-		// update_inv_wear_suit(), handle species checks here.
-		if(wearer && sprite_sheets && sprite_sheets[wearer.species.get_bodytype(wearer)])
-			species_icon =  sprite_sheets[wearer.species.get_bodytype(wearer)]
-		mob_icon = image("icon" = species_icon, "icon_state" = "[icon_state]")
+/obj/item/weapon/rig/update_icon()
 
 	if(installed_modules.len)
 		for(var/obj/item/rig_module/module in installed_modules)
 			if(module.suit_overlay)
-				chest.overlays += image("icon" = 'icons/mob/rig_modules.dmi', "icon_state" = "[module.suit_overlay]", "dir" = SOUTH)
+				chest.overlays += image('icons/mob/rig_modules.dmi', module.suit_overlay, ,SOUTH)
 
 	if(wearer)
 		wearer.update_inv_shoes()
@@ -487,6 +476,7 @@
 		wearer.update_inv_head()
 		wearer.update_inv_wear_suit()
 		wearer.update_inv_back()
+
 	return
 
 /obj/item/weapon/rig/proc/check_suit_access(var/mob/living/carbon/human/user)

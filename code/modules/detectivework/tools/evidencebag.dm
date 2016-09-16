@@ -9,35 +9,14 @@
 	w_class = 2
 	var/obj/item/stored_item = null
 
-/obj/item/weapon/evidencebag/MouseDrop(var/obj/item/I as obj)
-	if (!ishuman(usr))
-		return
-
-	var/mob/living/carbon/human/user = usr
-
-	if(!user.item_is_in_hands(src))
-		return //bag must be in your hands to use
-
-	if (isturf(I.loc))
-		if (!user.Adjacent(I))
-			return
-	else
-		//If it isn't on the floor. Do some checks to see if it's in our hands or a box. Otherwise give up.
-		if(istype(I.loc,/obj/item/weapon/storage))	//in a container.
-			var/sdepth = I.storage_depth(user)
-			if (sdepth == -1 || sdepth > 1)
-				return	//too deeply nested to access
-
-			var/obj/item/weapon/storage/U = I.loc
-			user.client.screen -= I
-			U.contents.Remove(I)
-		else if(user.item_is_in_hands(I))
-			user.drop_from_inventory(I)
-		else
-			return
+/obj/item/weapon/evidencebag/afterattack(obj/item/I, mob/user, proximity)
+	if(!proximity) return
 
 	if(!istype(I) || I.anchored)
 		return
+
+	if(ismob(I.loc))
+		if(!I.loc:unEquip(I)) return
 
 	if(istype(I, /obj/item/weapon/evidencebag))
 		user << "<span class='notice'>You find putting an evidence bag in another evidence bag to be slightly absurd.</span>"
