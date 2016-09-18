@@ -168,6 +168,12 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 	icon = 'icons/mob/human_races/cyberlimbs/zenghu/zenghu_main.dmi'
 	unavailable_to_build = 1
 
+/datum/robolimb/cyber
+	company = "Cyber Industries"
+	desc = "This limb has a dark metal casing and looks rather bulky."
+	icon = 'icons/mob/human_races/cyberlimbs/cyberindustries.dmi'
+	unavailable_to_build = 1
+
 /obj/item/weapon/disk/limb
 	name = "Limb Blueprints"
 	desc = "A disk containing the blueprints for prosthetics."
@@ -199,6 +205,9 @@ var/const/standard_monitor_styles = "blank=ipc_blank;\
 
 	nanotrasen
 		company = "NanoTrasen"
+
+	cyber
+		company = "Cyber Industries"
 
 /obj/item/weapon/disk/limb/New(var/newloc)
 	..()
