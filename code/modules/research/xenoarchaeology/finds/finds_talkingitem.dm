@@ -89,10 +89,7 @@
 	if(lentext(text)==1)
 		text=ruppertext(text)
 	else
-		var/cap = copytext(text,1,2)
-		cap = ruppertext(cap)
-		cap += copytext(text,2,lentext(text)+1)
-		text=cap
+		text=capitalize(text)
 	var/q = 0
 	msg+=text
 	if(msg=="What" | msg == "Who" | msg == "How" | msg == "Why" | msg == "Are")
