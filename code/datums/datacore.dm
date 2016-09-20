@@ -241,32 +241,9 @@
 	return add_zero(num2hex(rand(1, 65535)), 4)	//no point generating higher numbers because of the limitations of num2hex
 
 /proc/get_id_photo(var/mob/living/carbon/human/H, var/assigned_role)
-	var/icon/preview_icon = null
+
+	var/icon/preview_icon = H.stand_icon
 	var/icon/temp
-
-	var/icon/icobase = H.species.get_icobase(H)
-
-	preview_icon = new /icon('icons/mob/human.dmi', "blank")
-
-	for(var/obj/item/organ/external/E in H.organs)
-		preview_icon.Blend(E.get_icon(), ICON_OVERLAY)
-
-	//Tail
-	if(H.species.tail)
-		temp = new/icon(icobase, "tail")
-
-		if(H.species.flags & HAS_SKIN_TONE)
-			if (H.s_tone >= 0)
-				temp.Blend(rgb(H.s_tone, H.s_tone, H.s_tone), ICON_ADD)
-			else
-				temp.Blend(rgb(-H.s_tone,  -H.s_tone,  -H.s_tone), ICON_SUBTRACT)
-
-		// Skin color
-		if(H.species && H.species.flags & HAS_SKIN_COLOR)
-			temp.Blend(H.skin_color, ICON_ADD)
-
-		preview_icon.Blend(temp, ICON_OVERLAY)
-
 
 	var/datum/sprite_accessory/hair_style = hair_styles_list[H.h_style ? H.h_style : "bald"]
 	if(hair_style)
