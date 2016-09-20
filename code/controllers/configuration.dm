@@ -61,6 +61,7 @@ var/list/gamemode_cache = list()
 	var/allow_ai = 1					// allow ai job
 	var/hostedby = null
 	var/respawn = 1
+	var/respawn_time = 30
 	var/guest_jobban = 1
 	var/usewhitelist = 0
 	var/kick_inactive = 0				//force disconnect for inactive players after this many minutes, if non-0
@@ -389,6 +390,9 @@ var/list/gamemode_cache = list()
 
 				if ("norespawn")
 					config.respawn = 0
+
+				if ("respawn_time")
+					config.respawn_time = value
 
 				if ("servername")
 					config.server_name = value
