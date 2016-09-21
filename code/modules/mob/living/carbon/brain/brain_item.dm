@@ -99,10 +99,9 @@
 
 /obj/item/organ/internal/brain/install(var/mob/living/target)
 
-	if(target.key)
-		target.ghostize()
-
 	if(brainmob)
+		if(target.key)
+			target.ghostize()
 		if(brainmob.mind)
 			brainmob.mind.transfer_to(target)
 		else
