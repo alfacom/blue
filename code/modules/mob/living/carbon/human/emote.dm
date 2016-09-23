@@ -10,7 +10,6 @@
 		act = copytext(act,1,length(act))
 
 	var/muzzled = is_muzzled()
-	//var/m_type = 1
 
 	for (var/obj/item/weapon/implant/I in src)
 		if (I.implanted)
@@ -88,9 +87,10 @@
 			m_type = 1
 
 		if ("custom")
-			var/input = sanitize(input("Choose an emote to display.") as text|null)
-			if (!input)
-				return
+			if(!message)
+				message = sanitize(input("Choose an emote to display.") as text|null)
+				if (!message)
+					return
 			var/input2 = input("Is this a visible or hearable emote?") in list("Visible","Hearable")
 			if (input2 == "Visible")
 				m_type = 1
@@ -104,10 +104,8 @@
 			return custom_emote(m_type, message)
 
 		if ("me")
-
 			//if(silent && silent > 0 && findtext(message,"\"",1, null) > 0)
 			//	return //This check does not work and I have no idea why, I'm leaving it in for reference.
-
 			if (src.client)
 				if (client.prefs.muted & MUTE_IC)
 					src << "\red You cannot send IC messages (muted)."
