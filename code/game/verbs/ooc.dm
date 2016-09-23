@@ -40,7 +40,7 @@
 			message_admins("[key_name_admin(src)] has attempted to advertise in OOC: [msg]")
 			return
 
-	log_ooc("[mob.name]/[key] : [msg]")
+	log_ooc("[key]/[mob.name] : [msg]")
 
 	var/ooc_style = "everyone"
 	if(holder && !holder.fakekey)
@@ -84,10 +84,9 @@
 		src << "Guests may not use OOC."
 		return
 
-	if(src.mob)
-		if(jobban_isbanned(src.mob, "LOOC"))
-			src << "<span class='danger'>You have been banned from LOOC.</span>"
-			return
+	if(jobban_isbanned(src.mob, "LOOC"))
+		src << "<span class='danger'>You have been banned from LOOC.</span>"
+		return
 
 	msg = sanitize(msg)
 	if(!msg)
@@ -104,8 +103,8 @@
 		if(!config.dooc_allowed && (mob.stat == DEAD))
 			usr << "<span class='danger'>OOC for dead mobs has been turned off.</span>"
 			return
-		if(prefs.muted & MUTE_OOC)
-			src << "<span class='danger'>You cannot use OOC (muted).</span>"
+		if(prefs.muted & MUTE_LOOC)
+			src << "<span class='danger'>You cannot use LOOC (muted).</span>"
 			return
 		if(findtext(msg, "byond://"))
 			src << "<B>Advertising other servers is not allowed.</B>"

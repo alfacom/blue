@@ -305,3 +305,8 @@
 	icon_state = "turban"
 	body_parts_covered = 0
 	flags_inv = BLOCKHAIR
+
+/obj/item/clothing/head/sombrero
+	name = "sombrero"
+	desc = "A wide-brimmed hat popularly worn in Mexico."
+	icon_state = "sombrero"

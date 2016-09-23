@@ -968,7 +968,7 @@
 				feet_blood_DNA.Cut()
 				update_inv_shoes()
 
-	return 1
+	return
 
 
 /mob/living/carbon/human/get_visible_implants(var/class = 0)
@@ -1015,12 +1015,10 @@
 	set name = "Check pulse"
 	set desc = "Approximately count somebody's pulse. Requires you to stand still at least 6 seconds."
 	set src in view(1)
-	var/self = 0
 
 	if(usr.stat || usr.restrained() || !isliving(usr)) return
 
-	if(usr == src)
-		self = 1
+	var/self = (usr == src)
 	if(!self)
 		usr.visible_message("<span class='notice'>[usr] kneels down, puts \his hand on [src]'s wrist and begins counting their pulse.</span>",\
 		"You begin counting [src]'s pulse")

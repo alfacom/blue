@@ -11,7 +11,6 @@
 		src << "<font color='red'>Error: Admin-PM: You cannot send adminhelps (Muted).</font>"
 		return
 
-
 	if(src.mob)
 		if(jobban_isbanned(src.mob, "AHELP"))
 			src << "<span class='danger'>You have been banned from Adminhelp.</span>"

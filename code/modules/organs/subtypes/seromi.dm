@@ -5,11 +5,11 @@ var/global/list/limb_icon_cache = list()
 	var/body_hair = "feathers"  // Icon blend for body hair if any.
 
 /obj/item/organ/external/tiny/featers/sync_colour_to_human(var/mob/living/carbon/human/human)
-	..()
+	. = ..()
 	h_col = human.hair_color
 
 /obj/item/organ/external/tiny/featers/sync_colour_to_dna()
-	..()
+	. = ..()
 	h_col = rgb(dna.GetUIValue(DNA_UI_HAIR_R),dna.GetUIValue(DNA_UI_HAIR_G),dna.GetUIValue(DNA_UI_HAIR_B))
 
 /obj/item/organ/external/tiny/featers/get_icon_key()

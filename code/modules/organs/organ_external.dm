@@ -128,7 +128,7 @@
 			qdel(O)
 
 	if(owner)
-		drop_items()
+		//drop_items()
 		owner.organs -= src
 		owner.organs_by_name[organ_tag] = null
 
