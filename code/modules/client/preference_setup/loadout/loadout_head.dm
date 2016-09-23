@@ -194,3 +194,7 @@
 /datum/gear/head/fedora/grey
 	display_name = "fedora, grey"
 	path = /obj/item/clothing/head/det/grey
+
+/datum/gear/head/sombrero
+	display_name = "sombrero"
+	path = /obj/item/clothing/head/sombrero
