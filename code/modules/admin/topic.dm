@@ -10,8 +10,10 @@
 		check_antagonists()
 		return
 
-	if(href_list["dbsearchckey"] || href_list["dbsearchadmin"])
+	else if(href_list["showmultiacc"])
+		showAccounts(href_list["showmultiacc"])
 
+	else if(href_list["dbsearchckey"] || href_list["dbsearchadmin"])
 		var/adminckey = href_list["dbsearchadmin"]
 		var/playerckey = href_list["dbsearchckey"]
 		var/playerip = href_list["dbsearchip"]
@@ -663,6 +665,7 @@
 					joblist += temp.title
 			if("nonhumandept")
 				joblist += "pAI"
+				joblist += "Drone"
 				for(var/jobPos in nonhuman_positions)
 					if(!jobPos)	continue
 					var/datum/job/temp = job_master.GetJob(jobPos)

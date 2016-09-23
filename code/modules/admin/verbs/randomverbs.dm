@@ -172,6 +172,7 @@ proc/cmd_admin_mute(mob/M as mob, mute_type, automute = 0)
 	switch(mute_type)
 		if(MUTE_IC)			mute_string = "IC (say and emote)"
 		if(MUTE_OOC)		mute_string = "OOC"
+		if(MUTE_LOOC)		mute_string = "LOOC"
 		if(MUTE_PRAY)		mute_string = "pray"
 		if(MUTE_ADMINHELP)	mute_string = "adminhelp, admin PM and ASAY"
 		if(MUTE_DEADCHAT)	mute_string = "deadchat and DSAY"
@@ -247,7 +248,7 @@ Ccomp's first proc.
 /client/proc/allow_character_respawn()
 	set category = "Special Verbs"
 	set name = "Allow player to respawn"
-	set desc = "Let's the player bypass the 15 minute wait to respawn or allow them to re-enter their corpse."
+	set desc = "Let's the player bypass respawn delay or allow them to re-enter their corpse."
 	if(!holder)
 		src << "Only administrators and moderators may use this command."
 	var/list/ghosts= get_ghosts(1,1)
@@ -269,8 +270,8 @@ Ccomp's first proc.
 	G.can_reenter_corpse = 1
 
 	G:show_message(text("\blue <B>You may now respawn.  You should roleplay as if you learned nothing about the round during your time with the dead.</B>"), 1)
-	log_admin("[key_name(usr)] allowed [key_name(G)] to bypass the 15 minute respawn limit")
-	message_admins("Admin [key_name_admin(usr)] allowed [key_name_admin(G)] to bypass the 15 minute respawn limit", 1)
+	log_admin("[key_name(usr)] allowed [key_name(G)] to bypass the [config.respawn_time] minute respawn limit")
+	message_admins("Admin [key_name_admin(usr)] allowed [key_name_admin(G)] to bypass the [config.respawn_time] minute respawn limit", 1)
 
 
 /client/proc/toggle_antagHUD_use()
@@ -561,7 +562,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	message_admins("[key_name_admin(src)] has created a command report", 1)
 
 /client/proc/cmd_admin_delete(atom/O as obj|mob|turf in view())
-	set category = "Admin"
+	set category = null
 	set name = "Delete"
 
 	if (!holder)
