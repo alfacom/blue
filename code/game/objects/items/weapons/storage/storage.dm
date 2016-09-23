@@ -57,27 +57,24 @@
 			src.open(usr)
 			return
 
-		if (!( istype(over_object, /obj/screen) ))
+		if (!istype(over_object, /obj/screen))
 			return ..()
 
 		//makes sure that the storage is equipped, so that we can't drag it into our hand from miles away.
 		//there's got to be a better way of doing this.
-		if (!(src.loc == usr) || (src.loc && src.loc.loc == usr))
+		if (src.loc != usr && (src.loc && src.loc.loc != usr))
 			return
 
-		if (( usr.restrained() ) || ( usr.stat ))
-			return
-
-		if ((src.loc == usr) && !(istype(over_object, /obj/screen)) && !usr.unEquip(src))
+		if (usr.restrained() || usr.stat)
 			return
 
 		switch(over_object.name)
 			if("r_hand")
-				usr.u_equip(src)
-				usr.put_in_r_hand(src)
+				if(usr.unEquip(src))
+					usr.put_in_r_hand(src)
 			if("l_hand")
-				usr.u_equip(src)
-				usr.put_in_l_hand(src)
+				if(usr.unEquip(src))
+					usr.put_in_l_hand(src)
 		src.add_fingerprint(usr)
 
 
