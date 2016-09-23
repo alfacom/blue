@@ -36,7 +36,7 @@
 				tally += E.get_tally()
 	else
 		if(shoes)
-			tally += shoes.slowdown
+			tally += shoes.slowdown - 1
 
 		for(var/organ_name in list(BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT))
 			var/obj/item/organ/external/E = get_organ(organ_name)
