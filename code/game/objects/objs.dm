@@ -1,4 +1,5 @@
 /obj
+	appearance_flags = TILE_BOUND
 	//Used to store information about the contents of the object.
 	var/list/matter
 	var/w_class // Size of the object.
