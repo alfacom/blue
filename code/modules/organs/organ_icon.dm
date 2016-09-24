@@ -108,7 +108,7 @@
 		body_build = owner.body_build.index
 
 	icon_state = "[organ_tag][gendered_icon ? gender : ""][body_build]"
-	icon_cache_key = "[organ_tag][species ? species.name : "Human"]"
+	icon_cache_key = "[organ_tag][species ? species.name : "Human"][body_build]"
 
 	if(force_icon)
 		mob_icon = new /icon(force_icon, icon_state)
